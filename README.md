@@ -22,12 +22,16 @@ HorliX は 本家 Horos に日本語リソースを提供しましたが、日�
 [こちら](https://phazor.info/blog2-ja/?p=300)でご案内しています。
 
 
-### ライブラリ
-日英混在のサブメニュー
+### ギャラリー
+
+日英混在のサブメニュー  
+
 ![メインメニュー](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/HorosJ301.jpg)  
   
-3D は流石にキレイですね。
-![3D](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/horosagain4.png)
+
+3D は流石にキレイですね。  
+
+![3D](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/horosagain4.jpg)
   
 
 ## ライセンス

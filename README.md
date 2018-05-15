@@ -1,30 +1,28 @@
-## Build instructions
+## HorliX
 
-### Prerequisites
+### 概略
 
-1. `cmake` and `pkg-config` must be in the system's `PATH`.
-2. Patience and coffee. A full build takes about 30-45 minutes.
+HorliX は Horos/OsiriX ベースの Mac OS X で動作する DICOM ビューアです。  
+個人的に「ホーリックス」と呼んでいます。Hor ナントカ X と命名したかったので、伝説の名馬 Horlics にあやかってこの名前にしました。
 
-### Build
 
-1. Clone the repository: `git clone https://github.com/horosproject/horos.git`
+### 機能
 
-### Option 1 (GUI)
+現時点では、Horos Ver 3.0.1 と同一です。
 
-1. Open `Horos.xcodeproj` in Xcode
-2. Build (Command+B)
 
-### Option 2 (terminal)
+### 今後
 
-1. Go to the project root directory
-2. `make`
+HorliX は Horos に日本語リソースを提供しましたが、日本語化の大変さを痛感したので（本家の軽微な minof fix で関連日本語リソース作り直し）今後は本家と完全に同期が取れている、というような状態は期待しないでください。  
+独自機能追加もあるかもしれません。
 
-## Additional remarks
 
-The project uses git submodules and depends on files that are in a zipped format.
-The build process takes care of these dependencies, but you can invoke the steps manually:
+### ビルドもろもろ
 
-- To unzip the binaries, you can build the target `Unzip Binaries`
-- To initialize the submodules: `git submodule update --init --recursive`
+こちらでご案内しています。
 
-For more information on this code, visit [horosproject.org](https://horosproject.org/get-involved/)
+
+## ライセンス
+
+本家同様とします。
+

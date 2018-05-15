@@ -19,7 +19,8 @@ HorliX は 本家 Horos に日本語リソースを提供しましたが、日�
 
 ### ビルドもろもろ
 
-こちらでご案内しています。
+[こちら](https://phazor.info/blog2-ja/?p=300)でご案内しています。   
+![メインメニュー](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/HorosJ301.jpg)
 
 
 ## ライセンス

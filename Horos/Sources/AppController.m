@@ -684,6 +684,12 @@ void exceptionHandler(NSException *exception)
     return (v.majorVersion == 10 && v.minorVersion == 8 && v.patchVersion == 3);
 }
 
++ (BOOL)hasMacOSXHighSierra//air とりあえず追加してみる
+{
+    NSOperatingSystemVersion v = [self.class operatingSystemVersion];
+    return (v.majorVersion >= 10 && v.minorVersion >= 13);
+}
+
 + (BOOL)hasMacOSXSierra
 {
     NSOperatingSystemVersion v = [self.class operatingSystemVersion];

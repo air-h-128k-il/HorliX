@@ -826,7 +826,7 @@ enum /*typedef NS_ENUM(NSUInteger, O2ValueRepresentation)*/ {
         [oops addObject:arg];
     va_end(args);
     
-//    NSLog(@"Available Operators -> %@", oops);
+    NSLog(@"Available Operators -> %@", oops);
     
     NSMenuItem* firstItem = nil;
     for (NSMenuItem* mi in _operatorsPopUp.itemArray) {

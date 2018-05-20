@@ -8198,10 +8198,10 @@ static int avoidReentryRefreshDatabase = 0;
             
             [imageView mouseUp: [[NSApplication sharedApplication] currentEvent]];
             
-            if( [pixList[ 0] count] && d.count)
+            if( [pixList[ 0] count] && d.count)//ここかな
             {
                 [self selectFirstTilingView];
-                [imageView updateTilingViews];
+                [imageView updateTilingViews];//描画？
                 
                 [[pixList[ 0] objectAtIndex:0] orientation: previousOrientation];
                 
@@ -8722,7 +8722,7 @@ static int avoidReentryRefreshDatabase = 0;
                 }
                 @catch( NSException *e)
                 {
-                    NSLog( @"***** changeImageData exception : %@", e);
+                    NSLog( @"***** changeImageData exception : %@", e);//ここだ！
                     [[self window] close];
                 }
                 

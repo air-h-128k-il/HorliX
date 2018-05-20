@@ -8189,6 +8189,7 @@ static int avoidReentryRefreshDatabase = 0;
             
             if( previousColumns != 1 || previousRows != 1)
             {
+                NSLog(@"line 8192");
                 [imageView release];
                 imageView = [[[seriesView imageViews] objectAtIndex:0] retain];
                 [imageView becomeFirstResponder];

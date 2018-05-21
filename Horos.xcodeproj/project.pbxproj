@@ -13274,6 +13274,7 @@
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 			};
@@ -13585,6 +13586,15 @@
 					$CONFIGURATION_TEMP_DIR/CharLS.build/Install/include,
 					$CONFIGURATION_TEMP_DIR/ITK.build/Install/include,
 					$CONFIGURATION_TEMP_DIR/VTK.build/Install/include,
+					"${SDKROOT}/usr/include/libxml2",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					$CONFIGURATION_TEMP_DIR/Grok.build/Install/include,
+					$CONFIGURATION_TEMP_DIR/GDCM.build/Install/include,
+					$CONFIGURATION_TEMP_DIR/OpenSSL.build/Install/include,
+					$CONFIGURATION_TEMP_DIR/CharLS.build/Install/include,
+					$CONFIGURATION_TEMP_DIR/ITK.build/Install/include,
+					$CONFIGURATION_TEMP_DIR/VTK.build/Install/include,
 				);
 				INFOPLIST_FILE = Horos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -13677,6 +13687,7 @@
 				OTHER_LDFLAGS = "-Wno-deprecated";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 			};

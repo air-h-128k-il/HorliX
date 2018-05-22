@@ -1,5 +1,5 @@
 ## HorliX
-
+[logo](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/horlix-logo2.jpg)
 ### 概略
 
 HorliX は Horos/OsiriX ベースの Mac OS X で動作する DICOM ビューアです。  

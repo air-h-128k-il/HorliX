@@ -4,7 +4,7 @@
 *.lock
 *~.nib
 DerivedData/
-DerevedData-old/
+
 build/
 *.pbxuser
 *.mode1v3
@@ -37,6 +37,7 @@ Binaries/homephone.framework/
 
 *.xcscmblueprint
 
+DerevedData-old/
 DicomImporter/
 GDCM/
 Grok/

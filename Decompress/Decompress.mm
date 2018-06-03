@@ -49,6 +49,7 @@
 #include <mingpp.h>
 #import "N2Debug.h"
 #import <Quartz/Quartz.h>
+//#import <Quartz/PDFKit.h>//add by air
 
 #undef verify
 #include "osconfig.h" /* make sure OS specific configuration is included first */

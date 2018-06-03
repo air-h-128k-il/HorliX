@@ -1,7 +1,7 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX Project
  
- Horos is free software: you can redistribute it and/or modify
+ HorliX is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
  the Free Software Foundation, Êversion 3 of the License.
  
@@ -13,7 +13,7 @@
  to the GNU LGPL in order to be conform to the changes previously made to the
  OsiriX Project.
  
- Horos is distributed in the hope that it will be useful, but
+ HorliX is distributed in the hope that it will be useful, but
  WITHOUT ANY WARRANTY EXPRESS OR IMPLIED, INCLUDING ANY WARRANTY OF
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE OR USE. ÊSee the
  GNU Lesser General Public License for more details.
@@ -41,6 +41,7 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 #import <Accelerate/Accelerate.h>
+#import <CoreVideo/CVPixelBuffer.h>
 
 #include "options.h"
 

@@ -39,6 +39,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
+#import <CoreVideo/CVPixelBuffer.h>
 
 /** \brief  Parses files for importing into the database */
 

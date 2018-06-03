@@ -4,6 +4,7 @@
 *.lock
 *~.nib
 DerivedData/
+DerevedData-old/
 build/
 *.pbxuser
 *.mode1v3
@@ -35,5 +36,19 @@ Binaries/FeedbackReporter.framework/
 Binaries/homephone.framework/
 
 *.xcscmblueprint
+
+DicomImporter/
+GDCM/
+Grok/
+Horos Laucher/
+ITK/
+LetsMoveAndDock/
+OpenJPEG/
+OpenSSL/
+VTK/
+
+*.xcodeproj
+
+
 
 

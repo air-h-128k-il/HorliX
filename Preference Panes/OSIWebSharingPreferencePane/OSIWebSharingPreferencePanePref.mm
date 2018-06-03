@@ -276,10 +276,10 @@
 
 - (IBAction) copyMissingCustomizedFiles: (id) sender
 {
-	#ifdef MACAPPSTORE
-    [[NSFileManager defaultManager] copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"WebServicesHTML"] toPath: [@"~/Library/Application Support/Horos App/WebServicesHTML" stringByExpandingTildeInPath] byReplacingExisting:NO error:NULL];
+	#ifdef MACAPPSTORE// directory?
+    [[NSFileManager defaultManager] copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"WebServicesHTML"] toPath: [@"~/Library/Application Support/HorliX App/WebServicesHTML" stringByExpandingTildeInPath] byReplacingExisting:NO error:NULL];
     #else
-    [[NSFileManager defaultManager] copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"WebServicesHTML"] toPath: [@"~/Library/Application Support/Horos/WebServicesHTML" stringByExpandingTildeInPath] byReplacingExisting:NO error:NULL];
+    [[NSFileManager defaultManager] copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"WebServicesHTML"] toPath: [@"~/Library/Application Support/HorliX/WebServicesHTML" stringByExpandingTildeInPath] byReplacingExisting:NO error:NULL];
     #endif
 }
 

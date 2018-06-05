@@ -21,6 +21,11 @@ MulitiLingual (now japanese version only)
 ![mainmenu](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/HorosJ301.jpg)  
   
 
+MPR  
+  
+![MPR](https://phazor.info/HorliX-J/wp-content/uploads/2018/06/color3DMPR.jpg)  
+  
+
 3D  
 
 ![3D](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/horosagain4.jpg)

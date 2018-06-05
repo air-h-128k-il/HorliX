@@ -11,7 +11,7 @@ Now HorliX has several features apart from Horos and/or OsiriX Lite:
 - SSL support
 -  and so on  
   
- ‘HorliX’ was named after not ony Horos/OsiriX but also ‘Horlicks’ , a female legendary race horse in NZ.
+ ‘HorliX’ was named after not only Horos/OsiriX but also ‘Horlicks’ , a female legendary race horse in NZ.
   
 
 ### Gallery

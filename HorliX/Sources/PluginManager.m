@@ -1799,7 +1799,7 @@ NSInteger sortPluginArray(id plugin1, id plugin2, void *context)
 	else
 	{
         if( !gPluginsAlertAlreadyDisplayed)
-            NSRunInformationalAlertPanel(NSLocalizedString(@"Plugin Update Completed", @""), NSLocalizedString(@"All your plugins are now up to date. Restart Horos to use the new or updated plugins.", @""), NSLocalizedString(@"OK", @""), nil, nil);
+            NSRunInformationalAlertPanel(NSLocalizedString(@"Plugin Update Completed", @""), NSLocalizedString(@"All your plugins are now up to date. Restart HorliX to use the new or updated plugins.", @""), NSLocalizedString(@"OK", @""), nil, nil);
 		gPluginsAlertAlreadyDisplayed = YES;
         
         startedUpdateProcess = NO;

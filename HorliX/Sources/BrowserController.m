@@ -9818,7 +9818,7 @@ static BOOL withReset = NO;
             if( [[NSUserDefaults standardUserDefaults] boolForKey: @"hideListenerError"])
                 r = NSAlertDefaultReturn;
             else
-                r = NSRunAlertPanel( NSLocalizedString(@"Corrupted files", nil), NSLocalizedString(@"A corrupted study crashed OsiriX:\r\r%@ / %@\r\rThis file will be deleted.\r\rYou can run OsiriX in Protected Mode (shift + option keys at startup) if you have more crashes.\r\rShould I delete this corrupted study? (Highly recommended)", nil), NSLocalizedString(@"OK", nil), NSLocalizedString(@"Cancel", nil), nil, [studyObject valueForKey:@"name"], [studyObject valueForKey:@"studyName"]);
+                r = NSRunAlertPanel( NSLocalizedString(@"Corrupted files", nil), NSLocalizedString(@"A corrupted study crashed HorliX:\r\r%@ / %@\r\rThis file will be deleted.\r\rYou can run HorliX in Protected Mode (shift + option keys at startup) if you have more crashes.\r\rShould I delete this corrupted study? (Highly recommended)", nil), NSLocalizedString(@"OK", nil), NSLocalizedString(@"Cancel", nil), nil, [studyObject valueForKey:@"name"], [studyObject valueForKey:@"studyName"]);
             
             if( r == NSAlertDefaultReturn)
             {
@@ -14397,7 +14397,7 @@ static NSArray*	openSubSeriesArray = nil;
             N2LogExceptionWithStackTrace(ne);
             [@"" writeToFile:_database.loadingFilePath atomically:NO encoding:NSUTF8StringEncoding error:NULL];
             
-            NSString *message = [NSString stringWithFormat: NSLocalizedString(@"A problem occured during start-up of OsiriX:\r\r%@\r\r%@",nil), [ne description], [AppController printStackTrace: ne]];
+            NSString *message = [NSString stringWithFormat: NSLocalizedString(@"A problem occured during start-up of HorliX:\r\r%@\r\r%@",nil), [ne description], [AppController printStackTrace: ne]];
             
             NSRunCriticalAlertPanel(NSLocalizedString(@"Error",nil), @"%@", NSLocalizedString( @"OK",nil), nil, nil, message);
             

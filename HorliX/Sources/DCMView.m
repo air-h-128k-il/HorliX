@@ -8640,7 +8640,7 @@ NSInteger studyCompare(ViewerController *v1, ViewerController *v2, void *context
         yRaster = size.origin.y + size.size.height-2;
         xRaster = size.origin.x + size.size.width-2;
         if( fullText)
-            [self DrawNSStringGL: @"Made In Horos" :fontList :xRaster :yRaster rightAlignment:YES useStringTexture:YES];
+            [self DrawNSStringGL: @"Made In HorliX" :fontList :xRaster :yRaster rightAlignment:YES useStringTexture:YES];
     }
     
    

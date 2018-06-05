@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +17,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="793" height="426"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="793" height="426"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -49,7 +48,7 @@ Aw
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="dA0-CP-hHe">
                                         <font key="font" metaFont="system" size="18"/>
-                                        <string key="title">It seems you are using the iCloud Drive and your Horos local database is being stored and shared via Apple iCloud. This can cause loss of data if you are using Horos on multiple workstations with the same Apple ID.</string>
+                                        <string key="title">It seems you are using the iCloud Drive and your HorliX local database is being stored and shared via Apple iCloud. This can cause loss of data if you are using HorliX on multiple workstations with the same Apple ID.</string>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -59,7 +58,7 @@ Aw
                                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="L1z-zK-Jgv">
                                         <font key="font" metaFont="system" size="18"/>
-                                        <string key="title">You can manually disable iCloud Drive in your macOS iCloud settings (recommended). Alternativelly, Horos can flag the database folder making it ineligible for iCloud Drive synchronization (experimental).</string>
+                                        <string key="title">You can manually disable iCloud Drive in your macOS iCloud settings (recommended). Alternativelly, HorliX can flag the database folder making it ineligible for iCloud Drive synchronization (experimental).</string>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -67,7 +66,7 @@ Aw
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XL5-xw-6QT">
                                     <rect key="frame" x="18" y="90" width="715" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Do you want Horos to flag the dabase folder?" id="Ko3-kz-8vd">
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Do you want HorliX to flag the dabase folder?" id="Ko3-kz-8vd">
                                         <font key="font" metaFont="system" size="20"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

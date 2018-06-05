@@ -2884,7 +2884,7 @@ static BOOL initialized = NO;
 				
 				if ([AppController hasMacOSXElCapitan] == NO)
 				{
-					NSRunCriticalAlertPanel(NSLocalizedString(@"macOS", nil), NSLocalizedString(@"This application requires macOS 10.11 or higher. Please upgrade your operating system.", nil), NSLocalizedString(@"Quit", nil), nil, nil);
+					NSRunCriticalAlertPanel(NSLocalizedString(@"macOS", nil), NSLocalizedString(@"This application requires macOS 10.13 or higher. Please upgrade your operating system.", nil), NSLocalizedString(@"Quit", nil), nil, nil);
 					exit(0);
 				}
                 
@@ -3622,7 +3622,7 @@ static BOOL initialized = NO;
     
     if( [AppController hasMacOSXElCapitan] == NO)
     {
-        NSRunCriticalAlertPanel( NSLocalizedString( @"macOS Version", nil), NSLocalizedString( @"Horos requires macOS 10.11 or higher. Please update your OS: Apple Menu - Software Update...", nil), NSLocalizedString( @"Quit", nil) , nil, nil);
+        NSRunCriticalAlertPanel( NSLocalizedString( @"macOS Version", nil), NSLocalizedString( @"HorliX requires macOS 10.13 or higher. Please update your OS: Apple Menu - Software Update...", nil), NSLocalizedString( @"Quit", nil) , nil, nil);
         exit( 0);
     }
     
@@ -4320,7 +4320,7 @@ static BOOL initialized = NO;
     
 	if( [msg isEqualToString:@"UPDATE"])
 	{
-	//	int button = NSRunAlertPanel( NSLocalizedString( @"New Version Available", nil), NSLocalizedString( @"A new version of Horos is available. Would you like to download the new version now?", nil), NSLocalizedString( @"Download", nil), NSLocalizedString( @"Continue", nil), nil);
+	//	int button = NSRunAlertPanel( NSLocalizedString( @"New Version Available", nil), NSLocalizedString( @"A new version of HorliX is available. Would you like to download the new version now?", nil), NSLocalizedString( @"Download", nil), NSLocalizedString( @"Continue", nil), nil);
 		
 	//	if (NSOKButton == button)
 	//		[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:URL_HOROS_UPDATE]];
@@ -4336,12 +4336,12 @@ static BOOL initialized = NO;
 	WaitRendering *wait = nil;
 	
 	#ifdef OSIRIX_LIGHT
-	wait = [[[WaitRendering alloc] init: NSLocalizedString(@"Starting Horos Lite...", nil)] autorelease];
+	wait = [[[WaitRendering alloc] init: NSLocalizedString(@"Starting HorliX Lite...", nil)] autorelease];
 	#else
 	if( sizeof( long) == 8)
-		wait = [[[WaitRendering alloc] init: NSLocalizedString(@"Starting Horos 64-bit", nil)] autorelease];
+		wait = [[[WaitRendering alloc] init: NSLocalizedString(@"Starting HorliX 64-bit", nil)] autorelease];
 	else
-		wait = [[[WaitRendering alloc] init: NSLocalizedString(@"Starting Horos 32-bit", nil)] autorelease];
+		wait = [[[WaitRendering alloc] init: NSLocalizedString(@"Starting HorliX 32-bit", nil)] autorelease];
 	#endif
 
 	return wait;

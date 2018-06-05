@@ -336,7 +336,7 @@
 
 -(NSString*)fetchDatabaseIndex {
 	NSThread* thread = [NSThread currentThread];
-	thread.status = NSLocalizedString(@"Negotiating with remote OsiriX...", nil);
+	thread.status = NSLocalizedString(@"Negotiating with remote HorliX...", nil);
 	
 	NSString* version = [self fetchDatabaseVersion];
 	

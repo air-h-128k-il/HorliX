@@ -8,7 +8,7 @@ It was when HorliX came into the world.
 Now HorliX has several features apart from Horos and/or OsiriX Lite:  
   
 - fully 64bit software including libralies  
-- SSL support
+- User Friendly UI(for exampl, ROI-color-roatation-UI)
 -  and so on  
   
  ‘HorliX’ was named after not only Horos/OsiriX but also ‘Horlicks’ , a female legendary race horse in NZ.
@@ -16,7 +16,7 @@ Now HorliX has several features apart from Horos and/or OsiriX Lite:
 
 ### Gallery
 
-MulitiLingual (now japanese version only) 
+MulitiLingual (now english and japanese version only) 
 
 ![mainmenu](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/HorosJ301.jpg)  
   
@@ -26,9 +26,9 @@ MPR
 ![MPR](https://phazor.info/HorliX-J/wp-content/uploads/2018/06/color3DMPR.jpg)  
   
 
-3D  
+ROI-color-rotation-UI  
 
-![3D](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/horosagain4.jpg)
+![UI](https://phazor.info/HorliX-J/wp-content/uploads/2018/06/horlix-roi-color-ja.png)
   
 
 ## Licence

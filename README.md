@@ -18,7 +18,7 @@ Now HorliX has several features apart from Horos and/or OsiriX Lite:
 
 MulitiLingual (now english and japanese version only) 
 
-![mainmenu](https://phazor.info/blog2-ja/wp-content/uploads/2018/05/HorosJ301.jpg)  
+![mainmenu](https://phazor.info/HorliX-J/wp-content/uploads/2018/06/horlix-ja-tif.jpg)  
   
 
 MPR  

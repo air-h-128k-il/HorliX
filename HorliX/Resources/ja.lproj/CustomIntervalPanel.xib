@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CustomIntervalPanel">
@@ -20,7 +20,7 @@
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="CustomIntervalWindow" animationBehavior="default" id="228" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
             <rect key="contentRect" x="1041" y="633" width="296" height="497"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="229">
                 <rect key="frame" x="0.0" y="0.0" width="296" height="497"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -29,10 +29,9 @@
                         <rect key="frame" x="6" y="253" width="277" height="148"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="clockAndCalendar" id="258">
                             <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="155260800" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--2005-12-03 01:00:00 +0100-->
-                                <timeZone key="timeZone" name="Europe/Zurich"/>
-                            </calendarDate>
+                            <date key="date" timeIntervalSinceReferenceDate="155260800">
+                                <!--2005-12-03 00:00:00 +0000-->
+                            </date>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES"/>
@@ -41,14 +40,13 @@
                             <binding destination="-2" name="value" keyPath="self.fromDate" id="948"/>
                         </connections>
                     </datePicker>
-                    <datePicker verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="231">
+                    <datePicker verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="231">
                         <rect key="frame" x="6" y="42" width="277" height="148"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="clockAndCalendar" id="257">
                             <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="155260800" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--2005-12-03 01:00:00 +0100-->
-                                <timeZone key="timeZone" name="Europe/Zurich"/>
-                            </calendarDate>
+                            <date key="date" timeIntervalSinceReferenceDate="155260800">
+                                <!--2005-12-03 00:00:00 +0000-->
+                            </date>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES"/>
@@ -63,10 +61,10 @@
                             </binding>
                         </connections>
                     </datePicker>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" preferredMaxLayoutWidth="20" translatesAutoresizingMaskIntoConstraints="NO" id="233">
-                        <rect key="frame" x="4" y="199" width="24" height="17"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="To:" id="254">
-                            <font key="font" metaFont="system"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" preferredMaxLayoutWidth="20" translatesAutoresizingMaskIntoConstraints="NO" id="233">
+                        <rect key="frame" x="4" y="199" width="47" height="17"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="まで:" id="254">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -78,11 +76,11 @@
                             </binding>
                         </connections>
                     </textField>
-                    <button verticalHuggingPriority="750" misplaced="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="237">
-                        <rect key="frame" x="29" y="191" width="50" height="28"/>
-                        <buttonCell key="cell" type="push" title="Now" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="1" inset="2" id="248">
+                    <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="237">
+                        <rect key="frame" x="37" y="191" width="47" height="28"/>
+                        <buttonCell key="cell" type="push" title="現在" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="1" inset="2" id="248">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="nowTo:" target="-2" id="1155"/>
@@ -95,10 +93,10 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="238">
-                        <rect key="frame" x="1" y="403" width="50" height="28"/>
-                        <buttonCell key="cell" type="push" title="Now" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="246">
+                        <rect key="frame" x="1" y="403" width="47" height="28"/>
+                        <buttonCell key="cell" type="push" title="現在" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="246">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="nowFrom:" target="-2" id="1154"/>
@@ -108,10 +106,9 @@
                         <rect key="frame" x="6" y="223" width="140" height="27"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="244">
                             <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="155260800" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--2005-12-03 01:00:00 +0100-->
-                                <timeZone key="timeZone" name="Europe/Zurich"/>
-                            </calendarDate>
+                            <date key="date" timeIntervalSinceReferenceDate="155260800">
+                                <!--2005-12-03 00:00:00 +0000-->
+                            </date>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES"/>
@@ -120,14 +117,13 @@
                             <binding destination="-2" name="value" keyPath="self.fromDate" id="949"/>
                         </connections>
                     </datePicker>
-                    <datePicker verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="240">
+                    <datePicker verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="240">
                         <rect key="frame" x="6" y="12" width="140" height="27"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="242">
                             <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="155260800" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--2005-12-03 01:00:00 +0100-->
-                                <timeZone key="timeZone" name="Europe/Zurich"/>
-                            </calendarDate>
+                            <date key="date" timeIntervalSinceReferenceDate="155260800">
+                                <!--2005-12-03 00:00:00 +0000-->
+                            </date>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES"/>
@@ -153,11 +149,11 @@
                         </buttonCell>
                         <cells>
                             <column>
-                                <buttonCell type="radio" title="On a specific date" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="875">
+                                <buttonCell type="radio" title="日付指定" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="875">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="smallSystem"/>
                                 </buttonCell>
-                                <buttonCell type="radio" title="Between two dates" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="876">
+                                <buttonCell type="radio" title="期間指定" imagePosition="left" alignment="left" controlSize="small" tag="1" inset="2" id="876">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="smallSystem"/>
                                 </buttonCell>
@@ -168,10 +164,10 @@
                         </connections>
                     </matrix>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="914">
-                        <rect key="frame" x="3" y="432" width="110" height="18"/>
-                        <buttonCell key="cell" type="check" title="Hours &amp; Minutes" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="915">
+                        <rect key="frame" x="3" y="432" width="63" height="18"/>
+                        <buttonCell key="cell" type="check" title="時刻指定" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="915">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <binding destination="944" name="enabled" keyPath="values.betweenDatesMode" id="1246"/>
@@ -205,6 +201,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="518"/>
             </connections>
+            <point key="canvasLocation" x="132" y="164.5"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="944"/>
     </objects>

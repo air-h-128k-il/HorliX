@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,7 +22,7 @@
         <window title="DICOM Burner" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="6" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="498" height="390"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="5">
                 <rect key="frame" x="0.0" y="0.0" width="498" height="390"/>
@@ -31,8 +30,8 @@
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9">
                         <rect key="frame" x="66" y="351" width="45" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Name:" id="58">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="名前:" id="58">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -57,9 +56,9 @@
                         </connections>
                     </textField>
                     <matrix verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25">
-                        <rect key="frame" x="114" y="213" width="228" height="58"/>
+                        <rect key="frame" x="114" y="213" width="282" height="58"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        <size key="cellSize" width="227" height="18"/>
+                        <size key="cellSize" width="282" height="18"/>
                         <size key="intercellSpacing" width="4" height="2"/>
                         <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="72">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -67,15 +66,15 @@
                         </buttonCell>
                         <cells>
                             <column>
-                                <buttonCell type="radio" title="Don't modify the files" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="27">
+                                <buttonCell type="radio" title="ファイルを変更しない" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="27">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <buttonCell type="radio" title="Compress all DICOM files in JPEG" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="28">
+                                <buttonCell type="radio" title="全 DICOM ファイルをJPEG 形式にする " imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="28">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <buttonCell type="radio" title="Decompress all DICOM files" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="2" inset="2" id="26">
+                                <buttonCell type="radio" title="全 DICOM ファイルを解凍する" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="2" inset="2" id="26">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -90,9 +89,9 @@
                         </connections>
                     </matrix>
                     <matrix verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="159">
-                        <rect key="frame" x="114" y="147" width="126" height="58"/>
+                        <rect key="frame" x="114" y="147" width="199" height="58"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        <size key="cellSize" width="125" height="18"/>
+                        <size key="cellSize" width="199" height="18"/>
                         <size key="intercellSpacing" width="4" height="2"/>
                         <buttonCell key="prototype" type="radio" title="Save as DMG file" imagePosition="left" alignment="left" tag="2" inset="2" id="169">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -100,15 +99,15 @@
                         </buttonCell>
                         <cells>
                             <column>
-                                <buttonCell type="radio" title="CD/DVD Media" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="162">
+                                <buttonCell type="radio" title="CD/DVD メディア" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="162">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <buttonCell type="radio" title="Save as DMG file" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="2" inset="2" id="161">
+                                <buttonCell type="radio" title="DMG ファイルとして保存" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="2" inset="2" id="161">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <buttonCell type="radio" title="USB Key:" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="163">
+                                <buttonCell type="radio" title="USB キー:" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="163">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <connections>
@@ -128,16 +127,16 @@
                     </matrix>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29">
                         <rect key="frame" x="21" y="254" width="90" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Compression:" id="62">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="圧縮:" id="62">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="157">
                         <rect key="frame" x="31" y="188" width="80" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Destination:" id="158">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="出力先:" id="158">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -163,17 +162,17 @@
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36">
                         <rect key="frame" x="32" y="279" width="79" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Anonymize:" id="65">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="匿名化:" id="65">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37">
                         <rect key="frame" x="114" y="278" width="293" height="18"/>
-                        <buttonCell key="cell" type="check" title="Anonymize the DICOM files before burning" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="66">
+                        <buttonCell key="cell" type="check" title="作成前に DICOM ファイルを匿名化" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="66">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="setAnonymizedCheck:" target="-2" id="42"/>
@@ -186,16 +185,16 @@
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45">
-                        <rect key="frame" x="75" y="122" width="36" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Misc:" id="67">
-                            <font key="font" metaFont="system"/>
+                        <rect key="frame" x="67" y="122" width="44" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="その他:" id="67">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46">
                         <rect key="frame" x="114" y="121" width="349" height="18"/>
-                        <buttonCell key="cell" type="check" title="Include Weasis viewer (multi-platform, about 17MB)" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="68">
+                        <buttonCell key="cell" type="check" title="Weasis ビューア同梱 (マルチプラットフォーム、約 17MB)" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="68">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -211,7 +210,7 @@
                     </button>
                     <button hidden="YES" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="146">
                         <rect key="frame" x="110" y="307" width="325" height="18"/>
-                        <buttonCell key="cell" type="check" title="Include Horos Lite viewer (mac only, about 8MB)" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" enabled="NO" inset="2" id="147">
+                        <buttonCell key="cell" type="check" title="Horlix Lite ビューアを同梱 (Mac のみ、約 8MB)" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" enabled="NO" inset="2" id="147">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -227,7 +226,7 @@
                     </button>
                     <button horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47">
                         <rect key="frame" x="114" y="99" width="316" height="18"/>
-                        <buttonCell key="cell" type="check" title="Copy an html/Quicktime version of the images" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="69">
+                        <buttonCell key="cell" type="check" title="html/QuickTime 画像ムービーをコピー" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="69">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -242,10 +241,10 @@
                         </connections>
                     </button>
                     <button horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90">
-                        <rect key="frame" x="114" y="59" width="296" height="18"/>
-                        <buttonCell key="cell" type="check" title="Encrypt Data in ZIP file, password protected" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="91">
+                        <rect key="frame" x="114" y="59" width="307" height="18"/>
+                        <buttonCell key="cell" type="check" title="パスワード保護されたZIPデータを暗号化" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="91">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <binding destination="-2" name="enabled" keyPath="buttonsDisabled" id="139">
@@ -266,9 +265,9 @@
                     </button>
                     <button horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48">
                         <rect key="frame" x="114" y="37" width="352" height="18"/>
-                        <buttonCell key="cell" type="check" title="Copy the auxiliary folder (see CD/DVD Preferences) :" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="70">
+                        <buttonCell key="cell" type="check" title="指定フォルダをコピー (環境設定 CD/DVD 参照)" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="70">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="estimateFolderSize:" target="-2" id="79"/>
@@ -302,7 +301,7 @@
                     </textField>
                     <button horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73">
                         <rect key="frame" x="114" y="79" width="284" height="18"/>
-                        <buttonCell key="cell" type="check" title="Copy the associated Report(s), if available" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="74">
+                        <buttonCell key="cell" type="check" title="DICOM 関連レポートがあればコピー" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="74">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -422,7 +421,7 @@ DQ
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="157" y="361" width="373" height="100"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="96">
                 <rect key="frame" x="0.0" y="0.0" width="373" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -440,11 +439,11 @@ DQ
                         </connections>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="103">
-                        <rect key="frame" x="165" y="7" width="97" height="32"/>
+                        <rect key="frame" x="163" y="7" width="101" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="106">
+                        <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="106">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
@@ -470,8 +469,8 @@ DQ
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="107">
                         <rect key="frame" x="-3" y="60" width="114" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Password:" id="108">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="パスワード:" id="108">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -479,8 +478,8 @@ DQ
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="143">
                         <rect key="frame" x="113" y="42" width="239" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="(8 or more characters)" id="144">
-                            <font key="font" metaFont="smallSystem"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="(8 文字以上)" id="144">
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>

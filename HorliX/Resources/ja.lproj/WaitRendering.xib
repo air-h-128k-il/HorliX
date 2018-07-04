@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="WaitRendering">
@@ -21,28 +21,28 @@
             <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="299" y="668" width="278" height="80"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <value key="minSize" type="size" width="122" height="50"/>
             <view key="contentView" id="8">
                 <rect key="frame" x="0.0" y="0.0" width="278" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="5">
-                        <rect key="frame" x="130" y="30" width="16" height="16"/>
+                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                        <rect key="frame" x="130" y="34" width="16" height="16"/>
                     </progressIndicator>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18">
                         <rect key="frame" x="59" y="50" width="159" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Rendering in progress..." id="41">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="レンダリング中..." id="41">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="31">
-                        <rect key="frame" x="110" y="-1" width="56" height="28"/>
-                        <buttonCell key="cell" type="push" title="Abort" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="42">
+                        <rect key="frame" x="115" y="3" width="47" height="28"/>
+                        <buttonCell key="cell" type="push" title="中止" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="42">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
@@ -52,10 +52,10 @@ Gw
                         </connections>
                     </button>
                     <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="35">
-                        <rect key="frame" x="211" y="5" width="63" height="22"/>
+                        <rect key="frame" x="233" y="9" width="41" height="18"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" id="43">
-                            <font key="font" metaFont="miniSystem"/>
-                            <string key="title">Last Duration
+                            <font key="font" size="9" name=".HiraKakuInterface-W3"/>
+                            <string key="title">残り時間
 00:00:00</string>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -64,8 +64,8 @@ Gw
                     <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37">
                         <rect key="frame" x="3" y="5" width="62" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" id="44">
-                            <font key="font" metaFont="miniSystem"/>
-                            <string key="title">Elapsed Time
+                            <font key="font" size="9" name=".HiraKakuInterface-W3"/>
+                            <string key="title">経過時間
 00:00:00</string>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

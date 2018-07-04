@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AYDicomPrintWindowController">
@@ -45,28 +45,28 @@
         <window title="DICOM Print" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" visibleAtLaunch="NO" animationBehavior="default" id="6" userLabel="PrintWindow" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" utility="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="800" height="507"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <value key="minSize" type="size" width="213" height="113"/>
             <view key="contentView" id="7">
                 <rect key="frame" x="0.0" y="0.0" width="800" height="507"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <box misplaced="YES" title="Layout:" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                    <box misplaced="YES" title="レイアウト:" translatesAutoresizingMaskIntoConstraints="NO" id="12">
                         <rect key="frame" x="325" y="54" width="182" height="208"/>
                         <view key="contentView" id="1qZ-nD-5ae">
-                            <rect key="frame" x="2" y="2" width="178" height="191"/>
+                            <rect key="frame" x="2" y="2" width="178" height="194"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="30">
-                                    <rect key="frame" x="18" y="168" width="42" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Format:" id="533">
-                                        <font key="font" metaFont="label"/>
+                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30">
+                                    <rect key="frame" x="18" y="168" width="62" height="15"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="フォーマット:" id="533">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="14">
-                                    <rect key="frame" x="15" y="142" width="115" height="26"/>
+                                    <rect key="frame" x="15" y="145" width="115" height="26"/>
                                     <popUpButtonCell key="cell" type="push" title="Standard 5,7" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="13" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="24" id="532">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
@@ -99,31 +99,31 @@
                                         </binding>
                                     </connections>
                                 </popUpButton>
-                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="395">
-                                    <rect key="frame" x="21" y="91" width="69" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Border Color:" id="534">
-                                        <font key="font" metaFont="label"/>
+                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="395">
+                                    <rect key="frame" x="21" y="96" width="81" height="10"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="各フレーム境界色:" id="534">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="396">
-                                    <rect key="frame" x="21" y="48" width="100" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Empty Image Color:" id="535">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="21" y="51" width="100" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="空きフレーム色:" id="535">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="397">
-                                    <rect key="frame" x="15" y="65" width="75" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="WHITE" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="399" id="536">
+                                    <rect key="frame" x="15" y="68" width="75" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="白" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="399" id="536">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="398">
                                             <items>
-                                                <menuItem title="BLACK" id="400"/>
-                                                <menuItem title="WHITE" state="on" tag="1" id="399"/>
+                                                <menuItem title="黒" id="400"/>
+                                                <menuItem title="白" state="on" tag="1" id="399"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -132,14 +132,14 @@
                                     </connections>
                                 </popUpButton>
                                 <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="401">
-                                    <rect key="frame" x="15" y="22" width="75" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="WHITE" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="403" id="537">
+                                    <rect key="frame" x="15" y="25" width="75" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="白" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="403" id="537">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="402">
                                             <items>
-                                                <menuItem title="BLACK" id="404"/>
-                                                <menuItem title="WHITE" state="on" tag="1" id="403"/>
+                                                <menuItem title="黒" id="404"/>
+                                                <menuItem title="白" state="on" tag="1" id="403"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -148,10 +148,10 @@
                                     </connections>
                                 </popUpButton>
                                 <button horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="592">
-                                    <rect key="frame" x="19" y="127" width="144" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Automatically adjusted" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="593">
+                                    <rect key="frame" x="19" y="130" width="144" height="18"/>
+                                    <buttonCell key="cell" type="check" title="自動調整" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="593">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="smallSystem"/>
+                                        <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                                     </buttonCell>
                                     <connections>
                                         <action selector="setPages:" target="-2" id="597"/>
@@ -178,24 +178,23 @@
                             <constraint firstItem="395" firstAttribute="top" secondItem="592" secondAttribute="bottom" constant="26" id="egD-Xu-331"/>
                             <constraint firstItem="401" firstAttribute="top" secondItem="396" secondAttribute="bottom" constant="2" id="hED-Dv-a8B"/>
                         </constraints>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" size="11" name=".HiraKakuInterface-W3"/>
                     </box>
-                    <box misplaced="YES" title="Settings:" translatesAutoresizingMaskIntoConstraints="NO" id="31">
+                    <box misplaced="YES" title="設定:" translatesAutoresizingMaskIntoConstraints="NO" id="31">
                         <rect key="frame" x="15" y="54" width="301" height="208"/>
                         <view key="contentView" id="v5c-Ee-wOB">
-                            <rect key="frame" x="2" y="2" width="297" height="191"/>
+                            <rect key="frame" x="2" y="2" width="297" height="194"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="63">
-                                    <rect key="frame" x="15" y="142" width="100" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="Landscape" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="66" id="543">
+                                    <rect key="frame" x="15" y="145" width="100" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="横長" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="66" id="543">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="64">
                                             <items>
-                                                <menuItem title="Portrait" id="65"/>
-                                                <menuItem title="Landscape" state="on" tag="1" id="66"/>
+                                                <menuItem title="縦長" id="65"/>
+                                                <menuItem title="横長" state="on" tag="1" id="66"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -204,7 +203,7 @@
                                     </connections>
                                 </popUpButton>
                                 <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47">
-                                    <rect key="frame" x="130" y="142" width="136" height="26"/>
+                                    <rect key="frame" x="130" y="145" width="136" height="26"/>
                                     <popUpButtonCell key="cell" type="push" title="A3" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" baseWritingDirection="leftToRight" tag="11" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="55" id="540">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
@@ -230,14 +229,14 @@
                                     </connections>
                                 </popUpButton>
                                 <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="33">
-                                    <rect key="frame" x="15" y="99" width="95" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="Magazine" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" baseWritingDirection="leftToRight" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="268" id="538">
+                                    <rect key="frame" x="15" y="102" width="95" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="マガジン" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" baseWritingDirection="leftToRight" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="268" id="538">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="34">
                                             <items>
-                                                <menuItem title="Processor" id="42"/>
-                                                <menuItem title="Magazine" state="on" tag="1" id="268"/>
+                                                <menuItem title="自動現像機" id="42"/>
+                                                <menuItem title="マガジン" state="on" tag="1" id="268"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -246,38 +245,40 @@
                                     </connections>
                                 </popUpButton>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="990" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95">
-                                    <rect key="frame" x="133" y="168" width="51" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Film Size:" id="549">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="133" y="171" width="72" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="フィルムサイズ:" id="549">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="990" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61">
-                                    <rect key="frame" x="18" y="168" width="86" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Film Orientation:" id="541">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="18" y="171" width="86" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="フィルム方向:" id="541">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="990" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87">
-                                    <rect key="frame" x="18" y="125" width="86" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Film Destination:" id="546">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="18" y="128" width="86" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="出力先:" id="546">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83">
-                                    <rect key="frame" x="15" y="56" width="57" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="YES" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" baseWritingDirection="leftToRight" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="86" id="545">
+                                    <rect key="frame" x="15" y="59" width="57" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="する" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" baseWritingDirection="leftToRight" tag="1" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="86" id="545">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="84">
                                             <items>
-                                                <menuItem title="NO" id="85"/>
-                                                <menuItem title="YES" state="on" tag="1" id="86"/>
+                                                <menuItem title="しない" id="85"/>
+                                                <menuItem title="する" state="on" tag="1" keyEquivalent="s" id="86">
+                                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                                </menuItem>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -286,23 +287,23 @@
                                     </connections>
                                 </popUpButton>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62">
-                                    <rect key="frame" x="18" y="82" width="30" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Trim:" id="542">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="18" y="85" width="35" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="トリム:" id="542">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="990" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88">
-                                    <rect key="frame" x="18" y="37" width="134" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Configuration Information:" id="547">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="18" y="40" width="134" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="システム構成情報:" id="547">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46">
-                                    <rect key="frame" x="18" y="13" width="262" height="22"/>
+                                    <rect key="frame" x="18" y="16" width="262" height="22"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="539">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -317,24 +318,24 @@
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="990" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82">
-                                    <rect key="frame" x="133" y="125" width="99" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Magnification Type:" id="544">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="133" y="128" width="45" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="拡大方法:" id="544">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89">
-                                    <rect key="frame" x="130" y="99" width="100" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="NONE" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="94" id="548">
+                                    <rect key="frame" x="130" y="102" width="100" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="なし" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="94" id="548">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="90">
                                             <items>
-                                                <menuItem title="NONE" state="on" id="94"/>
-                                                <menuItem title="BILINEAR" tag="1" id="92"/>
-                                                <menuItem title="CUBIC" tag="2" id="93"/>
-                                                <menuItem title="REPLICATE" tag="3" id="91"/>
+                                                <menuItem title="なし" state="on" id="94"/>
+                                                <menuItem title="バイリニア補間" tag="1" id="92"/>
+                                                <menuItem title="キュービック補間" tag="2" id="93"/>
+                                                <menuItem title="0次補間" tag="3" id="91"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -377,25 +378,24 @@
                             <constraint firstItem="63" firstAttribute="top" secondItem="61" secondAttribute="bottom" constant="2" id="vyL-Ej-fal"/>
                             <constraint firstItem="61" firstAttribute="leading" secondItem="87" secondAttribute="leading" id="xOt-SK-WBj"/>
                         </constraints>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" size="11" name=".HiraKakuInterface-W3"/>
                     </box>
-                    <box horizontalHuggingPriority="249" misplaced="YES" title="Job:" translatesAutoresizingMaskIntoConstraints="NO" id="112">
+                    <box horizontalHuggingPriority="249" misplaced="YES" title="ページ処理:" translatesAutoresizingMaskIntoConstraints="NO" id="112">
                         <rect key="frame" x="519" y="54" width="264" height="208"/>
                         <view key="contentView" id="Fl1-Wf-oYP">
-                            <rect key="frame" x="2" y="2" width="260" height="191"/>
+                            <rect key="frame" x="2" y="2" width="260" height="194"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="117">
-                                    <rect key="frame" x="22" y="142" width="67" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="LOW" bezelStyle="rounded" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="2" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="121" id="552">
+                                    <rect key="frame" x="22" y="145" width="67" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="低" bezelStyle="rounded" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="2" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="121" id="552">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="118">
                                             <items>
-                                                <menuItem title="HIGH" id="119"/>
-                                                <menuItem title="MED" tag="1" id="120"/>
-                                                <menuItem title="LOW" state="on" tag="2" id="121"/>
+                                                <menuItem title="高" id="119"/>
+                                                <menuItem title="中" tag="1" id="120"/>
+                                                <menuItem title="低" state="on" tag="2" id="121"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -404,15 +404,15 @@
                                     </connections>
                                 </popUpButton>
                                 <popUpButton verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="123">
-                                    <rect key="frame" x="22" y="99" width="98" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="Paper" bezelStyle="rounded" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="2" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="127" id="554">
+                                    <rect key="frame" x="22" y="93" width="122" height="26"/>
+                                    <popUpButtonCell key="cell" type="push" title="紙" bezelStyle="rounded" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="2" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="127" id="554">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="124">
                                             <items>
-                                                <menuItem title="Blue Film" id="125"/>
-                                                <menuItem title="Clear Film" tag="1" id="126"/>
-                                                <menuItem title="Paper" state="on" tag="2" id="127"/>
+                                                <menuItem title="ブルーフィルム" id="125"/>
+                                                <menuItem title="クリアフィルム" tag="1" id="126"/>
+                                                <menuItem title="紙" state="on" tag="2" id="127"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -421,7 +421,7 @@
                                     </connections>
                                 </popUpButton>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="122">
-                                    <rect key="frame" x="24" y="58" width="41" height="22"/>
+                                    <rect key="frame" x="24" y="55" width="41" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="41" id="hiK-iJ-384"/>
                                     </constraints>
@@ -434,32 +434,24 @@
                                         <binding destination="11" name="value" keyPath="selection.copies" id="324"/>
                                     </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="128">
-                                    <rect key="frame" x="18" y="168" width="42" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Priority:" id="555">
-                                        <font key="font" metaFont="label"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="114">
-                                    <rect key="frame" x="18" y="125" width="47" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Medium:" id="550">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="18" y="119" width="47" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="印刷媒体:" id="550">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="116">
-                                    <rect key="frame" x="18" y="82" width="40" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copies:" id="551">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="18" y="78" width="40" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="部数:" id="551">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="229">
-                                    <rect key="frame" x="70" y="55" width="17" height="27"/>
+                                    <rect key="frame" x="70" y="52" width="17" height="27"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="11" id="5ja-ms-Smw"/>
                                     </constraints>
@@ -472,6 +464,14 @@
                                         </binding>
                                     </connections>
                                 </stepper>
+                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="128">
+                                    <rect key="frame" x="18" y="168" width="53" height="16"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="印刷優先度:" id="555">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
                             </subviews>
                         </view>
                         <constraints>
@@ -496,19 +496,18 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="114" secondAttribute="trailing" constant="5" id="pZW-ne-Lir"/>
                             <constraint firstItem="117" firstAttribute="top" secondItem="128" secondAttribute="bottom" constant="2" id="ues-cP-wlC"/>
                         </constraints>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" size="11" name=".HiraKakuInterface-W3"/>
                     </box>
-                    <box title="Currently selected printer" translatesAutoresizingMaskIntoConstraints="NO" id="129">
-                        <rect key="frame" x="18" y="415" width="765" height="74"/>
+                    <box title="現在選択されているプリンタ:" translatesAutoresizingMaskIntoConstraints="NO" id="129">
+                        <rect key="frame" x="18" y="403" width="765" height="71"/>
                         <view key="contentView" id="OKQ-4f-3bB">
                             <rect key="frame" x="2" y="2" width="761" height="57"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="138">
-                                    <rect key="frame" x="221" y="34" width="30" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Host:" id="560">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="221" y="34" width="44" height="10"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="ホスト名:" id="560">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -528,9 +527,9 @@
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="137">
-                                    <rect key="frame" x="461" y="34" width="27" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Port:" id="559">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="461" y="34" width="35" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="ポート:" id="559">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -550,7 +549,7 @@
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="269">
-                                    <rect key="frame" x="539" y="34" width="44" height="13"/>
+                                    <rect key="frame" x="539" y="34" width="45" height="13"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="AE Title:" id="561">
                                         <font key="font" metaFont="label"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -572,9 +571,9 @@
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="369">
-                                    <rect key="frame" x="15" y="34" width="71" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Printer Name:" id="563">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="15" y="34" width="53" height="10"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="プリンタ名:" id="563">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -616,17 +615,16 @@
                             <constraint firstItem="133" firstAttribute="baseline" secondItem="377" secondAttribute="baseline" id="sXx-wa-qPZ"/>
                             <constraint firstItem="138" firstAttribute="leading" secondItem="133" secondAttribute="leading" id="wA3-No-1cJ"/>
                         </constraints>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" size="11" name=".HiraKakuInterface-W3"/>
                     </box>
-                    <box title="Images:" translatesAutoresizingMaskIntoConstraints="NO" id="141">
-                        <rect key="frame" x="16" y="267" width="767" height="147"/>
+                    <box misplaced="YES" title="画像:" translatesAutoresizingMaskIntoConstraints="NO" id="141">
+                        <rect key="frame" x="16" y="266" width="767" height="137"/>
                         <view key="contentView" id="fgz-hP-FnS">
-                            <rect key="frame" x="2" y="2" width="763" height="130"/>
+                            <rect key="frame" x="2" y="2" width="763" height="123"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <matrix verticalHuggingPriority="750" misplaced="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="144">
-                                    <rect key="frame" x="71" y="36" width="148" height="58"/>
+                                    <rect key="frame" x="71" y="29" width="148" height="58"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     <size key="cellSize" width="148" height="18"/>
                                     <size key="intercellSpacing" width="4" height="2"/>
@@ -636,15 +634,15 @@
                                     </buttonCell>
                                     <cells>
                                         <column>
-                                            <buttonCell type="radio" title="Current image" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" inset="2" id="145">
+                                            <buttonCell type="radio" title="現在の画像" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" inset="2" id="145">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="smallSystem"/>
                                             </buttonCell>
-                                            <buttonCell type="radio" title="Only ROIs &amp; Key images" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="146">
+                                            <buttonCell type="radio" title="ROIs と Key 画像のみ" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="146">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="smallSystem"/>
                                             </buttonCell>
-                                            <buttonCell type="radio" title="Entire series, including:" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" tag="2" inset="2" id="147">
+                                            <buttonCell type="radio" title="右の設定で全シリーズ:" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" tag="2" inset="2" id="147">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="smallSystem"/>
                                             </buttonCell>
@@ -660,25 +658,25 @@
                                     </connections>
                                 </matrix>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="382">
-                                    <rect key="frame" x="14" y="79" width="51" height="15"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Selection:" id="565">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="14" y="72" width="51" height="15"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="選択:" id="565">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="384">
-                                    <rect key="frame" x="70" y="103" width="77" height="20"/>
-                                    <buttonCell key="cell" type="check" title="Colorprint" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" inset="2" id="566">
+                                    <rect key="frame" x="70" y="96" width="77" height="20"/>
+                                    <buttonCell key="cell" type="check" title="カラー印刷" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" inset="2" id="566">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                        <font key="font" metaFont="smallSystem"/>
+                                        <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                                     </buttonCell>
                                     <connections>
                                         <binding destination="11" name="value" keyPath="selection.colorPrint" id="441"/>
                                     </connections>
                                 </button>
-                                <box misplaced="YES" title="Box" boxType="secondary" borderType="bezel" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="487">
-                                    <rect key="frame" x="222" y="9" width="527" height="106"/>
+                                <box misplaced="YES" boxType="secondary" borderType="bezel" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="487">
+                                    <rect key="frame" x="222" y="6" width="527" height="106"/>
                                     <view key="contentView" id="NYc-bN-CyB">
                                         <rect key="frame" x="3" y="3" width="521" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -695,14 +693,14 @@
                                             </slider>
                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="494">
                                                 <rect key="frame" x="33" y="78" width="48" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Interval:" id="572">
-                                                    <font key="font" metaFont="smallSystem"/>
+                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="間隔:" id="572">
+                                                    <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="496">
-                                                <rect key="frame" x="125" y="46" width="380" height="16"/>
+                                                <rect key="frame" x="125" y="46" width="380" height="15"/>
                                                 <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="90" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="30" allowsTickMarkValuesOnly="YES" sliderType="linear" id="574">
                                                     <font key="font" size="12" name="Helvetica"/>
                                                 </sliderCell>
@@ -712,14 +710,14 @@
                                             </slider>
                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="489">
                                                 <rect key="frame" x="46" y="54" width="35" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="From:" id="567">
-                                                    <font key="font" metaFont="smallSystem"/>
+                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="から:" id="567">
+                                                    <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <slider verticalHuggingPriority="750" misplaced="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="495">
-                                                <rect key="frame" x="125" y="34" width="380" height="16"/>
+                                                <rect key="frame" x="125" y="34" width="380" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="380" id="HOk-Ia-QjL"/>
                                                 </constraints>
@@ -731,9 +729,9 @@
                                                 </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="497">
-                                                <rect key="frame" x="60" y="30" width="21" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="To:" id="575">
-                                                    <font key="font" metaFont="smallSystem"/>
+                                                <rect key="frame" x="53" y="30" width="28" height="14"/>
+                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="まで:" id="575">
+                                                    <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -783,9 +781,9 @@
                                                 </connections>
                                             </textField>
                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="523">
-                                                <rect key="frame" x="43" y="8" width="38" height="14"/>
-                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Pages:" id="576">
-                                                    <font key="font" metaFont="smallSystem"/>
+                                                <rect key="frame" x="33" y="8" width="48" height="14"/>
+                                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="ページ数:" id="576">
+                                                    <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
@@ -795,7 +793,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="125" id="JNq-d3-c5W"/>
                                                 </constraints>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="40 pages" id="577">
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="40 ページ" id="577">
                                                     <font key="font" metaFont="smallSystem"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -844,13 +842,11 @@
                                         <constraint firstItem="490" firstAttribute="leading" secondItem="493" secondAttribute="leading" id="zH0-ZP-1Em"/>
                                         <constraint firstItem="523" firstAttribute="top" secondItem="497" secondAttribute="bottom" constant="8" symbolic="YES" id="zNZ-FE-c9i"/>
                                     </constraints>
-                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </box>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="502">
-                                    <rect key="frame" x="31" y="105" width="34" height="13"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Mode:" id="578">
-                                        <font key="font" metaFont="label"/>
+                                    <rect key="frame" x="30" y="98" width="35" height="13"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="モード:" id="578">
+                                        <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -876,14 +872,13 @@
                             <constraint firstItem="487" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="384" secondAttribute="trailing" constant="6" id="kS9-Ql-aJy"/>
                             <constraint firstAttribute="trailing" secondItem="487" secondAttribute="trailing" constant="16" id="xkU-YK-6Ua"/>
                         </constraints>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" size="11" name=".HiraKakuInterface-W3"/>
                     </box>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="210">
-                        <rect key="frame" x="698" y="13" width="82" height="32"/>
-                        <buttonCell key="cell" type="push" title="Print" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="579">
+                        <rect key="frame" x="679" y="13" width="101" height="32"/>
+                        <buttonCell key="cell" type="push" title="プリント" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="579">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -898,10 +893,10 @@ DQ
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="358">
-                        <rect key="frame" x="610" y="13" width="82" height="32"/>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="580">
+                        <rect key="frame" x="572" y="13" width="101" height="32"/>
+                        <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="580">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
@@ -911,10 +906,10 @@ Gw
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="407">
-                        <rect key="frame" x="472" y="13" width="138" height="29"/>
-                        <buttonCell key="cell" type="push" title="Show Printers..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="581">
+                        <rect key="frame" x="428" y="13" width="138" height="29"/>
+                        <buttonCell key="cell" type="push" title="プリンタを表示..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="581">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <action selector="toggle:" target="5" id="408"/>
@@ -932,7 +927,7 @@ Gw
                     <constraint firstItem="31" firstAttribute="top" secondItem="141" secondAttribute="bottom" constant="9" id="FWX-bJ-2xK"/>
                     <constraint firstItem="210" firstAttribute="leading" secondItem="358" secondAttribute="trailing" constant="18" id="Sbk-co-qd9"/>
                     <constraint firstItem="112" firstAttribute="leading" secondItem="12" secondAttribute="trailing" constant="18" id="SgA-Za-a1h"/>
-                    <constraint firstItem="358" firstAttribute="leading" secondItem="407" secondAttribute="trailing" constant="12" symbolic="YES" id="TK1-39-O7z"/>
+                    <constraint firstItem="358" firstAttribute="leading" secondItem="407" secondAttribute="trailing" constant="18" id="TK1-39-O7z"/>
                     <constraint firstItem="129" firstAttribute="trailing" secondItem="141" secondAttribute="trailing" id="TLx-za-kDb"/>
                     <constraint firstAttribute="bottom" secondItem="31" secondAttribute="bottom" constant="58" id="TQa-Dc-bAa"/>
                     <constraint firstAttribute="trailing" secondItem="210" secondAttribute="trailing" constant="26" id="W9c-yM-vah"/>
@@ -950,6 +945,7 @@ Gw
             <connections>
                 <outlet property="delegate" destination="-2" id="ZMq-YF-Ayu"/>
             </connections>
+            <point key="canvasLocation" x="132" y="164.5"/>
         </window>
         <customView id="8" userLabel="PrintersList">
             <rect key="frame" x="0.0" y="0.0" width="194" height="299"/>
@@ -957,9 +953,9 @@ Gw
             <subviews>
                 <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="451">
                     <rect key="frame" x="29" y="-4" width="136" height="32"/>
-                    <buttonCell key="cell" type="push" title="Verify printer..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="583">
+                    <buttonCell key="cell" type="push" title="プリンタを検証..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="583">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                     </buttonCell>
                     <connections>
                         <action selector="verifyConnection:" target="-2" id="486"/>
@@ -968,18 +964,18 @@ Gw
                 <scrollView horizontalLineScroll="19" horizontalPageScroll="0.0" verticalLineScroll="19" verticalPageScroll="0.0" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="442">
                     <rect key="frame" x="0.0" y="31" width="194" height="268"/>
                     <clipView key="contentView" id="P9d-xC-BUi">
-                        <rect key="frame" x="1" y="0.0" width="192" height="267"/>
+                        <rect key="frame" x="1" y="0.0" width="181" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" headerView="590" id="443">
-                                <rect key="frame" x="0.0" y="0.0" width="192" height="244"/>
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn editable="NO" width="164" minWidth="164" maxWidth="164" id="446">
-                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Dicom Printers">
+                                    <tableColumn identifier="" editable="NO" width="164" minWidth="164" maxWidth="164" id="446">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="DICOM プリンタ">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -1002,7 +998,7 @@ Gw
                                             </binding>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn editable="NO" width="17" minWidth="4" maxWidth="17" id="444">
+                                    <tableColumn identifier="" editable="NO" width="17" minWidth="4" maxWidth="17" id="444">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1016,18 +1012,17 @@ Gw
                                 </tableColumns>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <scroller key="horizontalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="589">
-                        <rect key="frame" x="1" y="253" width="192" height="14"/>
+                        <rect key="frame" x="1" y="256" width="181" height="11"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="588">
-                        <rect key="frame" x="179" y="23" width="14" height="244"/>
+                        <rect key="frame" x="182" y="23" width="11" height="233"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <tableHeaderView key="headerView" id="590">
-                        <rect key="frame" x="0.0" y="0.0" width="192" height="23"/>
+                        <rect key="frame" x="0.0" y="0.0" width="187" height="23"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
@@ -1086,31 +1081,31 @@ Gw
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1032" y="393" width="242" height="90"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <value key="minSize" type="size" width="144.006" height="5"/>
             <view key="contentView" id="468">
                 <rect key="frame" x="0.0" y="0.0" width="242" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="476">
-                        <rect key="frame" x="17" y="56" width="200" height="14"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Preparing Print..." id="585">
-                            <font key="font" metaFont="smallSystem"/>
+                        <rect key="frame" x="17" y="59" width="200" height="11"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="プリント処理中..." id="585">
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <tabView drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="469">
-                        <rect key="frame" x="0.0" y="6" width="242" height="42"/>
+                        <rect key="frame" x="0.0" y="6" width="242" height="45"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Progress Bar" identifier="1" id="470">
                                 <view key="view" id="471">
-                                    <rect key="frame" x="0.0" y="0.0" width="242" height="42"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="242" height="45"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <progressIndicator verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="472">
-                                            <rect key="frame" x="18" y="13" width="206" height="20"/>
+                                        <progressIndicator wantsLayer="YES" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="472">
+                                            <rect key="frame" x="18" y="16" width="206" height="20"/>
                                         </progressIndicator>
                                     </subviews>
                                     <constraints>
@@ -1127,6 +1122,7 @@ Gw
                                     <subviews>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="475">
                                             <rect key="frame" x="172" y="9" width="55" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="584">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="smallSystem"/>

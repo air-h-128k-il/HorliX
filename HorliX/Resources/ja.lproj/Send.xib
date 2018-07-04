@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SendController">
@@ -22,7 +22,7 @@
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="329" y="257" width="534" height="292"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="534" height="292"/>
@@ -39,18 +39,18 @@
                         </buttonCell>
                         <cells>
                             <column>
-                                <buttonCell type="radio" title="All images" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="32">
+                                <buttonCell type="radio" title="全画像" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="32">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <buttonCell type="radio" title="Only key images" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="34">
+                                <buttonCell type="radio" title="キー画像のみ" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="34">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <connections>
                                         <binding destination="-2" name="enabled" keyPath="self.hasKeyImages" id="L8T-jp-09m"/>
                                     </connections>
                                 </buttonCell>
-                                <buttonCell type="radio" title="Only Secondary Captures (SC)" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="2" inset="2" id="33">
+                                <buttonCell type="radio" title="セカンダリキャプチャ (SC) のみ" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" tag="2" inset="2" id="33">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <connections>
@@ -68,9 +68,9 @@
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="TOP-wv-0Oj"/>
                         </constraints>
-                        <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" tag="1" inset="2" id="102">
+                        <buttonCell key="cell" type="push" title="送信" bezelStyle="rounded" alignment="center" borderStyle="border" tag="1" inset="2" id="102">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -80,13 +80,13 @@ DQ
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7">
-                        <rect key="frame" x="315" y="13" width="97" height="32"/>
+                        <rect key="frame" x="311" y="13" width="101" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="ats-fd-dzc"/>
                         </constraints>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="95">
+                        <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="95">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
@@ -97,8 +97,8 @@ Gw
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35">
                         <rect key="frame" x="64" y="265" width="106" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Number of files:" id="99">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="ファイル数:" id="99">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -123,30 +123,30 @@ Gw
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39">
                         <rect key="frame" x="51" y="235" width="119" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Select destination:" id="103">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="送信先を選択:" id="103">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30">
                         <rect key="frame" x="65" y="185" width="105" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Transfer Syntax:" id="98">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="転送構文:" id="98">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="37">
-                        <rect key="frame" x="131" y="126" width="39" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Send:" id="101">
-                            <font key="font" metaFont="system"/>
+                        <rect key="frame" x="139" y="130" width="31" height="13"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="送信:" id="101">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <popUpButton verticalHuggingPriority="750" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                        <rect key="frame" x="172" y="179" width="252" height="26"/>
+                        <rect key="frame" x="172" y="179" width="205" height="26"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="96">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -156,14 +156,14 @@ Gw
                                     <menuItem title="Implicit Little Endian only" tag="9" id="13"/>
                                     <menuItem isSeparatorItem="YES" tag="-1" id="116"/>
                                     <menuItem title="JPEG 2000 Lossless" tag="1" id="67"/>
-                                    <menuItem title="JPEG 2000 Lossy - Good Quality" tag="2" id="71"/>
-                                    <menuItem title="JPEG 2000 Lossy - Medium Quality" tag="3" id="72"/>
-                                    <menuItem title="JPEG 2000 Lossy - Low Quality" tag="4" id="73"/>
+                                    <menuItem title="JPEG 2000 Lossy - 高品質" tag="2" id="71"/>
+                                    <menuItem title="JPEG 2000 Lossy - 標準品質" tag="3" id="72"/>
+                                    <menuItem title="JPEG 2000 Lossy - 低品質" tag="4" id="73"/>
                                     <menuItem isSeparatorItem="YES" tag="-1" id="147"/>
                                     <menuItem title="JPEG LS Lossless" tag="13" id="148"/>
-                                    <menuItem title="JPEG LS Lossy - Good Quality" tag="14" id="149"/>
-                                    <menuItem title="JPEG LS Lossy - Medium Quality" tag="15" id="150"/>
-                                    <menuItem title="JPEG LS Lossy - Low Quality" tag="16" id="151"/>
+                                    <menuItem title="JPEG LS Lossy - 高品質" tag="14" id="149"/>
+                                    <menuItem title="JPEG LS Lossy - 標準品質" tag="15" id="150"/>
+                                    <menuItem title="JPEG LS Lossy - 低品質" tag="16" id="151"/>
                                     <menuItem isSeparatorItem="YES" tag="-1" id="117"/>
                                     <menuItem title="JPEG Lossless" tag="5" id="16"/>
                                 </items>
@@ -183,7 +183,7 @@ Gw
                     </textField>
                     <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90">
                         <rect key="frame" x="181" y="59" width="253" height="18"/>
-                        <buttonCell key="cell" type="check" title="Include ROIs, Comments, Reports, ..." bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="105">
+                        <buttonCell key="cell" type="check" title="ROIs、コメント、レポートを含める..." bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="105">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -201,8 +201,8 @@ Gw
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="152">
                         <rect key="frame" x="14" y="155" width="156" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Number of associations:" id="153">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="通信経路数:" id="153">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -231,11 +231,11 @@ Gw
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="156">
                                 <items>
-                                    <menuItem title="Single association" tag="1" id="157">
+                                    <menuItem title="単一通信路" tag="1" id="157">
                                         <modifierMask key="keyEquivalentModifierMask"/>
                                     </menuItem>
-                                    <menuItem title="2 simultaneous associations" tag="2" id="158"/>
-                                    <menuItem title="4 simultaneous associations" tag="4" id="159"/>
+                                    <menuItem title="同時に 2 通信路" tag="2" id="158"/>
+                                    <menuItem title="同時に 4 通信路" tag="4" id="159"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>

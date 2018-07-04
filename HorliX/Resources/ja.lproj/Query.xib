@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="QueryController">
@@ -50,30 +50,30 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="DICOM Query/Retrieve" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="QR" animationBehavior="default" id="144" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
-            <rect key="contentRect" x="0.0" y="0.0" width="914" height="672"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="contentRect" x="0.0" y="0.0" width="929" height="672"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <value key="minSize" type="size" width="914" height="672"/>
             <view key="contentView" id="145">
-                <rect key="frame" x="0.0" y="0.0" width="914" height="672"/>
+                <rect key="frame" x="0.0" y="0.0" width="929" height="672"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1170" customClass="SFHorosAuthorizationView">
-                        <rect key="frame" x="749" y="611" width="165" height="60"/>
+                        <rect key="frame" x="749" y="611" width="180" height="60"/>
                     </customView>
                     <tabView controlSize="mini" translatesAutoresizingMaskIntoConstraints="NO" id="657">
-                        <rect key="frame" x="0.0" y="612" width="914" height="62"/>
+                        <rect key="frame" x="0.0" y="612" width="929" height="62"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="C9l-iM-KTe"/>
                         </constraints>
                         <font key="font" metaFont="miniSystem"/>
                         <tabViewItems>
-                            <tabViewItem label="Name" identifier="1" id="660">
+                            <tabViewItem label="患者氏名" identifier="1" id="660">
                                 <view key="view" id="661">
-                                    <rect key="frame" x="10" y="28" width="894" height="21"/>
+                                    <rect key="frame" x="10" y="28" width="909" height="21"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="667">
-                                            <rect key="frame" x="47" y="-6" width="771" height="22"/>
+                                            <rect key="frame" x="47" y="-6" width="786" height="22"/>
                                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Patient Name" bezelStyle="round" sendsWholeSearchString="YES" maximumRecents="20" recentsAutosaveName="LastQueryPatientName" id="749">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -92,13 +92,13 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Patient ID" identifier="2" id="658">
+                            <tabViewItem label="患者 ID" identifier="2" id="658">
                                 <view key="view" id="659">
-                                    <rect key="frame" x="10" y="19" width="929" height="30"/>
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="665">
-                                            <rect key="frame" x="47" y="3" width="806" height="22"/>
+                                            <rect key="frame" x="47" y="3" width="786" height="22"/>
                                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Patient ID" bezelStyle="round" sendsWholeSearchString="YES" maximumRecents="20" recentsAutosaveName="LastQueryPatientID" id="748">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -118,13 +118,13 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Accession Number" identifier="2" id="730">
+                            <tabViewItem label="受付番号" identifier="2" id="730">
                                 <view key="view" id="731">
-                                    <rect key="frame" x="10" y="19" width="929" height="30"/>
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="732">
-                                            <rect key="frame" x="47" y="3" width="806" height="22"/>
+                                            <rect key="frame" x="47" y="3" width="786" height="22"/>
                                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Accession Number" bezelStyle="round" sendsWholeSearchString="YES" maximumRecents="20" recentsAutosaveName="LastQueryPatientAccessionNumber" id="751">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -144,15 +144,15 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Birthdate" identifier="2" id="662">
-                                <view key="view" id="663">
-                                    <rect key="frame" x="10" y="19" width="1107" height="31"/>
+                            <tabViewItem label="生年月日" identifier="2" id="662">
+                                <view key="view" misplaced="YES" id="663">
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="990">
-                                            <rect key="frame" x="200" y="7" width="469" height="18"/>
+                                            <rect key="frame" x="200" y="7" width="271" height="18"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="cellSize" width="153" height="18"/>
+                                            <size key="cellSize" width="87" height="18"/>
                                             <size key="intercellSpacing" width="4" height="2"/>
                                             <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="993">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -160,19 +160,19 @@
                                             </buttonCell>
                                             <cells>
                                                 <column>
-                                                    <buttonCell type="radio" title="Exactly" imagePosition="left" alignment="left" state="on" inset="2" id="991">
+                                                    <buttonCell type="radio" title="指定当日" imagePosition="left" alignment="left" state="on" inset="2" id="991">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                 </column>
                                                 <column>
-                                                    <buttonCell type="radio" title="Before" imagePosition="left" alignment="left" tag="-1" inset="2" id="994">
+                                                    <buttonCell type="radio" title="以前" imagePosition="left" alignment="left" tag="-1" inset="2" id="994">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                 </column>
                                                 <column>
-                                                    <buttonCell type="radio" title="After" imagePosition="left" alignment="left" tag="1" inset="2" id="995">
+                                                    <buttonCell type="radio" title="以後" imagePosition="left" alignment="left" tag="1" inset="2" id="995">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
@@ -183,27 +183,26 @@
                                             </connections>
                                         </matrix>
                                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="997">
-                                            <rect key="frame" x="674" y="8" width="84" height="17"/>
+                                            <rect key="frame" x="476" y="8" width="84" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="Zyb-Y4-8s6"/>
                                             </constraints>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XX Years" id="998">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="XX 年" id="998">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="686">
-                                            <rect key="frame" x="767" y="3" width="123" height="27"/>
+                                            <rect key="frame" x="569" y="3" width="123" height="27"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="TXu-0y-kx3"/>
                                             </constraints>
                                             <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="750">
                                                 <font key="font" metaFont="system"/>
-                                                <calendarDate key="date" timeIntervalSinceReferenceDate="-885430800" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                                    <!--1972-12-11 00:00:00 +0100-->
-                                                    <timeZone key="timeZone" name="Europe/Zurich"/>
-                                                </calendarDate>
+                                                <date key="date" timeIntervalSinceReferenceDate="-885430800">
+                                                    <!--1972-12-10 23:00:00 +0000-->
+                                                </date>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             </datePickerCell>
@@ -225,13 +224,13 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Description" identifier="2" id="901">
+                            <tabViewItem label="検査部位" identifier="2" id="901">
                                 <view key="view" id="902">
-                                    <rect key="frame" x="10" y="19" width="929" height="30"/>
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="903">
-                                            <rect key="frame" x="47" y="3" width="806" height="22"/>
+                                            <rect key="frame" x="47" y="3" width="786" height="22"/>
                                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Study Description" bezelStyle="round" sendsWholeSearchString="YES" maximumRecents="20" recentsAutosaveName="LastQueryPatientStudyDescription" id="904">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -251,13 +250,13 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Referring Physician" identifier="Item 5" id="928">
+                            <tabViewItem label="依頼医師" identifier="Item 5" id="928">
                                 <view key="view" id="929">
-                                    <rect key="frame" x="10" y="19" width="929" height="30"/>
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="930">
-                                            <rect key="frame" x="47" y="3" width="806" height="22"/>
+                                            <rect key="frame" x="47" y="3" width="786" height="22"/>
                                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Referring Physician" bezelStyle="round" sendsWholeSearchString="YES" maximumRecents="20" recentsAutosaveName="LastQueryReferingPhysician" id="931">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -277,13 +276,13 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Comments" identifier="Item 6" id="978">
+                            <tabViewItem label="コメント" identifier="Item 6" id="978">
                                 <view key="view" id="979">
-                                    <rect key="frame" x="10" y="19" width="929" height="30"/>
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="980">
-                                            <rect key="frame" x="47" y="3" width="806" height="22"/>
+                                            <rect key="frame" x="47" y="3" width="786" height="22"/>
                                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Comments" bezelStyle="round" sendsWholeSearchString="YES" maximumRecents="20" recentsAutosaveName="LastQueryPatientComments" id="981">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -303,13 +302,13 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Institution" identifier="InstitutionName" id="984">
+                            <tabViewItem label="施設" identifier="InstitutionName" id="984">
                                 <view key="view" id="985">
-                                    <rect key="frame" x="10" y="19" width="929" height="30"/>
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="986">
-                                            <rect key="frame" x="47" y="3" width="806" height="22"/>
+                                            <rect key="frame" x="47" y="3" width="786" height="22"/>
                                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Institution Name" bezelStyle="round" sendsWholeSearchString="YES" maximumRecents="20" recentsAutosaveName="LastQueryInstitutionName" id="987">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -329,13 +328,13 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Custom DICOM field" identifier="" id="1020">
+                            <tabViewItem label="カスタム DICOM フィールド" identifier="" id="1020">
                                 <view key="view" id="1021">
-                                    <rect key="frame" x="10" y="19" width="929" height="30"/>
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1022">
-                                            <rect key="frame" x="285" y="3" width="591" height="22"/>
+                                            <rect key="frame" x="285" y="3" width="571" height="22"/>
                                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Custom Field" bezelStyle="round" sendsWholeSearchString="YES" maximumRecents="20" recentsAutosaveName="LastCustomField" id="1023">
                                                 <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -378,15 +377,15 @@
                                     </constraints>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Status" identifier="" id="wkC-34-4da">
+                            <tabViewItem label="状況" identifier="" id="wkC-34-4da">
                                 <view key="view" id="swM-cm-wXp">
-                                    <rect key="frame" x="10" y="19" width="894" height="30"/>
+                                    <rect key="frame" x="10" y="19" width="909" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yv0-9O-bNQ">
-                                            <rect key="frame" x="239" y="6" width="416" height="18"/>
+                                            <rect key="frame" x="209" y="6" width="491" height="18"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="cellSize" width="80" height="18"/>
+                                            <size key="cellSize" width="95" height="18"/>
                                             <size key="intercellSpacing" width="4" height="2"/>
                                             <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="ln8-pj-dKo">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -394,31 +393,31 @@
                                             </buttonCell>
                                             <cells>
                                                 <column>
-                                                    <buttonCell type="radio" title="Empty" imagePosition="left" alignment="left" state="on" inset="2" id="M0x-W9-9Pj">
+                                                    <buttonCell type="radio" title="空 (から)" imagePosition="left" alignment="left" state="on" inset="2" id="M0x-W9-9Pj">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                 </column>
                                                 <column>
-                                                    <buttonCell type="radio" title="Unread" imagePosition="left" alignment="left" tag="1" inset="2" id="W8y-EC-U1k">
+                                                    <buttonCell type="radio" title="未読" imagePosition="left" alignment="left" tag="1" inset="2" id="W8y-EC-U1k">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                 </column>
                                                 <column>
-                                                    <buttonCell type="radio" title="Reviewed" imagePosition="left" alignment="left" tag="2" inset="2" id="gf0-Wl-OKO">
+                                                    <buttonCell type="radio" title="レビュー済み" imagePosition="left" alignment="left" tag="2" inset="2" id="gf0-Wl-OKO">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                 </column>
                                                 <column>
-                                                    <buttonCell type="radio" title="Dictated" imagePosition="left" alignment="left" tag="3" inset="2" id="HGm-N3-vvN">
+                                                    <buttonCell type="radio" title="指示済み" imagePosition="left" alignment="left" tag="3" inset="2" id="HGm-N3-vvN">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                 </column>
                                                 <column>
-                                                    <buttonCell type="radio" title="Validated" imagePosition="left" alignment="left" tag="4" inset="2" id="6EI-T6-COt">
+                                                    <buttonCell type="radio" title="検証済み" imagePosition="left" alignment="left" tag="4" inset="2" id="6EI-T6-COt">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
@@ -439,7 +438,7 @@
                         </tabViewItems>
                     </tabView>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="788">
-                        <rect key="frame" x="868" y="625" width="26" height="28"/>
+                        <rect key="frame" x="883" y="625" width="26" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="26" id="sd3-FN-jgK"/>
                         </constraints>
@@ -456,14 +455,14 @@
                         </popUpButtonCell>
                     </popUpButton>
                     <splitView dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="1153">
-                        <rect key="frame" x="-14" y="1" width="940" height="619"/>
+                        <rect key="frame" x="-14" y="1" width="955" height="619"/>
                         <subviews>
                             <customView id="1152">
-                                <rect key="frame" x="0.0" y="0.0" width="940" height="165"/>
+                                <rect key="frame" x="0.0" y="0.0" width="955" height="165"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <box title="Title" boxType="secondary" borderType="bezel" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="549">
-                                        <rect key="frame" x="809" y="0.0" width="114" height="167"/>
+                                    <box boxType="secondary" borderType="bezel" title="Title" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="549">
+                                        <rect key="frame" x="824" y="0.0" width="114" height="167"/>
                                         <view key="contentView" id="aEc-MA-5eL">
                                             <rect key="frame" x="3" y="3" width="108" height="161"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -575,31 +574,29 @@
                                             <constraint firstItem="528" firstAttribute="top" secondItem="549" secondAttribute="top" constant="5" id="lVq-6s-dbn"/>
                                             <constraint firstAttribute="width" constant="108" id="o2J-N2-H60"/>
                                         </constraints>
-                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </box>
-                                    <box title="Title" boxType="secondary" borderType="bezel" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="717">
-                                        <rect key="frame" x="17" y="0.0" width="366" height="167"/>
+                                    <box boxType="secondary" borderType="bezel" title="Title" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="717">
+                                        <rect key="frame" x="17" y="0.0" width="453" height="167"/>
                                         <view key="contentView" id="mbS-AF-SQr">
-                                            <rect key="frame" x="3" y="3" width="360" height="161"/>
+                                            <rect key="frame" x="3" y="3" width="447" height="161"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="641">
-                                                    <rect key="frame" x="6" y="139" width="69" height="18"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DICOM Nodes:" id="753">
+                                                    <rect key="frame" x="6" y="139" width="66" height="18"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DICOM ノード:" id="753">
                                                         <font key="font" metaFont="miniSystem"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
                                                 <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="0.0" verticalLineScroll="19" verticalPageScroll="0.0" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="690">
-                                                    <rect key="frame" x="6" y="6" width="348" height="139"/>
+                                                    <rect key="frame" x="6" y="6" width="435" height="139"/>
                                                     <clipView key="contentView" id="Gmi-iM-SZh">
-                                                        <rect key="frame" x="1" y="0.0" width="346" height="138"/>
+                                                        <rect key="frame" x="1" y="0.0" width="433" height="138"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveName="srcsTable" headerView="VCg-wO-Khi" id="691" customClass="sourcesTableView">
-                                                                <rect key="frame" x="0.0" y="0.0" width="392" height="115"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="433" height="115"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -622,8 +619,8 @@
                                                                             <binding destination="696" name="value" keyPath="arrangedObjects.activated" id="698"/>
                                                                         </connections>
                                                                     </tableColumn>
-                                                                    <tableColumn identifier="name" editable="NO" width="60" minWidth="60" maxWidth="200" id="692">
-                                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
+                                                                    <tableColumn identifier="name" editable="NO" width="81" minWidth="60" maxWidth="200" id="692">
+                                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="サーバ名">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -639,7 +636,7 @@
                                                                         </connections>
                                                                     </tableColumn>
                                                                     <tableColumn identifier="AETitle" editable="NO" width="140" minWidth="140" maxWidth="140" id="709">
-                                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="AETitle">
+                                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="AE Title">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -658,8 +655,8 @@
                                                                             </binding>
                                                                         </connections>
                                                                     </tableColumn>
-                                                                    <tableColumn identifier="AddressAndPort" editable="NO" width="160" minWidth="160" maxWidth="200" id="701">
-                                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Address">
+                                                                    <tableColumn identifier="AddressAndPort" editable="NO" width="180" minWidth="160" maxWidth="200" id="701">
+                                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="アドレス">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -682,10 +679,9 @@
                                                                 </connections>
                                                             </tableView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </clipView>
-                                                    <scroller key="horizontalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="782">
-                                                        <rect key="frame" x="1" y="124" width="346" height="14"/>
+                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="782">
+                                                        <rect key="frame" x="1" y="127" width="361" height="11"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="781">
@@ -693,17 +689,17 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <tableHeaderView key="headerView" id="VCg-wO-Khi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="392" height="23"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="433" height="23"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </tableHeaderView>
                                                 </scrollView>
                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="727">
-                                                    <rect key="frame" x="135" y="140" width="220" height="17"/>
+                                                    <rect key="frame" x="246" y="140" width="196" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="zqz-kX-Y2v"/>
                                                     </constraints>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Drag sources into the priority order for retrieving" id="754">
-                                                        <font key="font" metaFont="miniSystem"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="ソースをドラッグしてリトリーブの優先順位を設定" id="754">
+                                                        <font key="font" size="9" name=".HiraKakuInterface-W3"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -722,19 +718,17 @@
                                             <constraint firstItem="690" firstAttribute="leading" secondItem="717" secondAttribute="leading" constant="6" id="lCa-Pa-yyT"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="sUc-8I-IEA"/>
                                         </constraints>
-                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </box>
                                     <box boxType="secondary" borderType="bezel" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="551">
-                                        <rect key="frame" x="385" y="0.0" width="421" height="167"/>
+                                        <rect key="frame" x="472" y="0.0" width="349" height="167"/>
                                         <view key="contentView" id="adj-hK-ywP">
-                                            <rect key="frame" x="3" y="3" width="415" height="161"/>
+                                            <rect key="frame" x="3" y="3" width="343" height="161"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <matrix verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="515">
-                                                    <rect key="frame" x="5" y="1" width="413" height="158"/>
+                                                    <rect key="frame" x="5" y="1" width="341" height="158"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                    <size key="cellSize" width="135" height="18"/>
+                                                    <size key="cellSize" width="111" height="18"/>
                                                     <size key="intercellSpacing" width="4" height="2"/>
                                                     <buttonCell key="prototype" type="radio" title="Last 3 hours" imagePosition="left" alignment="left" controlSize="small" tag="103" inset="2" id="1099">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -742,53 +736,53 @@
                                                     </buttonCell>
                                                     <cells>
                                                         <column>
-                                                            <buttonCell type="radio" title="Any date" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="603">
+                                                            <buttonCell type="radio" title="任意の日付" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="603">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Today AM" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="10" inset="2" id="605">
+                                                            <buttonCell type="radio" title="今日の午前" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="10" inset="2" id="605">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Today PM" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="11" inset="2" id="607">
+                                                            <buttonCell type="radio" title="今日の午後" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="11" inset="2" id="607">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Today" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="609">
+                                                            <buttonCell type="radio" title="今日" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="1" inset="2" id="609">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Yesterday" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="2" inset="2" id="611">
+                                                            <buttonCell type="radio" title="昨日" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="2" inset="2" id="611">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Day Before Yesterday" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="9" inset="2" id="817">
+                                                            <buttonCell type="radio" title="一昨日" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="9" inset="2" id="817">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 2 days" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="7" inset="2" id="1085">
+                                                            <buttonCell type="radio" title="2 日以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="7" inset="2" id="1085">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 7 days" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="3" inset="2" id="1095">
+                                                            <buttonCell type="radio" title="7 日以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="3" inset="2" id="1095">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
                                                         </column>
                                                         <column>
-                                                            <buttonCell type="radio" title="Last month" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="4" inset="2" id="604">
+                                                            <buttonCell type="radio" title="先月" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="4" inset="2" id="604">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 3 months" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="8" inset="2" id="606">
+                                                            <buttonCell type="radio" title="3 か月以内" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="8" inset="2" id="606">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="On:" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="6" inset="2" id="608">
+                                                            <buttonCell type="radio" title="指定:" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="6" inset="2" id="608">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Between:" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="5" inset="2" id="610">
+                                                            <buttonCell type="radio" title="期間:" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="5" inset="2" id="610">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
@@ -810,35 +804,35 @@
                                                             </buttonCell>
                                                         </column>
                                                         <column>
-                                                            <buttonCell type="radio" title="Last 30 min" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="230" inset="2" id="1008">
+                                                            <buttonCell type="radio" title="30 分以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="230" inset="2" id="1008">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 1 hour" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="101" inset="2" id="1013">
+                                                            <buttonCell type="radio" title="1 時間以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="101" inset="2" id="1013">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 2 hours" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="102" inset="2" id="1007">
+                                                            <buttonCell type="radio" title="2 時間以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="102" inset="2" id="1007">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 3 hours" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="103" inset="2" id="1014">
+                                                            <buttonCell type="radio" title="3 時間以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="103" inset="2" id="1014">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 6 hours" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="106" inset="2" id="1010">
+                                                            <buttonCell type="radio" title="6 時間以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="106" inset="2" id="1010">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 8 hours" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="108" inset="2" id="1011">
+                                                            <buttonCell type="radio" title="8 時間以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="108" inset="2" id="1011">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 12 hours" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="112" inset="2" id="1083">
+                                                            <buttonCell type="radio" title="12 時間以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="112" inset="2" id="1083">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
-                                                            <buttonCell type="radio" title="Last 24 hours" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="124" inset="2" id="1097">
+                                                            <buttonCell type="radio" title="24 時間以内" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" tag="124" inset="2" id="1097">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="smallSystem"/>
                                                             </buttonCell>
@@ -850,28 +844,26 @@
                                                     </connections>
                                                 </matrix>
                                                 <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="969">
-                                                    <rect key="frame" x="157" y="55" width="104" height="27"/>
+                                                    <rect key="frame" x="121" y="55" width="104" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="101" id="VLO-b4-EXk"/>
                                                     </constraints>
                                                     <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="970">
                                                         <font key="font" metaFont="system"/>
-                                                        <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                                            <!--1982-02-12 08:00:00 -0800-->
-                                                            <timeZone key="timeZone" name="US/Pacific"/>
-                                                        </calendarDate>
+                                                        <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                                                            <!--1982-02-12 16:00:00 +0000-->
+                                                        </date>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     </datePickerCell>
                                                 </datePicker>
                                                 <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="971">
-                                                    <rect key="frame" x="157" y="24" width="104" height="27"/>
+                                                    <rect key="frame" x="121" y="24" width="104" height="27"/>
                                                     <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="972">
                                                         <font key="font" metaFont="system"/>
-                                                        <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                                            <!--1982-02-12 08:00:00 -0800-->
-                                                            <timeZone key="timeZone" name="US/Pacific"/>
-                                                        </calendarDate>
+                                                        <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                                                            <!--1982-02-12 16:00:00 +0000-->
+                                                        </date>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     </datePickerCell>
@@ -890,8 +882,6 @@
                                             <constraint firstAttribute="centerX" secondItem="969" secondAttribute="centerX" id="vhc-1W-V5G"/>
                                             <constraint firstAttribute="centerX" secondItem="971" secondAttribute="centerX" id="ydy-yi-U5h"/>
                                         </constraints>
-                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </box>
                                 </subviews>
                                 <constraints>
@@ -908,11 +898,11 @@
                                 </constraints>
                             </customView>
                             <customView id="1151">
-                                <rect key="frame" x="0.0" y="166" width="940" height="453"/>
+                                <rect key="frame" x="0.0" y="166" width="955" height="453"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="836">
-                                        <rect key="frame" x="846" y="432" width="48" height="14"/>
+                                        <rect key="frame" x="861" y="432" width="48" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="3Jk-NX-1Rs"/>
                                         </constraints>
@@ -923,7 +913,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="736">
-                                        <rect key="frame" x="100" y="427" width="247" height="22"/>
+                                        <rect key="frame" x="103" y="427" width="247" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="241" id="24q-cN-3hl"/>
                                         </constraints>
@@ -943,18 +933,18 @@
                                         </popUpButtonCell>
                                     </popUpButton>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="683">
-                                        <rect key="frame" x="588" y="20" width="335" height="13"/>
+                                        <rect key="frame" x="603" y="20" width="335" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="331" id="UDO-LA-hDD"/>
                                         </constraints>
-                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="XX studies found" id="752">
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="XX スタディ見つかりました" id="752">
                                             <font key="font" metaFont="systemBold" size="10"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="719">
-                                        <rect key="frame" x="514" y="6" width="406" height="13"/>
+                                        <rect key="frame" x="529" y="6" width="406" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="402" id="jbi-tD-A0m"/>
                                         </constraints>
@@ -965,13 +955,13 @@
                                         </textFieldCell>
                                     </textField>
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="0.0" verticalLineScroll="19" verticalPageScroll="0.0" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="321">
-                                        <rect key="frame" x="21" y="38" width="899" height="374"/>
+                                        <rect key="frame" x="21" y="38" width="914" height="374"/>
                                         <clipView key="contentView" id="YTi-kc-ru4">
-                                            <rect key="frame" x="1" y="0.0" width="897" height="373"/>
+                                            <rect key="frame" x="1" y="0.0" width="912" height="362"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" emptySelection="NO" headerView="780" id="319" customClass="QueryOutlineView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="1584" height="350"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1584" height="339"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -979,7 +969,7 @@
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
                                                         <tableColumn identifier="name" editable="NO" width="204" minWidth="100" maxWidth="600" id="320">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Patient Name">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="患者氏名">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -1005,7 +995,7 @@
                                                             </textFieldCell>
                                                         </tableColumn>
                                                         <tableColumn identifier="patientID" editable="NO" width="82" minWidth="50" maxWidth="200" id="318">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Patient ID">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="患者 ID">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -1019,7 +1009,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                         </tableColumn>
                                                         <tableColumn identifier="birthdate" editable="NO" width="100" minWidth="100" maxWidth="100" id="646">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Date of Birth">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="生年月日">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1034,7 +1024,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                         </tableColumn>
                                                         <tableColumn identifier="theDescription" editable="NO" width="66" minWidth="50" maxWidth="600" id="354">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Description">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="検査部位">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1048,7 +1038,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                         </tableColumn>
                                                         <tableColumn identifier="modality" editable="NO" width="65" minWidth="65" maxWidth="65" id="350">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Modality">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="モダリティ">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1061,7 +1051,7 @@
                                                             <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="modality"/>
                                                         </tableColumn>
                                                         <tableColumn identifier="numberImages" editable="NO" width="55" minWidth="55" maxWidth="55" id="495">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="# im">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="画像数">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1076,7 +1066,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                         </tableColumn>
                                                         <tableColumn identifier="date" editable="NO" width="110" minWidth="110" maxWidth="110" id="349">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Date">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="検査年月日">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1091,7 +1081,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                         </tableColumn>
                                                         <tableColumn identifier="time" editable="NO" width="80" minWidth="34.533199310302734" maxWidth="80" id="492">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Time">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="検査時刻">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1106,7 +1096,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                         </tableColumn>
                                                         <tableColumn identifier="calledAET" editable="NO" width="71" minWidth="60" maxWidth="200" id="743">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Source">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="ソース">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1120,7 +1110,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                         </tableColumn>
                                                         <tableColumn identifier="accessionNumber" editable="NO" width="72" minWidth="60" maxWidth="200" id="784">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Accession #">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="登録">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1238,10 +1228,9 @@
                                                     </connections>
                                                 </tableView>
                                             </subviews>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </clipView>
                                         <scroller key="horizontalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="779">
-                                            <rect key="frame" x="1" y="359" width="897" height="14"/>
+                                            <rect key="frame" x="1" y="362" width="912" height="11"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="778">
@@ -1254,15 +1243,15 @@
                                         </tableHeaderView>
                                     </scrollView>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="735">
-                                        <rect key="frame" x="33" y="432" width="65" height="14"/>
-                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Retrieve to:" id="761">
-                                            <font key="font" metaFont="smallSystem"/>
+                                        <rect key="frame" x="33" y="433" width="68" height="11"/>
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="リトリーブ先:" id="761">
+                                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="908">
-                                        <rect key="frame" x="895" y="426" width="25" height="25"/>
+                                        <rect key="frame" x="910" y="426" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="niO-It-hcF"/>
                                         </constraints>
@@ -1276,13 +1265,13 @@
                                         </connections>
                                     </button>
                                     <customView horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1174">
-                                        <rect key="frame" x="703" y="413" width="140" height="35"/>
+                                        <rect key="frame" x="718" y="413" width="140" height="35"/>
                                         <subviews>
                                             <button translatesAutoresizingMaskIntoConstraints="NO" id="839">
-                                                <rect key="frame" x="-3" y="0.0" width="83" height="18"/>
-                                                <buttonCell key="cell" type="check" title="Auto-Retrieve" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="mini" scrollable="YES" lineBreakMode="clipping" inset="2" id="840">
+                                                <rect key="frame" x="-3" y="-1" width="81" height="18"/>
+                                                <buttonCell key="cell" type="check" title="自動リトリーブ" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="mini" scrollable="YES" lineBreakMode="clipping" inset="2" id="840">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" metaFont="miniSystem"/>
+                                                    <font key="font" size="9" name=".HiraKakuInterface-W3"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="switchAutoRetrieving:" target="-2" id="842"/>
@@ -1300,10 +1289,10 @@
                                                 </connections>
                                             </button>
                                             <button horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="938">
-                                                <rect key="frame" x="81" y="-1" width="59" height="17"/>
-                                                <buttonCell key="cell" type="squareTextured" title="Settings" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" controlSize="mini" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="939">
+                                                <rect key="frame" x="79" y="-1" width="61" height="16"/>
+                                                <buttonCell key="cell" type="squareTextured" title="設定" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" controlSize="mini" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="939">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="miniSystem"/>
+                                                    <font key="font" size="9" name=".HiraKakuInterface-W3"/>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="autoRetrieveSettings:" target="-2" id="942"/>
@@ -1357,10 +1346,10 @@
                                         </constraints>
                                     </customView>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="1185">
-                                        <rect key="frame" x="19" y="16" width="259" height="18"/>
-                                        <buttonCell key="cell" type="check" title="Keep this window on top of all other windows" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="1186">
+                                        <rect key="frame" x="19" y="16" width="195" height="18"/>
+                                        <buttonCell key="cell" type="check" title="このウインドウを常に前面に表示する" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="1186">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="smallSystem"/>
+                                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                                         </buttonCell>
                                         <connections>
                                             <binding destination="-2" name="hidden" keyPath="autoQuery" id="1194"/>
@@ -1368,20 +1357,20 @@
                                         </connections>
                                     </button>
                                     <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="339">
-                                        <rect key="frame" x="663" y="429" width="16" height="16"/>
+                                        <rect key="frame" x="676" y="429" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="kCi-5g-wZv"/>
                                         </constraints>
                                     </progressIndicator>
                                     <segmentedControl horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="725">
-                                        <rect key="frame" x="366" y="425" width="291" height="25"/>
+                                        <rect key="frame" x="369" y="426" width="301" height="23"/>
                                         <segmentedCell key="cell" lineBreakMode="charWrapping" state="on" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="760">
                                             <font key="font" metaFont="system"/>
                                             <segments>
-                                                <segment label="Query" imageScaling="none"/>
-                                                <segment label="Query Patient" imageScaling="none" tag="1"/>
-                                                <segment label="Retrieve" imageScaling="none" tag="2"/>
-                                                <segment label="Verify" imageScaling="none"/>
+                                                <segment label="クエリ" imageScaling="none"/>
+                                                <segment label="患者をクエリ" imageScaling="none" tag="1"/>
+                                                <segment label="リトリーブ" imageScaling="none" tag="2"/>
+                                                <segment label="検証" imageScaling="none"/>
                                             </segments>
                                         </segmentedCell>
                                         <connections>
@@ -1450,12 +1439,12 @@
             <toolbar key="toolbar" implicitIdentifier="C832A200-6D92-46DB-AC0C-AB843AF7212F" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="regular" id="1102">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="1118"/>
-                    <toolbarItem implicitItemIdentifier="0B43AA69-31E5-44AA-B706-1735CB33FB64" label="Navigation" paletteLabel="Navigation" id="1105">
+                    <toolbarItem implicitItemIdentifier="0B43AA69-31E5-44AA-B706-1735CB33FB64" label="移動" paletteLabel="移動" id="1105">
                         <nil key="toolTip"/>
                         <size key="minSize" width="49" height="25"/>
                         <size key="maxSize" width="53" height="25"/>
                         <segmentedControl key="view" verticalHuggingPriority="750" id="1107">
-                            <rect key="frame" x="7" y="14" width="49" height="25"/>
+                            <rect key="frame" x="0.0" y="14" width="49" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <segmentedCell key="cell" state="on" borderStyle="border" alignment="left" tag="1" style="texturedSquare" trackingMode="momentary" id="1108">
                                 <font key="font" metaFont="system"/>
@@ -1469,12 +1458,12 @@
                             </connections>
                         </segmentedControl>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="49D15368-6723-47A7-8F90-2CD6E81BC31D" label="Delete" paletteLabel="Delete" image="NSRemoveTemplate" id="1114">
+                    <toolbarItem implicitItemIdentifier="49D15368-6723-47A7-8F90-2CD6E81BC31D" label="削除" paletteLabel="削除" image="NSRemoveTemplate" id="1114">
                         <nil key="toolTip"/>
                         <size key="minSize" width="40" height="25"/>
                         <size key="maxSize" width="40" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="1115">
-                            <rect key="frame" x="1" y="14" width="40" height="25"/>
+                            <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" title="Lock" bezelStyle="texturedRounded" image="NSRemoveTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1116">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1486,12 +1475,12 @@
                             <binding destination="-2" name="enabled" keyPath="self.isUnlocked" id="1172"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="EDE26A27-4F8F-44D6-90DF-4D7D43114E1B" label="Create" paletteLabel="Create" image="NSAddTemplate" id="1122">
+                    <toolbarItem implicitItemIdentifier="EDE26A27-4F8F-44D6-90DF-4D7D43114E1B" label="作成" paletteLabel="作成" image="NSAddTemplate" id="1122">
                         <nil key="toolTip"/>
                         <size key="minSize" width="40" height="25"/>
                         <size key="maxSize" width="40" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="1123">
-                            <rect key="frame" x="1" y="14" width="40" height="25"/>
+                            <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" title="Lock" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1124">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1503,12 +1492,12 @@
                             <binding destination="-2" name="enabled" keyPath="self.isUnlocked" id="1173"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="A9FB2C16-102A-4508-B57E-3A3E5D2040DD" label="Authentication" paletteLabel="Authentication" image="NSLockUnlockedTemplate" id="1103">
+                    <toolbarItem implicitItemIdentifier="A9FB2C16-102A-4508-B57E-3A3E5D2040DD" label="認証" paletteLabel="認証" image="NSLockUnlockedTemplate" id="1103">
                         <nil key="toolTip"/>
                         <size key="minSize" width="40" height="25"/>
                         <size key="maxSize" width="40" height="25"/>
                         <button key="view" verticalHuggingPriority="750" id="1111">
-                            <rect key="frame" x="22" y="14" width="40" height="25"/>
+                            <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" title="Lock" bezelStyle="texturedRounded" image="NSLockUnlockedTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="1112">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1522,7 +1511,7 @@
                             <action selector="lockAutoQRWindow:" target="-2" id="1121"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="BE0D9FAA-22E1-4631-9644-AEE8E82702C6" label="Instances List" paletteLabel="Instances List" id="1165" userLabel="Toolbar Item - Instances List">
+                    <toolbarItem implicitItemIdentifier="BE0D9FAA-22E1-4631-9644-AEE8E82702C6" label="インスタンスリスト" paletteLabel="インスタンスリスト" id="1165" userLabel="Toolbar Item - Instances List">
                         <nil key="toolTip"/>
                         <size key="minSize" width="100" height="25"/>
                         <size key="maxSize" width="212" height="25"/>
@@ -1559,7 +1548,7 @@
         </window>
         <menu title="Menu" id="445" userLabel="serversMenu">
             <items>
-                <menuItem title="Verify" keyEquivalent="v" id="443">
+                <menuItem title="検証" keyEquivalent="v" id="443">
                     <connections>
                         <action selector="verify:" target="-2" id="447"/>
                     </connections>
@@ -1598,29 +1587,29 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="795" userLabel="addPreset">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="317" height="162"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="796">
                 <rect key="frame" x="0.0" y="0.0" width="317" height="162"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="797">
-                        <rect key="frame" x="117" y="40" width="97" height="32"/>
+                        <rect key="frame" x="109" y="24" width="101" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="ebL-7E-eMb"/>
                         </constraints>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="806">
+                        <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="806">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
-                                Gw
-                            </string>
+Gw
+</string>
                         </buttonCell>
                         <connections>
                             <action selector="endAddPreset:" target="-2" id="807"/>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="798">
-                        <rect key="frame" x="12" y="103" width="293" height="22"/>
+                        <rect key="frame" x="12" y="107" width="293" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="805">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1628,7 +1617,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="799">
-                        <rect key="frame" x="214" y="40" width="97" height="32"/>
+                        <rect key="frame" x="210" y="25" width="101" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="GI2-DQ-QgK"/>
                         </constraints>
@@ -1636,34 +1625,34 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
-                                DQ
-                            </string>
+DQ
+</string>
                         </buttonCell>
                         <connections>
                             <action selector="endAddPreset:" target="-2" id="808"/>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="800">
-                        <rect key="frame" x="3" y="14" width="308" height="26"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="To remove a preset from the menu: simply select it while holding down the shift key." id="803">
-                            <font key="font" metaFont="system" size="10"/>
+                        <rect key="frame" x="3" y="14" width="308" height="10"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="メニューからプリセット値を除去: shift キーを押しながら選択。" id="803">
+                            <font key="font" size="10" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="801">
-                        <rect key="frame" x="9" y="133" width="171" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Give a name for this Preset:" id="802">
-                            <font key="font" metaFont="system"/>
+                        <rect key="frame" x="9" y="137" width="187" height="13"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="このプリセット値に名前を付ける:" id="802">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="913">
-                        <rect key="frame" x="12" y="79" width="215" height="18"/>
-                        <buttonCell key="cell" type="check" title="Include DICOM Nodes selection" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="914">
+                        <rect key="frame" x="12" y="63" width="229" height="38"/>
+                        <buttonCell key="cell" type="check" title="選択した DICOM ノード情報も含める" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="914">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <binding destination="832" name="value" keyPath="values.includeDICOMNodes" id="915"/>
@@ -1693,29 +1682,29 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="1127" userLabel="addAutoQRInstance">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="421" height="111"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="1128">
                 <rect key="frame" x="0.0" y="0.0" width="421" height="111"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1131">
-                        <rect key="frame" x="220" y="12" width="97" height="32"/>
+                        <rect key="frame" x="212" y="16" width="101" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="ubd-pd-w2o"/>
                         </constraints>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1138">
+                        <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="1138">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
-                                Gw
-                            </string>
+Gw
+</string>
                         </buttonCell>
                         <connections>
                             <action selector="endCreateAutoQRInstance:" target="-2" id="1147"/>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1134">
-                        <rect key="frame" x="12" y="52" width="396" height="22"/>
+                        <rect key="frame" x="12" y="56" width="396" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="1135">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1723,7 +1712,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="1130">
-                        <rect key="frame" x="317" y="12" width="97" height="32"/>
+                        <rect key="frame" x="313" y="17" width="101" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="SCF-9y-eg1"/>
                         </constraints>
@@ -1731,17 +1720,17 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
-                                DQ
-                            </string>
+DQ
+</string>
                         </buttonCell>
                         <connections>
                             <action selector="endCreateAutoQRInstance:" target="-2" id="1146"/>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1132">
-                        <rect key="frame" x="9" y="82" width="317" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Give a name for this Auto Query / Retrieve Instance:" id="1137">
-                            <font key="font" metaFont="system"/>
+                        <rect key="frame" x="9" y="86" width="265" height="13"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="この自動クエリ/リトリーブ設定に名前を付ける:" id="1137">
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -1765,29 +1754,29 @@
         <window title="Auto-Retrieving" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="844" userLabel="autoRetrieving">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="474" height="297"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="845">
                 <rect key="frame" x="0.0" y="0.0" width="474" height="297"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="850">
-                        <rect key="frame" x="274" y="12" width="97" height="32"/>
+                        <rect key="frame" x="266" y="35" width="101" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="Pby-l7-5rN"/>
                         </constraints>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="851">
+                        <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="851">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name=".HiraKakuInterface-W3"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
-                                Gw
-                            </string>
+Gw
+</string>
                         </buttonCell>
                         <connections>
                             <action selector="cancel:" target="-2" id="893"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="848">
-                        <rect key="frame" x="371" y="12" width="97" height="32"/>
+                        <rect key="frame" x="367" y="36" width="101" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="SiJ-I8-1AL"/>
                         </constraints>
@@ -1795,29 +1784,29 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
-                                DQ
-                            </string>
+DQ
+</string>
                         </buttonCell>
                         <connections>
                             <action selector="ok:" target="-2" id="894"/>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="846">
-                        <rect key="frame" x="114" y="182" width="336" height="70"/>
+                        <rect key="frame" x="114" y="202" width="314" height="55"/>
                         <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" alignment="left" id="855">
-                            <font key="font" metaFont="smallSystem"/>
-                            <string key="title">Each study displayed in the Query &amp; Retrieve list will be automatically retrieved to destination computer.
-                                
-                                Only 10 studies are retrieved each time. Next 10 studies will be retrieved during next 'refresh'.</string>
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
+                            <string key="title">クエリ/リトリーブリストに表示された各スタディは指定コンピュータへ自動でリトリーブされます。
+
+毎回10件のスタディがリトリーブされ、次の10件のスタディは'更新' 中にリトリーブされます。</string>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="860">
-                        <rect key="frame" x="37" y="99" width="112" height="18"/>
-                        <buttonCell key="cell" type="check" title="of same modality" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="861">
+                        <rect key="frame" x="37" y="122" width="165" height="18"/>
+                        <buttonCell key="cell" type="check" title="同一モダリティのみリトリーブ" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="861">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <binding destination="832" name="enabled" keyPath="values.NumberOfPreviousStudyToRetrieve" id="887"/>
@@ -1825,18 +1814,18 @@
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="862">
-                        <rect key="frame" x="17" y="150" width="336" height="14"/>
-                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="For each retrieved study, also retrieve, if needed and available :" id="863">
-                            <font key="font" metaFont="smallSystem"/>
+                        <rect key="frame" x="17" y="173" width="312" height="11"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="リトリーブする各スタディに以下の条件に一致するスタディも追加:" id="863">
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="864">
-                        <rect key="frame" x="37" y="79" width="173" height="18"/>
-                        <buttonCell key="cell" type="check" title="with same Study Description" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="865">
+                        <rect key="frame" x="37" y="102" width="155" height="18"/>
+                        <buttonCell key="cell" type="check" title="同一検査部位のみリトリーブ" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="865">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" size="11" name=".HiraKakuInterface-W3"/>
                         </buttonCell>
                         <connections>
                             <binding destination="832" name="enabled" keyPath="values.NumberOfPreviousStudyToRetrieve" id="888"/>
@@ -1844,8 +1833,8 @@
                         </connections>
                     </button>
                     <button horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1015">
-                        <rect key="frame" x="17" y="57" width="329" height="18"/>
-                        <buttonCell key="cell" type="check" title="retrieve if number of images is null on distant DICOM node" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="1016">
+                        <rect key="frame" x="17" y="80" width="286" height="18"/>
+                        <buttonCell key="cell" type="check" title="DICOM ノード先に有効な画像がなくてもリトリーブする" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" scrollable="YES" lineBreakMode="clipping" state="on" inset="2" id="1016">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="smallSystem"/>
                         </buttonCell>
@@ -1854,17 +1843,17 @@
                         </connections>
                     </button>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="866">
-                        <rect key="frame" x="17" y="119" width="186" height="22"/>
-                        <popUpButtonCell key="cell" type="push" title="Don't retrieve previous study" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="878" id="867">
+                        <rect key="frame" x="17" y="142" width="210" height="22"/>
+                        <popUpButtonCell key="cell" type="push" title="過去スタディはリトリーブしない" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="878" id="867">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystem"/>
                             <menu key="menu" title="OtherViews" id="868">
                                 <items>
-                                    <menuItem title="Don't retrieve previous study" state="on" id="878"/>
+                                    <menuItem title="過去スタディはリトリーブしない" state="on" id="878"/>
                                     <menuItem isSeparatorItem="YES" id="880"/>
-                                    <menuItem title="The previous study" tag="1" id="869"/>
-                                    <menuItem title="The last 2 previous studies" tag="2" id="870"/>
-                                    <menuItem title="The last 3 previous studies" tag="3" id="871"/>
+                                    <menuItem title="すべての過去スタディもリトリーブ" tag="1" id="869"/>
+                                    <menuItem title="最近 2 件の過去スタディもリトリーブ" tag="2" id="870"/>
+                                    <menuItem title="最近 3 件の過去スタディもリトリーブ" tag="3" id="871"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
@@ -1873,16 +1862,16 @@
                         </connections>
                     </popUpButton>
                     <imageView translatesAutoresizingMaskIntoConstraints="NO" id="874">
-                        <rect key="frame" x="20" y="201" width="77" height="84"/>
+                        <rect key="frame" x="20" y="221" width="77" height="64"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="77" id="DTy-Ib-akU"/>
                         </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="NSNetwork" id="875"/>
                     </imageView>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="876">
-                        <rect key="frame" x="114" y="260" width="107" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Auto-Retrieving" id="877">
-                            <font key="font" metaFont="systemBold"/>
+                        <rect key="frame" x="114" y="265" width="87" height="12"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="自動リトリーブ" id="877">
+                            <font key="font" size="13" name=".HiraKakuInterface-W6"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>

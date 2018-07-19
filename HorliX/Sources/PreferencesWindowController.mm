@@ -211,11 +211,11 @@ static const NSMutableArray* pluginPanes = [[NSMutableArray alloc] init];
 {
 	if (!image)
     {
-        image = [NSImage imageNamed:@"horosplugin"];
+        image = [NSImage imageNamed:@"horlixplugin"];//air
         
         if ([resourceName rangeOfString:@"osirixplugin" options:NSCaseInsensitiveSearch].location == NSNotFound)
         {
-            image = [NSImage imageNamed:@"horosplugin"];
+            image = [NSImage imageNamed:@"horlixplugin"];//air
         }
         else
         {

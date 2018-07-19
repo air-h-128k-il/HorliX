@@ -798,7 +798,7 @@ BOOL gPluginsAlertAlreadyDisplayed = NO;
         {
             NSString *pluginCrashPath = [NSString stringWithContentsOfFile: pluginCrash encoding: NSUTF8StringEncoding error: nil];
             
-            int result = NSRunInformationalAlertPanel(NSLocalizedString(@"Horos crashed", nil), NSLocalizedString(@"Previous crash is maybe related to a plugin.\r\rShould I remove this plugin (%@)?", nil), NSLocalizedString(@"Delete Plugin",nil), NSLocalizedString(@"Continue",nil), nil, [pluginCrashPath lastPathComponent]);
+            int result = NSRunInformationalAlertPanel(NSLocalizedString(@"HorliX crashed", nil), NSLocalizedString(@"Previous crash is maybe related to a plugin.\r\rShould I remove this plugin (%@)?", nil), NSLocalizedString(@"Delete Plugin",nil), NSLocalizedString(@"Continue",nil), nil, [pluginCrashPath lastPathComponent]);
             
             if( result == NSAlertDefaultReturn) // Delete Plugin
             {
@@ -1080,7 +1080,7 @@ BOOL gPluginsAlertAlreadyDisplayed = NO;
 	}
     
     if( !gPluginsAlertAlreadyDisplayed)
-        NSRunInformationalAlertPanel(NSLocalizedString(@"Plugins", @""), NSLocalizedString( @"Restart Horos to apply the changes to the plugins.", @""), NSLocalizedString(@"OK", @""), nil, nil);
+        NSRunInformationalAlertPanel(NSLocalizedString(@"Plugins", @""), NSLocalizedString( @"Restart HorliX to apply the changes to the plugins.", @""), NSLocalizedString(@"OK", @""), nil, nil);
     gPluginsAlertAlreadyDisplayed = YES;
 }
 
@@ -1118,7 +1118,7 @@ BOOL gPluginsAlertAlreadyDisplayed = NO;
 	}
     
     if( !gPluginsAlertAlreadyDisplayed)
-        NSRunInformationalAlertPanel(NSLocalizedString(@"Plugins", @""), NSLocalizedString( @"Restart Horos to apply the changes to the plugins.", @""), NSLocalizedString(@"OK", @""), nil, nil);
+        NSRunInformationalAlertPanel(NSLocalizedString(@"Plugins", @""), NSLocalizedString( @"Restart HorliX to apply the changes to the plugins.", @""), NSLocalizedString(@"OK", @""), nil, nil);
     gPluginsAlertAlreadyDisplayed = YES;
 }
 
@@ -1441,7 +1441,7 @@ NSInteger sortPluginArray(id plugin1, id plugin2, void *context)
                     }
                     else
                     {
-                        [pluginDescription setObject:[NSImage imageNamed:@"horosplugin"] forKey:@"typeIcon"];
+                        [pluginDescription setObject:[NSImage imageNamed:@"horlixplugin"] forKey:@"typeIcon"];//air
                     }
 					
 					////////////////////////////////////

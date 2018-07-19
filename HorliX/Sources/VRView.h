@@ -116,13 +116,14 @@
 #ifdef _STEREO_VISION_
 // Added SilvanWidmer 10-08-09
 // ****************************
-#import	<VTK/vtkCocoaGLView.h>
+//#import	"VTK/vtkCocoaGLView.h"
+#include <vtkCocoaGLView.h>
 #include <vtkCocoaRenderWindowInteractor.h>
 #include <vtkCocoaRenderWindow.h>
 #include <vtkParallelRenderManager.h>
 #include <vtkRendererCollection.h>
 #include <vtkCallbackCommand.h>
-#import	"VTKStereoVRView.h>
+#import	"VTKStereoVRView.h"
 // ****************************
 #endif
 

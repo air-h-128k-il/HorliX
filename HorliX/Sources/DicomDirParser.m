@@ -274,7 +274,7 @@ static int validFilePathDepth = 0;
         [aTask setStandardOutput:newPipe];
         
         [aTask setEnvironment:[NSDictionary dictionaryWithObject:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/dicom.dic"] forKey:@"DCMDICTPATH"]];
-        [aTask setLaunchPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/dcmdump"]];
+        //[aTask setLaunchPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/dcmdump"]];//no need dcmdump by air
         [theArguments addObject:srcFile];
         
         [theArguments addObject:@"+L"];

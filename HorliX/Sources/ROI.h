@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX Project 
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -90,6 +90,7 @@ enum
 	NSRecursiveLock *roiLock;
 	
 	int				textureWidth, textureHeight;
+    int             callcount;//add by air
 
 	unsigned char   *textureBuffer, *textureBufferSelected;
     
@@ -211,6 +212,11 @@ enum
 - (void) setThickness:(float) a globally: (BOOL) g;
 - (void) setOpacity:(float)newOpacity globally: (BOOL) g;
 - (void) addPointUnderMouse: (NSPoint) pt scale:(float) scale;
+
+/* set callcount by air*/
+ - (void) setCallCount:(int)n;
+ /* 1up callcount by air*/
+- (void) upCallCount;
 
 /** Set default ROI name (if not set, then default name is the currentTool) */
 + (void) setDefaultName:(NSString*) n;

@@ -197,7 +197,7 @@ static DicomDatabase* defaultDatabase = nil;
             
             if( [[NSUserDefaults standardUserDefaults] boolForKey: @"eraseEntireDBAtStartup"])
             {
-                NSString *databaseDir = [[[self defaultBaseDirPath] stringByAppendingPathComponent:@"DATABASE.noindex"] stringByResolvingSymlinksAndAliases];
+                NSString *databaseDir = [[[self defaultBaseDirPath] stringByAppendingPathComponent:@"DATABASE.noindex"] stringByResolvingSymlinksAndAliases];//need modification? by h.inomata
                 
                 if( [NSThread isMainThread])
                 {
@@ -3522,7 +3522,7 @@ static BOOL protectionAgainstReentry = NO;
                 r = NSAlertDefaultReturn;
             }
             else
-                r = NSRunAlertPanel(NSLocalizedString(@"Horos Database", nil), NSLocalizedString(@"Horos cannot understand the model of current saved database... The database index will be deleted and reconstructed (no images are lost).", nil), NSLocalizedString(@"OK", nil), NSLocalizedString(@"Quit", nil), nil);
+                r = NSRunAlertPanel(NSLocalizedString(@"HorliX Database", nil), NSLocalizedString(@"HorliX cannot understand the model of current saved database... The database index will be deleted and reconstructed (no images are lost).", nil), NSLocalizedString(@"OK", nil), NSLocalizedString(@"Quit", nil), nil);
             
             if (r == NSAlertAlternateReturn)
             {
@@ -4166,7 +4166,7 @@ static BOOL protectionAgainstReentry = NO;
         [NSFileManager.defaultManager createFileAtPath:repairedDBFile contents:[NSData data] attributes:nil];
         
         NSTask* theTask = [[NSTask alloc] init];
-        [theTask setLaunchPath: @"/usr/bin/sqlite3"];
+        [theTask setLaunchPath: @"/usr/bin/sqlite3"];//sqlite3 by air
         [theTask setStandardOutput:[NSFileHandle fileHandleForWritingAtPath:repairedDBFile]];
         [theTask setArguments:[NSArray arrayWithObjects: self.sqlFilePath, @".dump", nil]];
         

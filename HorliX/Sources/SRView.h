@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX/Horos Project (www.horosproject.org)
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -114,10 +114,10 @@
 #include <vtkCocoaGLView.h>
 #include <vtkCocoaRenderWindowInteractor.h>
 #include <vtkCocoaRenderWindow.h>
-#include <vtkParallelRenderManager.h>
+#include <vtkParallelRenderManager.h>//error why? by H.Inomata
 #include <vtkRendererCollection.h>
 #include <vtkCallbackCommand.h>
-#import "VTKStereoSRView.h>
+#import "VTKStereoSRView.h"
 // ****************************
 #endif
 

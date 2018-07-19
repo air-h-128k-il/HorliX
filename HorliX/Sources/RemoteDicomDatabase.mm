@@ -341,7 +341,7 @@
 	NSString* version = [self fetchDatabaseVersion];
 	
 	if (![version isEqualToString:CurrentDatabaseVersion])
-		[NSException raise:NSDestinationInvalidException format:NSLocalizedString(@"Invalid remote database model %@. When sharing databases, make sure both ends are running the same version of OsiriX.", nil), version];
+		[NSException raise:NSDestinationInvalidException format:NSLocalizedString(@"Invalid remote database model %@. When sharing databases, make sure both ends are running the same version of HorliX.", nil), version];
 	
 //	DLog(@"RDD version: %@", version);
 

@@ -400,7 +400,7 @@ static NSString* DefaultWebPortalDatabasePath = nil;
 
 -(void)restartIfRunning {
 	if (isAcceptingConnections) {
-		NSLog( @"----- cannot restart web server -> you have to restart Horos");
+		NSLog( @"----- cannot restart web server -> you have to restart HorliX");
 //		[self stopAcceptingConnections];
 //		[self startAcceptingConnections];
 	}
@@ -554,7 +554,7 @@ static NSString* DefaultWebPortalDatabasePath = nil;
         [temporaryUsersTimer release];
         temporaryUsersTimer = nil;
         
-		NSLog( @"----- cannot stop web server -> you have to restart Horos");
+		NSLog( @"----- cannot stop web server -> you have to restart HorliX");
 	}
 	
 }

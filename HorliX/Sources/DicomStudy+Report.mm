@@ -142,7 +142,7 @@
             @try {
                 NSTask* task = [[[NSTask alloc] init] autorelease];
                 
-                [task setLaunchPath:[[NSBundle mainBundle] pathForAuxiliaryExecutable:@"odt2pdf"]];
+                //[task setLaunchPath:[[NSBundle mainBundle] pathForAuxiliaryExecutable:@"odt2pdf"]];//stop support by air
                 [task setArguments:[NSArray arrayWithObjects: [NSString stringWithFormat:@"-env:URE_MORE_TYPES=file://%@", offapiPath], odtPath, pdfPath, nil]];
                 [task setEnvironment:[NSDictionary dictionaryWithObject:urelinklibPath forKey:@"DYLD_LIBRARY_PATH"]];
                 [task setStandardOutput:[NSPipe pipe]];

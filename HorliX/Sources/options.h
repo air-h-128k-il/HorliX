@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX Project 
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -63,6 +63,8 @@
  *  to "Developer ID Application: Your Name"
  */
 //#define WITH_CODE_SIGNING // and certificate for Deployment build
+
+//#define _STEREO_VISION_
 
 ////////////////////////////////////////////////////////////////////////////////
 /* Also, search the source files for

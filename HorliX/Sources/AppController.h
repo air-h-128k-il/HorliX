@@ -52,7 +52,7 @@
 #ifdef OSIRIX_VIEWER
 #ifndef OSIRIX_LIGHT
 #ifndef MACAPPSTORE
-#import <Growl/Growl.h>
+//#import <Growl/Growl.h>
 #endif
 #endif
 #endif

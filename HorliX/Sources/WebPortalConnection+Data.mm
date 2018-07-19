@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX Project 
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -2020,7 +2020,7 @@ const NSString* const GenerateMovieDicomImagesParamKey = @"dicomImageArray";
 	if (!self.portal.wadoEnabled)
     {
 		self.response.statusCode = 403;
-		[self.response setDataWithString:NSLocalizedString(@"Horos cannot fulfill your request because the WADO service is disabled.", NULL)];
+		[self.response setDataWithString:NSLocalizedString(@"HorliX cannot fulfill your request because the WADO service is disabled.", NULL)];
 		return;
 	}
 	
@@ -2768,7 +2768,7 @@ const NSString* const GenerateMovieDicomImagesParamKey = @"dicomImageArray";
 		if (![NSFileManager.defaultManager fileExistsAtPath:htmlpath]) {
 			NSTask* aTask = [[[NSTask alloc] init] autorelease];
 			[aTask setEnvironment:[NSDictionary dictionaryWithObject:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"dicom.dic"] forKey:@"DCMDICTPATH"]];
-			[aTask setLaunchPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"dsr2html"]];
+			//[aTask setLaunchPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"dsr2html"]];//no need by air
 			[aTask setArguments:[NSArray arrayWithObjects: @"+X1", @"--unknown-relationship", @"--ignore-constraints", @"--ignore-item-errors", @"--skip-invalid-items", [series.images.anyObject valueForKey:@"completePath"], htmlpath, nil]];
 			[aTask launch];
 			while( [aTask isRunning])

@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the Horos/HorliX Project (www.horosproject.org)
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -918,7 +918,9 @@ static NSConditionLock *threadLock = nil;
                                             }
                                             else if( [[itemPath pathExtension] isEqualToString: @"zip"] || [[itemPath pathExtension] isEqualToString: @"osirixzip"])
                                             {
-                                                NSString *unzipPath = [@"/tmp" stringByAppendingPathComponent: @"unzip_folder"];
+                                                //NSString *unzipPath = [@"/tmp" stringByAppendingPathComponent: @"unzip_folder"];//need modification for sandbox by air
+                                                NSLog(@"l 922");//test code by air
+                                                NSString *unzipPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"unzip_folder"];//test code
                                                 
                                                 [[NSFileManager defaultManager] removeItemAtPath: unzipPath error: nil];
                                                 [[NSFileManager defaultManager] createDirectoryAtPath: unzipPath withIntermediateDirectories:YES attributes:nil error:NULL];
@@ -965,7 +967,11 @@ static NSConditionLock *threadLock = nil;
                         }
                         else if( [[filename pathExtension] isEqualToString: @"zip"] || [[filename pathExtension] isEqualToString: @"osirixzip"])
                         {
-                            NSString *unzipPath = [@"/tmp" stringByAppendingPathComponent: @"unzip_folder"];
+                            
+                            NSLog(@"l 971");//test code by air
+                            NSString *unzipPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"unzip_folder"];//test code
+                            
+                            //NSString *unzipPath = [@"/tmp" stringByAppendingPathComponent: @"unzip_folder"];
                             
                             [[NSFileManager defaultManager] removeItemAtPath: unzipPath error: nil];
                             [[NSFileManager defaultManager] createDirectoryAtPath: unzipPath withIntermediateDirectories:YES attributes:nil error:NULL];
@@ -7023,7 +7029,7 @@ static NSConditionLock *threadLock = nil;
                 {
                     NSTask *aTask = [[[NSTask alloc] init] autorelease];
                     [aTask setEnvironment:[NSDictionary dictionaryWithObject:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/dicom.dic"] forKey:@"DCMDICTPATH"]];
-                    [aTask setLaunchPath: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: @"/dsr2html"]];
+                    //[aTask setLaunchPath: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: @"/dsr2html"]];// no need by air
                     [aTask setArguments: [NSArray arrayWithObjects: @"+X1", @"--unknown-relationship", @"--ignore-constraints", @"--ignore-item-errors", @"--skip-invalid-items", [im completePathResolved], htmlpath, nil]];
                     [aTask launch];
                     while( [aTask isRunning])
@@ -15236,8 +15242,8 @@ static NSArray*	openSubSeriesArray = nil;
     [helpItem setSubmenu:helpMenu];
     
     //[helpMenu addItemWithTitle: NSLocalizedString(@"TBD", nil) action: @selector(help:) keyEquivalent: @""];
-    [helpMenu addItemWithTitle: NSLocalizedString(@"Professional support", nil) action: @selector(openHorosSupport:) keyEquivalent: @""];
-    [helpMenu addItemWithTitle: NSLocalizedString(@"Community support", nil) action: @selector(openCommunityPage:) keyEquivalent: @""];
+    //[helpMenu addItemWithTitle: NSLocalizedString(@"Professional support", nil) action: @selector(openHorosSupport:) keyEquivalent: @""];
+    [helpMenu addItemWithTitle: NSLocalizedString(@"Web Support", nil) action: @selector(openCommunityPage:) keyEquivalent: @""];//community support to Web Support  by air
     [helpMenu addItem: [NSMenuItem separatorItem]];
     [helpMenu addItemWithTitle: NSLocalizedString(@"Report a bug", nil) action: @selector(openBugReportPage:) keyEquivalent: @""];
     //[helpMenu addItem: [NSMenuItem separatorItem]];
@@ -16369,7 +16375,7 @@ static volatile int numberOfThreadsForJPEG = 0;
                 {
                     NSTask *aTask = [[[NSTask alloc] init] autorelease];
                     [aTask setEnvironment:[NSDictionary dictionaryWithObject:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/dicom.dic"] forKey:@"DCMDICTPATH"]];
-                    [aTask setLaunchPath: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: @"/dsr2html"]];
+                    //[aTask setLaunchPath: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: @"/dsr2html"]];//no need by air
                     [aTask setArguments: [NSArray arrayWithObjects: @"+X1", @"--unknown-relationship", @"--ignore-constraints", @"--ignore-item-errors", @"--skip-invalid-items", [curImage valueForKey: @"completePath"], htmlpath, nil]];
                     [aTask launch];
                     while( [aTask isRunning])

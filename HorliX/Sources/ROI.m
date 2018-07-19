@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX Project
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -58,6 +58,7 @@ static		float					deg2rad = M_PI / 180.0f;
 static		float					fontHeight = 0;
 static		NSString				*defaultName;
 static		int						gUID = 0;
+//static      int                     callcount = 0;//by air
 
 extern long BresLine(int Ax, int Ay, int Bx, int By,long **xBuffer, long **yBuffer);
 
@@ -67,6 +68,8 @@ static BOOL ROITEXTIFSELECTED, ROITEXTNAMEONLY, ROITextIfMouseIsOver, ROIDrawPla
 static BOOL ROIDefaultsLoaded = NO;
 static BOOL splineForROI = NO;
 static BOOL displayCobbAngle = NO;
+
+
 
 int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt, double scale)
 {
@@ -361,6 +364,17 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 @synthesize groupID, mouseOverROI;
 @synthesize isLayerOpacityConstant, canColorizeLayer, displayTextualData, clickPoint;
 
+//by air For color-change
+-(void) setCallCount:(int)n
+{
+    callcount = n;
+}
+
+-(void) upCallCount
+{
+    callcount= callcount+1;
+}
+
 +(void) setFontHeight: (float) f
 {
 	fontHeight = f;
@@ -390,7 +404,9 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 
 +(void) loadDefaultSettings
 {
-	ROIRegionOpacity = [[NSUserDefaults standardUserDefaults] floatForKey: @"ROIRegionOpacity"];
+	
+    
+    ROIRegionOpacity = [[NSUserDefaults standardUserDefaults] floatForKey: @"ROIRegionOpacity"];
 	if( ROIRegionOpacity < 0.3) ROIRegionOpacity = 0.3;
 	
 	ROITextThickness = [[NSUserDefaults standardUserDefaults] floatForKey: @"ROITextThickness"];
@@ -659,6 +675,7 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 - (id) initWithCoder:(NSCoder*) coder
 {
 	long fileVersion;
+    //callcount = 0;//add by air
 	
     if( self = [super init])
     {
@@ -1419,7 +1436,9 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 
 - (id) initWithType: (ToolMode) itype :(float) ipixelSpacingx :(float) ipixelSpacingy :(NSPoint) iimageOrigin
 {
-	self = [super init];
+    //callcount = 0;//add by air
+    
+    self = [super init];
     if (self)
 	{
 		uniqueID = [[NSNumber numberWithInt: gUID++] retain];
@@ -1477,6 +1496,12 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 			color.red = ROITextColorR;	//[[NSUserDefaults standardUserDefaults] floatForKey: @"ROITextColorR"];
 			color.green = ROITextColorG;	//[[NSUserDefaults standardUserDefaults] floatForKey: @"ROITextColorG"];
 			color.blue = ROITextColorB;	//[[NSUserDefaults standardUserDefaults] floatForKey: @"ROITextColorB"];
+            
+            //color change by air
+            //color.red = ROIColorR;    //[[NSUserDefaults standardUserDefaults] floatForKey: @"ROITextColorR"];
+            //color.green = ROIColorG;    //[[NSUserDefaults standardUserDefaults] floatForKey: @"ROITextColorG"];
+            //color.blue = ROIColorB;    //[[NSUserDefaults standardUserDefaults] floatForKey: @"ROITextColorB"];
+            
 		}
 		else if (type == tPlain)
 		{
@@ -1617,10 +1642,54 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
     xc = xx - 2*curView.window.backingScaleFactor;
     yc = yy-[sT texSize].height;
     
-    glColor4f (0, 0, 0, 1.0f);
+    //test by air charcter writing?
+    //glColor4f (0, 0, 0, 1.0f);
+    if(callcount%10 ==1){
+        color.red = 0;color.green=65535.;color.blue=0;//default green
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+    }else if(callcount%10 == 2){
+        color.red = 63993.;color.green=48830.;color.blue=0;//topaz
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 3){
+        color.red = 60138.;color.green=28270.;color.blue=13621;//carrot orange
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 4){
+        color.red = 0;color.green=24672.;color.blue=36494.;//madonna blue
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 5){
+        color.red = 22102.;color.green=9509.;color.blue=22102;//grape
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 6){
+        color.red = 32639.;color.green=65534.;color.blue=32639;//pastel green 7fff7f
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 7){
+        color.red = 65534.;color.green=65535.;color.blue=32639;//pastel yellow ffff7f
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 8){
+        color.red = 65535.;color.green=32639.;color.blue=32639;//pastel orange ff7f7f
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 9){
+        color.red = 32639.;color.green=49087.;color.blue=65535.;//pastel blue 7fbfff
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else{
+        color.red = 49087;color.green=32639;color.blue=65534;//pastel purple bf7fff
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (0,0 ,1 , opacity);
+    }
+    glColor4f (color.red/65535., color.green/65535., color.blue/65535., 1.0f);
+    
     [sT drawAtPoint: NSMakePoint( xc+1, yc+1)];
     
-    glColor4f (1.0f, 1.0f, 1.0f, 1.0f);
+    //glColor4f (1.0f, 1.0f, 1.0f, 1.0f);
+    glColor4f (color.red/65535., color.green/65535., color.blue/65535., 1.0f);
     [sT drawAtPoint: NSMakePoint( xc, yc)];
     
 //    glDisable(GL_BLEND);
@@ -2933,6 +3002,7 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 {
 	rtotal = -1;
 	Brtotal = -1;
+    //callcount = 0;//add by air re-initilize?
 //	[[NSNotificationCenter defaultCenter] postNotificationName: OsirixROIChangeNotification object:self userInfo: nil];
 }
 
@@ -3656,24 +3726,75 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 
 - (void) setName:(NSString*) a
 {
-	if( a == nil)
+    NSLog(@"setName");
+    if( a == nil)
 		a = @"";
-	
+    
+ //   name = [a copy];
+// debug by air
+
 	if( name != a && ![name isEqualToString:a])
 	{
 		[name release];
 		
 		if (type != tText && [a length] > 256)
-			a = [a substringToIndex: 256];
-		
+			//a = [a substringToIndex: 256];
+            a = @"";// ROI name vanish by air
+        
+        
         name = [a copy];
 		
 		[[NSNotificationCenter defaultCenter] postNotificationName: OsirixROIChangeNotification object:self userInfo: nil];
 	}
-	
+
+    
+
 	if( type == tText)
 	{
 		NSString *finalString;
+        
+        //test code by air
+        if(callcount%10 ==1){
+            color.red = 0;color.green=65535.;color.blue=0;//default green
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        }else if(callcount%10 == 2){
+            color.red = 63993.;color.green=48830.;color.blue=0;//topaz
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 3){
+            color.red = 60138.;color.green=28270.;color.blue=13621.;//carrot orange
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 4){
+            color.red = 0.;color.green=24672.;color.blue=36494.;//madonna blue
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 5){
+            color.red = 22102.;color.green=9509.;color.blue=22102.;//grape
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 6){
+            color.red = 32639.;color.green=65535.;color.blue=32639.;//pastel green 7fff7f
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 7){
+            color.red = 65535.;color.green=65534.;color.blue=32639.;//pastel yellow ffff7f
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 8){
+            color.red = 65535.;color.green=32639.;color.blue=32639.;//pastel orange ff7f7f
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 9){
+            color.red = 32639.;color.green=49087.;color.blue=65535.;//pastel blue 7fbfff
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else{
+            color.red = 49087.;color.green=32639.;color.blue=65535.;//pastel purple bf7fff
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (0,0 ,1 , opacity);
+        }
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
 		
 		if( [comments length] > 0) finalString = [name stringByAppendingFormat:@"\r%@", comments];
 		else finalString = name;
@@ -3691,7 +3812,11 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 		rect.size = [stringTex frameSize];
 		if( pixelSpacingX != 0 && pixelSpacingY != 0 )
 			rect.size.height *= pixelSpacingX/pixelSpacingY;
+        
+        //NSLog(*finalString);
 	}
+    
+ 
 }
 
 - (void) setColor:(RGBColor) a
@@ -3702,13 +3827,63 @@ int spline( NSPoint *Pt, int tot, NSPoint **newPt, long **correspondingSegmentPt
 - (void) setColor:(RGBColor) a globally: (BOOL) g
 {
 	color = a;
+    
+    
+    //test code by air
+    if(callcount%10 ==1){
+        color.red = 0;color.green=65535.;color.blue=0;//default green
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+    }else if(callcount%10 == 2){
+        color.red = 63993.;color.green=48830.;color.blue=0;//topaz
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 3){
+        color.red = 60138.;color.green=28270.;color.blue=13621.;//carrot orange
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 4){
+        color.red = 0.;color.green=24672.;color.blue=36494.;//madonna blue
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 5){
+        color.red = 22102.;color.green=9509.;color.blue=22102.;//grape
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 6){
+        color.red = 32639.;color.green=65535.;color.blue=32639.;//pastel green 7fff7f
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 7){
+        color.red = 65535.;color.green=65534.;color.blue=32639.;//pastel yellow ffff7f
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 8){
+        color.red = 65535.;color.green=32639.;color.blue=32639.;//pastel orange ff7f7f
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else if(callcount%10 == 9){
+        color.red = 32639.;color.green=49087.;color.blue=65535.;//pastel blue 7fbfff
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (1,0 ,0 , opacity);
+    }else{
+        color.red = 49087.;color.green=32639.;color.blue=65535.;//pastel purple bf7fff
+        //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        //glColor4f (0,0 ,1 , opacity);
+    }
+    
 	
 	if( type == tText)
 	{
 		if( g)
 		{
-			ROITextColorR = color.red;	//[[NSUserDefaults standardUserDefaults] setFloat:color.red forKey:@"ROITextColorR"];
-			ROITextColorG = color.green;	//[[NSUserDefaults standardUserDefaults] setFloat:color.green forKey:@"ROITextColorG"];
+            /*test by air
+            if(callcount == 0){
+            ROITextColorR = color.red;	//[[NSUserDefaults standardUserDefaults] setFloat:color.red forKey:@"ROITextColorR"];
+            }else{
+                ROITextColorR = 0;
+            }*/
+            ROITextColorR = color.red;
+            ROITextColorG = color.green;	//[[NSUserDefaults standardUserDefaults] setFloat:color.green forKey:@"ROITextColorG"];
 			ROITextColorB = color.blue;	//[[NSUserDefaults standardUserDefaults] setFloat:color.blue forKey:@"ROITextColorB"];
 		}
 	}
@@ -4060,19 +4235,66 @@ void gl_round_box(int mode, float minx, float miny, float maxx, float maxy, floa
 	return drawTextBox;
 }
 
-- (void) drawTextualData
+- (void) drawTextualData//drawing characters by air
 {
 	BOOL moved;
 	
     if( hidden)
     {
+        NSLog(@"hidden");
         drawRect = NSMakeRect(0, 0, 0, 0);
         return;
     }
     
 	if( textualBoxLine1.length == 0 && textualBoxLine2.length == 0  && textualBoxLine3.length == 0  && textualBoxLine4.length == 0  && textualBoxLine5.length == 0  && textualBoxLine6.length == 0 )
 	{
-		drawRect = NSMakeRect(0, 0, 0, 0);
+		
+        //test by air
+        //callcount=callcount+1;
+        if(callcount%10 ==1){
+            color.red = 0;color.green=65535.;color.blue=0;//default green
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+        }else if(callcount%10 == 2){
+            color.red = 63993.;color.green=48830.;color.blue=0;//topaz
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 3){
+            color.red = 60138.;color.green=28270.;color.blue=13621.;//carrot orange
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 4){
+            color.red = 0;color.green=24672.;color.blue=36494.;//madonna blue
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 5){
+            color.red = 22102.;color.green=9509.;color.blue=22102.;//grape
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 6){
+            color.red = 32639.;color.green=65534.;color.blue=32639.;//pastel green 7fff7f
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 7){
+            color.red = 65534.;color.green=65534.;color.blue=32639.;//pastel yellow ffff7f
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 8){
+            color.red = 65534.;color.green=32639.;color.blue=32639.;//pastel orange ff7f7f
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else if(callcount%10 == 9){
+            color.red = 32639.;color.green=49087.;color.blue=65534.;//pastel blue 7fbfff
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (1,0 ,0 , opacity);
+        }else{
+            color.red = 49087.;color.green=32639.;color.blue=65534.;//pastel purple bf7fff
+            //glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+            //glColor4f (0,0 ,1 , opacity);
+        }
+        //glColor4f (color.red, color.green, color.blue, 1.0f);
+        
+        drawRect = NSMakeRect(color.red/65535., color.green/65535., color.blue/65535. , 1.0);
+        //drawRect = NSMakeRect(0, 0, 0, 0);//origin
 		return;
 	}
 	
@@ -4126,7 +4348,7 @@ void gl_round_box(int mode, float minx, float miny, float maxx, float maxy, floa
 		
 		glLineWidth( 1.0 * curView.window.backingScaleFactor);
 		
-		glColor4f( 1.0, 1.0, 1.0, 0.5);
+		glColor4f( 1.0, 1.0, 1.0, 0.3);
 		
 		glMap1f(GL_MAP1_VERTEX_3, 0.0, 1.0, 3, 3,&ctrlpoints[0][0]);
 		glEnable(GL_MAP1_VERTEX_3);
@@ -4157,8 +4379,15 @@ void gl_round_box(int mode, float minx, float miny, float maxx, float maxy, floa
             
 			glScalef( 2.0f /([curView drawingFrameRect].size.width), -2.0f / ([curView drawingFrameRect].size.height), 1.0f);
             
-            if( mode == ROI_sleep) glColor4f(0.0f, 0.0f, 0.0f, 0.4f);
-			else glColor4f(0.3f, 0.0f, 0.0f, 0.8f);
+            //if( mode == ROI_sleep) glColor4f(0.0f, 0.0f, 0.0f, 0.4f);
+			//else glColor4f(0.3f, 0.0f, 0.0f, 0.8f);
+            //background? by air
+            if( mode == ROI_sleep){
+                glColor4f(0.0f, 0.0f, 0.0f, 0.0f);
+            }else{
+                glColor4f(0.3f, 0.0f, 0.0f, 0.0f);
+            }
+            
             
             glBegin(GL_POLYGON);
             glVertex2f(  drawRect.origin.x, drawRect.origin.y-1);
@@ -4282,6 +4511,10 @@ void gl_round_box(int mode, float minx, float miny, float maxx, float maxy, floa
 
 - (void) drawROIWithScaleValue:(float)scaleValue offsetX:(float)offsetx offsetY:(float)offsety pixelSpacingX:(float)spacingX pixelSpacingY:(float)spacingY highlightIfSelected:(BOOL)highlightIfSelected thickness:(float)thick prepareTextualData:(BOOL) prepareTextualData;
 {
+    //test by air
+    //callcount=callcount+1;// +1 in drawing
+    
+    
     if( hidden)
         return;
     
@@ -4414,6 +4647,7 @@ void gl_round_box(int mode, float minx, float miny, float maxx, float maxy, floa
 						glVertex3f(p3.x, p3.y, 0.0);
 						glVertex3f(p4.x, p4.y, 0.0);
 						glEnd();
+                        NSLog(@"l 4650");
 						glColor3f (1.0f, 1.0f, 1.0f);
 					}
 					
@@ -4536,6 +4770,7 @@ void gl_round_box(int mode, float minx, float miny, float maxx, float maxy, floa
                                 glTexImage2D (GL_TEXTURE_RECTANGLE_EXT, 0, GL_INTENSITY8, newWidth, newHeight, 0, GL_LUMINANCE, GL_UNSIGNED_BYTE, textureBufferSelected);
                                 
                                 glColor4f( 0, 0, 0, 1.0);
+                                NSLog(@"l 4773");
                                 
                                 screenXUpL = (newTextureUpLeftCornerX-offsetx)*scaleValue;
                                 screenYUpL = (newTextureUpLeftCornerY-offsety)*scaleValue;
@@ -4989,7 +5224,50 @@ void gl_round_box(int mode, float minx, float miny, float maxx, float maxy, floa
                 if( points.count > 2)
                     type = tOPolygon;
                 
-				glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                //test by air
+                //callcount=callcount+1;
+                if(callcount%10 ==1){
+                    color.red = 0.;color.green=65535.;color.blue=0;//default green
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                }else if(callcount%10 == 2){
+                    color.red = 63993.;color.green=48830.;color.blue=0;//topaz
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (1,0 ,0 , opacity);
+                }else if(callcount%10 == 3){
+                    color.red = 60138.;color.green=28270.;color.blue=13621.;//carrot orange
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (1,0 ,0 , opacity);
+                }else if(callcount%10 == 4){
+                    color.red = 0;color.green=24672.;color.blue=36494;//madonna blue
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (1,0 ,0 , opacity);
+                }else if(callcount%10 == 5){
+                    color.red = 22102.;color.green=9509.;color.blue=22102;//grape
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (1,0 ,0 , opacity);
+                }else if(callcount%10 == 6){
+                    color.red = 32639.;color.green=65535.;color.blue=32639;//pastel green 7fff7f
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (1,0 ,0 , opacity);
+                }else if(callcount%10 == 7){
+                    color.red = 65535.;color.green=65535.;color.blue=32639.;//pastel yellow ffff7f
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (1,0 ,0 , opacity);
+                }else if(callcount%10 == 8){
+                    color.red = 65535.;color.green=32639.;color.blue=32639.;//pastel orange ff7f7f
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (1,0 ,0 , opacity);
+                }else if(callcount%10 == 9){
+                    color.red = 32639.;color.green=49087.;color.blue=65535;//pastel blue 7fbfff
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (1,0 ,0 , opacity);
+                }else{
+                    color.red = 49087.;color.green=32639.;color.blue=65535;//pastel purple bf7fff
+                    glColor4f (color.red / 65535., color.green / 65535., color.blue / 65535., opacity);
+                    //glColor4f (0,0 ,1 , opacity);
+                }
+                ////////
+                
 				glLineWidth( thick * backingScaleFactor);
 				
 				if( type == tArrow)
@@ -7167,6 +7445,7 @@ void gl_round_box(int mode, float minx, float miny, float maxx, float maxy, floa
 	}
     
 	#if __BIG_ENDIAN__
+    
 	glTexImage2D(GL_TEXTURE_RECTANGLE_EXT, 0, GL_RGBA, width, height, 0, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, textureBuffer);
 	#else
 	glTexImage2D(GL_TEXTURE_RECTANGLE_EXT, 0, GL_RGBA, width, height, 0, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8, textureBuffer);
@@ -7366,6 +7645,7 @@ NSInteger sortPointArrayAlongX(id point1, id point2, void *context)
 }
 
 -(void)setNSColor:(NSColor*)nsColor globally:(BOOL)g {
+    NSLog(@"l 7648");
 	[self setOpacity:[nsColor alphaComponent] globally:g];
 	RGBColor rgbColor = {[nsColor redComponent]*0xffff, [nsColor greenComponent]*0xffff, [nsColor blueComponent]*0xffff};
 	[self setColor:rgbColor globally:g];

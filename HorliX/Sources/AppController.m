@@ -1414,7 +1414,7 @@ void exceptionHandler(NSException *exception)
             if( showRestartNeeded == YES)
             {
                 showRestartNeeded = NO;
-                NSRunAlertPanel( NSLocalizedString( @"DICOM Listener", nil), NSLocalizedString( @"Restart Horos to apply these changes.", nil), NSLocalizedString( @"OK", nil), nil, nil);
+                NSRunAlertPanel( NSLocalizedString( @"DICOM Listener", nil), NSLocalizedString( @"Restart HorliX to apply these changes.", nil), NSLocalizedString( @"OK", nil), nil, nil);
             }
         }
         
@@ -2188,7 +2188,7 @@ void exceptionHandler(NSException *exception)
 					
 					[STORESCP unlock];
 				}
-				else NSRunCriticalAlertPanel( NSLocalizedString( @"DICOM Listener Error", nil), NSLocalizedString( @"Cannot start DICOM Listener. Another thread is already running. Restart Horos.", nil), NSLocalizedString( @"OK", nil), nil, nil);
+				else NSRunCriticalAlertPanel( NSLocalizedString( @"DICOM Listener Error", nil), NSLocalizedString( @"Cannot start DICOM Listener. Another thread is already running. Restart HorliX.", nil), NSLocalizedString( @"OK", nil), nil, nil);
 			}		
 		}
 		
@@ -2207,7 +2207,7 @@ void exceptionHandler(NSException *exception)
 				
 				[STORESCPTLS unlock];
 			}
-			else NSRunCriticalAlertPanel( NSLocalizedString( @"DICOM TLS Listener Error", nil), NSLocalizedString( @"Cannot start DICOM TLS Listener. Another thread is already running. Restart Horos.", nil), NSLocalizedString( @"OK", nil), nil, nil);
+			else NSRunCriticalAlertPanel( NSLocalizedString( @"DICOM TLS Listener Error", nil), NSLocalizedString( @"Cannot start DICOM TLS Listener. Another thread is already running. Restart HorliX.", nil), NSLocalizedString( @"OK", nil), nil, nil);
 		}
 	
 	} @catch (NSException* e) {
@@ -2803,6 +2803,22 @@ static BOOL firstCall = YES;
 #ifndef OSIRIX_LIGHT
         [DICOMTLS eraseKeys];
 #endif
+
+        // for beta-test by air
+        
+        NSDateFormatter *inputDateFormatter = [[NSDateFormatter alloc] init];
+        [inputDateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+        NSDate *nowdate = [NSDate date];
+        //NSDate *dateA = [inputDateFormatter:nowdate];
+        NSDate *dateB = [inputDateFormatter dateFromString:@"2018/09/01 00:00:00"];//Mac App Store
+        // dateBとdateAの時間の間隔を取得(dateB - dateAなイメージ)
+        NSTimeInterval  since = [dateB timeIntervalSinceDate:nowdate];
+        if (since <= 0)
+            exit(0);
+         
+        
+        
+        
         [[NSFileManager defaultManager] removeItemAtPath:[[NSFileManager defaultManager] tmpDirPath] error:NULL];
         
         if ([[NSFileManager defaultManager] fileExistsAtPath:[[[[[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSLocalDomainMask] firstObject] path] stringByAppendingPathComponent:[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString*)kCFBundleNameKey]] stringByAppendingPathComponent:@"DLog.enable"]])
@@ -2939,7 +2955,7 @@ static BOOL initialized = NO;
                 if( [BrowserController _currentModifierFlags] & NSCommandKeyMask &&
                    [BrowserController _currentModifierFlags] & NSAlternateKeyMask)
                 {
-                    NSInteger result = NSRunInformationalAlertPanel( NSLocalizedString(@"Reset Preferences", nil), NSLocalizedString(@"Are you sure you want to reset ALL preferences of Horos? All the preferences will be reseted to their default values.", nil), NSLocalizedString(@"Cancel",nil), NSLocalizedString(@"OK",nil),  nil);
+                    NSInteger result = NSRunInformationalAlertPanel( NSLocalizedString(@"Reset Preferences", nil), NSLocalizedString(@"Are you sure you want to reset ALL preferences of HorliX? All the preferences will be reseted to their default values.", nil), NSLocalizedString(@"Cancel",nil), NSLocalizedString(@"OK",nil),  nil);
                     
                     if( result == NSAlertAlternateReturn)
                     {
@@ -3027,7 +3043,7 @@ static BOOL initialized = NO;
                     NSString* volumePath = [[[dataBasePath componentsSeparatedByString:@"/"] subarrayWithRange:NSMakeRange(0,3)] componentsJoinedByString:@"/"];
                     if (![[NSFileManager defaultManager] fileExistsAtPath:volumePath]) {
                         NSPanel* dialog = [NSPanel alertWithTitle:@"HorliX Data"
-                                                          message:[NSString stringWithFormat:NSLocalizedString(@"Horos is configured to use the database located at %@. This volume is currently not available, most likely because it hasn't yet been mounted by the system, or because it is not plugged in or is turned off, or because you don't have write permissions for this location. Horos will wait for a few minutes, then give up and switch to a database in the current user's home directory.", nil), [[NSUserDefaults standardUserDefaults] stringForKey: @"DATABASELOCATIONURL"]]
+                                                          message:[NSString stringWithFormat:NSLocalizedString(@"HorliX is configured to use the database located at %@. This volume is currently not available, most likely because it hasn't yet been mounted by the system, or because it is not plugged in or is turned off, or because you don't have write permissions for this location. HorliX will wait for a few minutes, then give up and switch to a database in the current user's home directory.", nil), [[NSUserDefaults standardUserDefaults] stringForKey: @"DATABASELOCATIONURL"]]
                                                     defaultButton:@"Quit"
                                                   alternateButton:@"Continue"
                                                              icon:nil];
@@ -3217,7 +3233,7 @@ static BOOL initialized = NO;
                 {
                     if( [[NSFileManager defaultManager] fileExistsAtPath: path])
                     {
-                        int result = NSRunInformationalAlertPanel(NSLocalizedString(@"Horos crashed during last startup", nil), NSLocalizedString(@"Previous crash is maybe related to a corrupt database or corrupted images.\r\rShould I run Horos in Protected Mode (recommended) (no images displayed)? To allow you to delete the crashing/corrupted images/studies.\r\rOr Should I rebuild the local database? All albums, comments and status will be lost.", nil), NSLocalizedString(@"Continue normally",nil), NSLocalizedString(@"Protected Mode",nil), NSLocalizedString(@"Rebuild Database",nil));
+                        int result = NSRunInformationalAlertPanel(NSLocalizedString(@"HorliX crashed during last startup", nil), NSLocalizedString(@"Previous crash is maybe related to a corrupt database or corrupted images.\r\rShould I run HorliX in Protected Mode (recommended) (no images displayed)? To allow you to delete the crashing/corrupted images/studies.\r\rOr Should I rebuild the local database? All albums, comments and status will be lost.", nil), NSLocalizedString(@"Continue normally",nil), NSLocalizedString(@"Protected Mode",nil), NSLocalizedString(@"Rebuild Database",nil));
                         
                         if( result == NSAlertOtherReturn)
                         {
@@ -3284,7 +3300,8 @@ static BOOL initialized = NO;
 - (void) growlTitle:(NSString*) title description:(NSString*) description name:(NSString*) name
 {
 #ifndef OSIRIX_LIGHT
-#ifndef MACAPPSTORE
+//#ifndef MACAPPSTORE
+    /* Horos origianl by air
 	if( [[NSUserDefaults standardUserDefaults] boolForKey: @"displayGrowlNotification"])
 	{
         [GrowlApplicationBridge notifyWithTitle: title
@@ -3295,16 +3312,17 @@ static BOOL initialized = NO;
 							isSticky: NO
 							clickContext: nil];
     }
+    */
     
-//    if( [[NSUserDefaults standardUserDefaults] boolForKey: @"displayMacOSUserNotification"] && [AppController hasMacOSXMountainLion]) Growl SDK 1.3 will automatically use MacOS User Notification, if Growl is not installed
-//    {
-//        NSUserNotification *notification = [[NSUserNotification alloc] init];
-//        [notification setTitle: title];
-//        [notification setInformativeText: description];
-//        [notification setSoundName: NSUserNotificationDefaultSoundName];
-//        [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification: notification];
-//    }
-#endif
+    if( [[NSUserDefaults standardUserDefaults] boolForKey: @"displayMacOSUserNotification"])// && //[AppController hasMacOSXMountainLion])// Growl SDK 1.3 will automatically use MacOS User Notification, if Growl is not installed
+    {
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        [notification setTitle: title];
+        [notification setInformativeText: description];
+        [notification setSoundName: NSUserNotificationDefaultSoundName];
+        [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification: notification];
+    }
+//#endif
 #endif
 }
 
@@ -3575,10 +3593,12 @@ static BOOL initialized = NO;
 
 	[self testMenus];
     
+    /*
     #ifndef OSIRIX_LIGHT
     if( [[NSBundle bundleForClass:[self class]] pathForAuxiliaryExecutable:@"odt2pdf"] == nil)
         N2LogStackTrace( @"\r****** path2odt2pdf == nil\r*****************************");
     #endif
+     */
     
     
     [ROI loadDefaultSettings];
@@ -3611,7 +3631,7 @@ static BOOL initialized = NO;
         NSLog( @"SecStaticCodeCheckValidity: %d", (int) status);
         NSLog( @"%@", errors);
         
-        NSRunCriticalAlertPanel( NSLocalizedString( @"Code signing and Certificate", nil), NSLocalizedString( @"Invalid code signing or certificate. You should re-download Horos from the web site\r\rAre you using an utility such as CleanMyMac or CCleaner? Turn it off for Horos.", nil), NSLocalizedString( @"Continue", nil) , nil, nil);
+        NSRunCriticalAlertPanel( NSLocalizedString( @"Code signing and Certificate", nil), NSLocalizedString( @"Invalid code signing or certificate. You should re-download HorliX from the web site\r\rAre you using an utility such as CleanMyMac or CCleaner? Turn it off for HorliX.", nil), NSLocalizedString( @"Continue", nil) , nil, nil);
 
     }
     CFRelease( requirement);
@@ -4298,12 +4318,12 @@ static BOOL initialized = NO;
 	
 	if( [msg isEqualToString:@"LISTENER"])
 	{
-		NSRunAlertPanel( NSLocalizedString( @"DICOM Listener Error", nil), NSLocalizedString( @"Horos listener cannot start. Is the Port valid? Is there another process using this Port?\r\rSee Listener - Preferences.", nil), NSLocalizedString( @"OK", nil), nil, nil);
+		NSRunAlertPanel( NSLocalizedString( @"DICOM Listener Error", nil), NSLocalizedString( @"HorliX listener cannot start. Is the Port valid? Is there another process using this Port?\r\rSee Listener - Preferences.", nil), NSLocalizedString( @"OK", nil), nil, nil);
 	}
 	
 	if( [msg isEqualToString:@"UPTODATE"])
 	{
-		NSRunAlertPanel( NSLocalizedString( @"Horos is up-to-date", nil), NSLocalizedString( @"You have the most recent version of Horos.", nil), NSLocalizedString( @"OK", nil), nil, nil);
+		NSRunAlertPanel( NSLocalizedString( @"HorliX is up-to-date", nil), NSLocalizedString( @"You have the most recent version of Horos.", nil), NSLocalizedString( @"OK", nil), nil, nil);
 	}
 	
 	if( [msg isEqualToString:@"ERROR"])
@@ -4313,7 +4333,7 @@ static BOOL initialized = NO;
 	
     if( [msg isEqualToString: @"UPDATECRASH"])
     {
-        NSRunInformationalAlertPanel(NSLocalizedString(@"Horos crashed", nil), NSLocalizedString(@"Horos crashed... You are running an outdated version of Horos ! This bug is probably corrected in the last version !", nil), NSLocalizedString(@"OK",nil), nil, nil);
+        NSRunInformationalAlertPanel(NSLocalizedString(@"HorliX crashed", nil), NSLocalizedString(@"HorliX crashed... You are running an outdated version of Horos ! This bug is probably corrected in the last version !", nil), NSLocalizedString(@"OK",nil), nil, nil);
         
         [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:URL_HOROS_UPDATE_CRASH]];
     }

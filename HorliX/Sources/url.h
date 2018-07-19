@@ -50,7 +50,7 @@
 #define URL_HOROS_WEB_PAGE         URL_HOROS_VIEWER
 #define URL_HOROS_LEARNING         URL_HOROS_VIEWER@"/"
 #define URL_HOROS_SUPPORT_PAGE     URL_HOROS_VIEWER@"/"
-#define URL_HOROS_COMMUNITY        @"https://phazor.info/HorliX"
+#define URL_HOROS_COMMUNITY        @"https://phazor.info/HorliX/?page_id=145"
 #define URL_HOROS_BUG_REPORT_PAGE  @"https://github.com/air-h-128k-il/HorliX/issues"
 #define URL_VENDOR                 URL_HOROS_VIEWER
 #define URL_EMAIL                  @"horlix@phazor.info"
@@ -72,7 +72,7 @@
 // Make sure it matches "Bundle Identifier" in Info.plist
 
 #define BUNDLE_IDENTIFIER_PREFIX    "info.phazor"//org.horosproject"//info.phazor"
-#define BUNDLE_IDENTIFIER           "info.phazor.horlix"//org.horosproject.horos"//info.phazor.horlix"// file crash!
+#define BUNDLE_IDENTIFIER           "info.phazor.HorliX"//org.horosproject.horos"//info.phazor.horlix"// file crash!
 
 ////////////////////////////////////////////////////////////////////////////////
 // This is the address of the plist containing the list of the available plugins.

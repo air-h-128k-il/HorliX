@@ -2656,8 +2656,10 @@ NSInteger studyCompare(ViewerController *v1, ViewerController *v2, void *context
 
 -(BOOL) acceptsFirstMouse:(NSEvent*) theEvent
 {
+    NSLog(@"acceptFirstMouse");//by air
     if (currentTool >= 5) return NO;  // A ROI TOOL !
     else return YES;
+    //[ROI setCallCount:<#(int)#>0] //by air
 }
 
 - (BOOL)acceptsFirstResponder
@@ -3312,6 +3314,18 @@ NSInteger studyCompare(ViewerController *v1, ViewerController *v2, void *context
     
     mouseDragging = NO;
     
+    //test code
+    //int test = 0;
+    NSLog(@"mouseUp");//by air
+    for( ROI *r in curRoiList)//by air 'r' or 'ROI'
+    {
+        //[r upCallCount];//by air
+        int test;
+        NSLog(@"for-loop in mouseUp");
+        [r setCallCount:test];
+        test = test +1;
+    }
+    
     // get rid of timer
     [self deleteMouseDownTimer];
     
@@ -3362,6 +3376,7 @@ NSInteger studyCompare(ViewerController *v1, ViewerController *v2, void *context
                 {
                     [[[self windowController] thickSlabController] setLowQuality: NO];
                     [self reapplyWindowLevel];
+                    
                     [self loadTextures];
                     [self setNeedsDisplay:YES];
                 }
@@ -3369,13 +3384,16 @@ NSInteger studyCompare(ViewerController *v1, ViewerController *v2, void *context
             
             if( [self roiTool: tool] )
             {
+                //[ROI upCallCount];//by air for 1up
+                
                 NSPoint     eventLocation = [event locationInWindow];
                 NSPoint		tempPt = [self convertPoint:eventLocation fromView: nil];
                 
                 tempPt = [self ConvertFromNSView2GL:tempPt];
                 
-                for( ROI *r in curRoiList)
+                for( ROI *r in curRoiList)//by air 'r' or 'ROI'
                 {
+                    //[r upCallCount];//by air
                     [r mouseRoiUp: tempPt scaleValue: (float) scaleValue];
                     
                     if( [r ROImode] == ROI_selected)
@@ -4218,6 +4236,7 @@ NSInteger studyCompare(ViewerController *v1, ViewerController *v2, void *context
     {
         if( ([event modifierFlags] & NSShiftKeyMask) == 0 && ([event modifierFlags] & NSControlKeyMask) == 0 && ([event modifierFlags] & NSAlternateKeyMask) == 0 && ([event modifierFlags] & NSCommandKeyMask) == 0)
         {
+            //[ROI callcount:callcount+1]//by air
             NSPoint tempPt = [[[event window] contentView] convertPoint: [event locationInWindow] toView:self];
             tempPt = [self ConvertFromNSView2GL:tempPt];
             

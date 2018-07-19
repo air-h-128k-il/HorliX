@@ -653,7 +653,7 @@
     
     if( templatePath == nil || ![[NSFileManager defaultManager] fileExistsAtPath:templatePath])
     {
-        NSRunCriticalAlertPanel( NSLocalizedString( @"Microsoft Word", nil),  NSLocalizedString(@"I cannot find the Horos Word Template doc file.", nil), NSLocalizedString(@"OK", nil), nil, nil);
+        NSRunCriticalAlertPanel( NSLocalizedString( @"Microsoft Word", nil),  NSLocalizedString(@"I cannot find the HorliX Word Template doc file.", nil), NSLocalizedString(@"OK", nil), nil, nil);
         return NO;
     }
     
@@ -795,9 +795,9 @@ static int Pages5orHigher = -1;
         [[NSFileManager defaultManager] createDirectoryAtPath:templatesDirPath withIntermediateDirectories:NO attributes:nil error:nil];
     
 	// Pages template
-    NSString *defaultReport = [templatesDirPath stringByAppendingPathComponent:@"/Horos Basic Report.pages"];
+    NSString *defaultReport = [templatesDirPath stringByAppendingPathComponent:@"/HorliX Basic Report.pages"];
 	if ([[NSFileManager defaultManager] fileExistsAtPath: defaultReport] == NO)
-        [[NSFileManager defaultManager] copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/Horos Report.pages"] toPath:defaultReport error:NULL];
+        [[NSFileManager defaultManager] copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/HorliX Report.pages"] toPath:defaultReport error:NULL];//horos to horlix by air
 	
 #endif
 #endif
@@ -899,7 +899,7 @@ static int Pages5orHigher = -1;
         NSLog( @"-- Try to convert to Pages 09: %@", templateName);
         */
         
-        NSString* path = [[NSBundle mainBundle] pathForResource:@"Horos Report.pages09" ofType:@"pages"];
+        NSString* path = [[NSBundle mainBundle] pathForResource:@"HorliX Report.pages09" ofType:@"pages"];//horos to horlix by air
         if( [[NSFileManager defaultManager] fileExistsAtPath:path] == YES)
         {
             [[NSFileManager defaultManager] copyItemAtPath:path toPath:[templatePath stringByAppendingString: @"09.pages"] byReplacingExisting:YES error: nil];
@@ -917,7 +917,7 @@ static int Pages5orHigher = -1;
         
         if( [[NSFileManager defaultManager] fileExistsAtPath:indexFilePath] == NO)
         {
-            NSRunCriticalAlertPanel( NSLocalizedString( @"Pages", nil),  NSLocalizedString(@"Horos requires templates files in Pages '09 format. Open your template in Pages, select File menu and Export to Pages '09 format.", nil), NSLocalizedString(@"OK", nil), nil, nil);
+            NSRunCriticalAlertPanel( NSLocalizedString( @"Pages", nil),  NSLocalizedString(@"HorliX requires templates files in Pages '09 format. Open your template in Pages, select File menu and Export to Pages '09 format.", nil), NSLocalizedString(@"OK", nil), nil, nil);
             return NO;
         }
     }

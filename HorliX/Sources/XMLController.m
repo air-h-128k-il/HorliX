@@ -1318,7 +1318,7 @@ extern int delayedTileWindows;
 
 	NSPipe *thePipe = [NSPipe pipe];
 	
-	[theTask setLaunchPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/dciodvfy"]];
+	//[theTask setLaunchPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"/dciodvfy"]];//no need by air
 	[theTask setArguments: [NSMutableArray arrayWithObject: srcFile]];
 	[theTask setStandardError: thePipe];
 	[theTask launch];

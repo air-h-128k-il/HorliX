@@ -104,7 +104,7 @@
                     <toolbarItem reference="745"/>
                 </defaultToolbarItems>
             </toolbar>
-            <point key="canvasLocation" x="586" y="277"/>
+            <point key="canvasLocation" x="751" y="232"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="728"/>
         <comboBoxCell controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="756">

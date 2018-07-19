@@ -51,6 +51,14 @@ typedef struct {
     double x,y,z;
 } XYZ;
 
+/* add by air
+struct NSPointInt
+{
+    long x;
+    long y;
+};
+typedef struct NSPointInt NSPointInt;
+*/
 
 #ifdef __cplusplus
 extern "C"

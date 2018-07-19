@@ -81,7 +81,7 @@
                                                                 </connections>
                                                             </tableColumn>
                                                             <tableColumn identifier="" editable="NO" width="120" minWidth="120" maxWidth="120" id="OCE-FJ-HJu">
-                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Horos Validated">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="HorliX Validated">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -232,7 +232,7 @@
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="12Z-Kn-O69">
                                             <rect key="frame" x="17" y="613" width="42" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="horosplugin" id="0CC-BL-W1B"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="horlixplugin" id="0CC-BL-W1B"/>
                                         </imageView>
                                         <webView id="nX3-8t-vsW">
                                             <rect key="frame" x="17" y="58" width="843" height="545"/>
@@ -427,6 +427,7 @@
     </objects>
     <resources>
         <image name="Horos" width="512" height="512"/>
+        <image name="horlixplugin" width="256" height="256"/>
         <image name="horosplugin" width="256" height="256"/>
         <image name="osirixplugin" width="256" height="256"/>
     </resources>

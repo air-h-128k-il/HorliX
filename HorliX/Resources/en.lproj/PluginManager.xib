@@ -75,13 +75,13 @@
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 </tableHeaderCell>
-                                                                <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="horosplugin" id="vxp-bj-G1s"/>
+                                                                <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="horlixplugin" id="vxp-bj-G1s"/>
                                                                 <connections>
                                                                     <binding destination="26" name="value" keyPath="arrangedObjects.typeIcon" id="Ceh-QB-oo3"/>
                                                                 </connections>
                                                             </tableColumn>
                                                             <tableColumn identifier="" editable="NO" width="120" minWidth="120" maxWidth="120" id="OCE-FJ-HJu">
-                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Horos Validated">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="HorliX Validated">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -428,7 +428,6 @@
     <resources>
         <image name="Horos" width="512" height="512"/>
         <image name="horlixplugin" width="256" height="256"/>
-        <image name="horosplugin" width="256" height="256"/>
         <image name="osirixplugin" width="256" height="256"/>
     </resources>
 </document>

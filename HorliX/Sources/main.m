@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX Project (www.horosproject.org)
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -50,6 +50,9 @@ int main(int argc, const char *argv[])
 	#ifndef OSIRIX_LIGHT
     FVTIFFInitialize();
 	#endif
+    
+ 
+    
 	
     return NSApplicationMain(argc, argv);
 }

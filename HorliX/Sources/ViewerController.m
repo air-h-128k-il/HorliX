@@ -7657,6 +7657,7 @@ static ViewerController *draggedController = nil;
     [self setupToolbar];
     
     [ROI loadDefaultSettings];
+    //[ROI callcount:0];//test by air
     
     resampleRatio = 1.0;
     

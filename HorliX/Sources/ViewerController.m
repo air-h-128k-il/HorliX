@@ -662,11 +662,12 @@ static ViewerController *cachedFrontMostDisplayed2DViewer = nil;
         [self buildSeriesPopup];
         valid = YES;
     }
+/*
     else if( [item action] == @selector( displaySUV:))
     {
         if( [[imageView curDCM] hasSUV])
             valid = YES;
-    }
+    }*/
     else if( [item action] == @selector( flipDataSeries:))
     {
         if( pixList[ curMovieIndex].count > 1)
@@ -1791,7 +1792,7 @@ static volatile int numberOfThreadsForRelisce = 0;
                 [newPixList addObject: [[[pixList[ j] objectAtIndex: 0] copy] autorelease]];
                 
                 // SUV
-                [[newPixList lastObject] setDisplaySUVValue: [firstPix displaySUVValue]];
+                //[[newPixList lastObject] setDisplaySUVValue: [firstPix displaySUVValue]];
                 [[newPixList lastObject] setSUVConverted: [firstPix SUVConverted]];
                 [[newPixList lastObject] setFactorPET2SUV: [firstPix factorPET2SUV]];
                 [[newPixList lastObject] setRadiopharmaceuticalStartTime: [firstPix radiopharmaceuticalStartTime]];
@@ -6269,6 +6270,7 @@ static ViewerController *draggedController = nil;
         [toolbarItem setTarget: self];
         [toolbarItem setAction: @selector(roiGetManager:)];
     }
+    /*
     else if( [itemIdent isEqualToString: SUVToolbarItemIdentifier])
     {
         [toolbarItem setLabel: NSLocalizedString(@"SUV", nil)];
@@ -6277,7 +6279,7 @@ static ViewerController *draggedController = nil;
         [toolbarItem setImage: [NSImage imageNamed: SUVToolbarItemIdentifier]];
         [toolbarItem setTarget: self];
         [toolbarItem setAction: @selector(displaySUV:)];
-    }
+    }*/
     
     else if ( [itemIdent isEqualToString: ReportToolbarItemIdentifier])
     {
@@ -16033,6 +16035,7 @@ static float oldsetww, oldsetwl;
     [NSApp stopModal];
 }
 
+/*
 - (IBAction) editSUVinjectionTime:(id)sender
 {
     if( [sender tag] == 0)
@@ -16040,12 +16043,13 @@ static float oldsetww, oldsetwl;
     
     if( [sender tag] == 1)
         self.injectionDateTime = [[[[imageView curDCM] acquisitionTime] copy] autorelease];
-    
-    [NSApp beginSheet: injectionTimeWindow
-       modalForWindow: displaySUVWindow
-        modalDelegate: nil
-       didEndSelector: nil
-          contextInfo: nil];
+ 
+ //   [NSApp beginSheet: injectionTimeWindow
+ //      modalForWindow: displaySUVWindow
+ //       modalDelegate: nil
+//       didEndSelector: nil
+//          contextInfo: nil];
+ 
     
     [NSApp runModalForWindow: injectionTimeWindow];
     [NSApp endSheet: injectionTimeWindow];
@@ -16084,6 +16088,7 @@ static float oldsetww, oldsetwl;
             [[suvForm cellAtIndex: 4] setObjectValue: injectionDateTime];
     }
 }
+*/
 
 - (float) factorPET2SUV
 {
@@ -16192,6 +16197,7 @@ static float oldsetww, oldsetwl;
     [[NSUserDefaults standardUserDefaults] setBool: valueToRestore.boolValue forKey:@"ConvertPETtoSUVautomatically"];
 }
 
+/*
 -(IBAction) endDisplaySUV:(id) sender
 {
     long y, x;
@@ -16346,7 +16352,7 @@ static float oldsetww, oldsetwl;
         [NSApp beginSheet: displaySUVWindow modalForWindow:[self window] modalDelegate:self didEndSelector:nil contextInfo:nil];
     }
 }
-
+*/
 
 #pragma mark-
 #pragma mark 4.1.4 Anchored textual layer

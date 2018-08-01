@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CalciumScoringWindowController">
@@ -17,7 +17,7 @@
         <window title="Calcium Scoring" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Window" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="371" height="450"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="213" height="113"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="371" height="450"/>
@@ -80,11 +80,9 @@
                             <constraint firstItem="7" firstAttribute="leading" secondItem="12" secondAttribute="leading" constant="16" id="ZbM-By-jyH"/>
                             <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" constant="11" id="o7r-53-KDu"/>
                         </constraints>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="20">
-                        <rect key="frame" x="94" y="309" width="98" height="13"/>
+                        <rect key="frame" x="94" y="309" width="97" height="13"/>
                         <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="(Click in the image)" id="140">
                             <font key="font" metaFont="system" size="10"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -157,7 +155,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="200" minWidth="200" maxWidth="200" id="52">
+                                        <tableColumn identifier="" width="200" minWidth="200" maxWidth="200" id="52">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Vessel">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -173,7 +171,7 @@
                                                 <binding destination="48" name="value" keyPath="arrangedObjects.vesselName" id="57"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn width="40" minWidth="40" maxWidth="40" id="53">
+                                        <tableColumn identifier="" width="40" minWidth="40" maxWidth="40" id="53">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Score">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -196,7 +194,7 @@
                                                 <binding destination="48" name="value" keyPath="arrangedObjects.score" id="58"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn width="45" minWidth="45" maxWidth="45" id="54">
+                                        <tableColumn identifier="" width="45" minWidth="45" maxWidth="45" id="54">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Volume">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -219,7 +217,7 @@
                                                 <binding destination="48" name="value" keyPath="arrangedObjects.volume" id="61"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn width="45" minWidth="45" maxWidth="45" id="55">
+                                        <tableColumn identifier="" width="45" minWidth="45" maxWidth="45" id="55">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Mass">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -248,7 +246,6 @@
                                     </connections>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <constraints>
                             <constraint firstAttribute="height" constant="208" id="S5S-lL-LNf"/>
@@ -394,7 +391,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn width="250" minWidth="250" maxWidth="250" id="100">
+                                    <tableColumn identifier="" width="250" minWidth="250" maxWidth="250" id="100">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Vessel">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -410,7 +407,7 @@
                                             <binding destination="48" name="value" keyPath="arrangedObjects.vesselName" id="102"/>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn width="50" minWidth="50" maxWidth="50" id="98">
+                                    <tableColumn identifier="" width="50" minWidth="50" maxWidth="50" id="98">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Score">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -433,7 +430,7 @@
                                             <binding destination="48" name="value" keyPath="arrangedObjects.score" id="103"/>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn width="50" minWidth="50" maxWidth="50" id="96">
+                                    <tableColumn identifier="" width="50" minWidth="50" maxWidth="50" id="96">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Volume">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -456,7 +453,7 @@
                                             <binding destination="48" name="value" keyPath="arrangedObjects.volume" id="104"/>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn width="50" minWidth="50" maxWidth="50" id="94">
+                                    <tableColumn identifier="" width="50" minWidth="50" maxWidth="50" id="94">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Mass">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -485,7 +482,6 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <constraints>
                         <constraint firstAttribute="height" constant="253" id="Dcr-jE-mOa"/>
@@ -504,74 +500,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
-                <form verticalHuggingPriority="750" mode="track" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69">
-                    <rect key="frame" x="17" y="396" width="415" height="160"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="415" id="2cY-pv-WnG"/>
-                    </constraints>
-                    <color key="backgroundColor" red="0.50196081000000004" green="0.0" blue="0.50196081000000004" alpha="1" colorSpace="calibratedRGB"/>
-                    <size key="cellSize" width="415" height="16"/>
-                    <size key="intercellSpacing" width="1" height="8"/>
-                    <formCell key="prototype" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="justified" title="Field:" id="159">
-                        <font key="font" metaFont="cellTitle"/>
-                        <font key="titleFont" metaFont="cellTitle"/>
-                    </formCell>
-                    <cells>
-                        <column>
-                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="justified" title="Institution:" id="85">
-                                <font key="font" metaFont="cellTitle"/>
-                                <font key="titleFont" metaFont="cellTitle"/>
-                                <connections>
-                                    <binding destination="-2" name="value" keyPath="institution" id="115"/>
-                                </connections>
-                            </formCell>
-                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="justified" tag="1" title="Patient's Name:" id="86">
-                                <font key="font" metaFont="cellTitle"/>
-                                <font key="titleFont" metaFont="cellTitle"/>
-                                <connections>
-                                    <binding destination="-2" name="value" keyPath="patientsName" id="116"/>
-                                </connections>
-                            </formCell>
-                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="justified" tag="2" title="Patient ID:" id="87">
-                                <font key="font" metaFont="cellTitle"/>
-                                <font key="titleFont" metaFont="cellTitle"/>
-                                <connections>
-                                    <binding destination="-2" name="value" keyPath="patientID" id="117"/>
-                                </connections>
-                            </formCell>
-                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="justified" tag="3" title="Patient's DOB:" id="88">
-                                <dateFormatter key="formatter" formatterBehavior="pre10_4" dateFormat="%d %b %Y" id="130"/>
-                                <font key="font" metaFont="cellTitle"/>
-                                <font key="titleFont" metaFont="cellTitle"/>
-                                <connections>
-                                    <binding destination="-2" name="value" keyPath="patientsDOB" id="128"/>
-                                </connections>
-                            </formCell>
-                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="justified" tag="4" title="Patient's Age:" id="89">
-                                <font key="font" metaFont="cellTitle"/>
-                                <font key="titleFont" metaFont="cellTitle"/>
-                                <connections>
-                                    <binding destination="-2" name="value" keyPath="patientsAge" id="119"/>
-                                </connections>
-                            </formCell>
-                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="justified" tag="5" title="Patient's Sex:" id="90">
-                                <font key="font" metaFont="cellTitle"/>
-                                <font key="titleFont" metaFont="cellTitle"/>
-                                <connections>
-                                    <binding destination="-2" name="value" keyPath="patientsSex" id="175"/>
-                                </connections>
-                            </formCell>
-                            <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="justified" tag="6" title="Exam Date:" id="91">
-                                <dateFormatter key="formatter" formatterBehavior="custom10_4" dateStyle="full" timeStyle="medium" id="174"/>
-                                <font key="font" metaFont="cellTitle"/>
-                                <font key="titleFont" metaFont="cellTitle"/>
-                                <connections>
-                                    <binding destination="-2" name="value" keyPath="studyDate" id="127"/>
-                                </connections>
-                            </formCell>
-                        </column>
-                    </cells>
-                </form>
             </subviews>
             <constraints>
                 <constraint firstItem="132" firstAttribute="leading" secondItem="67" secondAttribute="leading" constant="12" id="9lY-ug-f2g"/>
@@ -581,11 +509,8 @@
                 <constraint firstItem="112" firstAttribute="baseline" secondItem="113" secondAttribute="baseline" id="RII-lw-qPO"/>
                 <constraint firstItem="112" firstAttribute="top" secondItem="92" secondAttribute="bottom" constant="4" id="WFT-w1-lda"/>
                 <constraint firstAttribute="centerX" secondItem="111" secondAttribute="centerX" constant="3" id="azz-tq-5N1"/>
-                <constraint firstItem="69" firstAttribute="leading" secondItem="67" secondAttribute="leading" constant="17" id="bnQ-ZW-8aD"/>
                 <constraint firstAttribute="bottom" secondItem="132" secondAttribute="bottom" constant="20" id="dKg-Hd-EVa"/>
                 <constraint firstItem="113" firstAttribute="trailing" secondItem="92" secondAttribute="trailing" constant="2" id="f7c-ji-1X3"/>
-                <constraint firstItem="92" firstAttribute="top" secondItem="69" secondAttribute="bottom" constant="8" symbolic="YES" id="fAa-JZ-RrZ"/>
-                <constraint firstItem="69" firstAttribute="top" secondItem="111" secondAttribute="bottom" constant="8" symbolic="YES" id="oNj-1I-N4r"/>
                 <constraint firstAttribute="trailing" secondItem="92" secondAttribute="trailing" constant="20" symbolic="YES" id="oQb-GB-suk"/>
                 <constraint firstItem="113" firstAttribute="leading" secondItem="112" secondAttribute="trailing" constant="6" id="qOF-mu-p6w"/>
                 <constraint firstItem="92" firstAttribute="leading" secondItem="67" secondAttribute="leading" constant="20" symbolic="YES" id="sCp-qf-jGO"/>

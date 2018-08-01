@@ -239,8 +239,8 @@ enum
 	IBOutlet NSMatrix		*imageSelection, *imageFormat;
 	IBOutlet NSButton		*imageAllViewers;
 	
-	IBOutlet NSWindow		*displaySUVWindow;
-	IBOutlet NSForm			*suvForm;
+	//IBOutlet NSWindow		*displaySUVWindow;
+	//IBOutlet NSForm			*suvForm;
 	IBOutlet NSMatrix		*suvConversion;
 	
 	NSCalendarDate			*editedRadiopharmaceuticalStartTime, *editedAcquisitionTime;
@@ -832,7 +832,7 @@ enum
 - (IBAction) endExportImage: (id) sender;
 - (IBAction) setCurrentPosition:(id) sender;
 - (IBAction) setCurrentdcmExport:(id) sender;
-- (IBAction) endDisplaySUV:(id) sender;
+//- (IBAction) endDisplaySUV:(id) sender;
 - (IBAction) endRoiRename:(id) sender;
 - (IBAction) roiRename:(id) sender;
 - (void) SyncSeries:(id) sender;

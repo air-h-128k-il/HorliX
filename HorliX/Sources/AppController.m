@@ -2805,7 +2805,7 @@ static BOOL firstCall = YES;
 #endif
 
         // for beta-test by air
-        
+        /*
         NSDateFormatter *inputDateFormatter = [[NSDateFormatter alloc] init];
         [inputDateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
         NSDate *nowdate = [NSDate date];
@@ -2815,7 +2815,7 @@ static BOOL firstCall = YES;
         NSTimeInterval  since = [dateB timeIntervalSinceDate:nowdate];
         if (since <= 0)
             exit(0);
-         
+         */
         
         
         

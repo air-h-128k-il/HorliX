@@ -14979,7 +14979,7 @@ static NSArray*	openSubSeriesArray = nil;
         
         if( [menuItem action] == @selector(selectFilesAndFoldersToAdd:) ||
            [menuItem action] == @selector(addURLToDatabase:) ||
-           [menuItem action] == @selector(importRawData:))
+           [menuItem action] == @selector(importRawData2:))//add 2 by h.inomata
             return NO;
         
         if( [menuItem action] == @selector(anonymizeDICOM:))
@@ -18115,6 +18115,8 @@ restart:
 }
 
 #ifndef OSIRIX_LIGHT
+
+/* no need by h.inomata
 - (IBAction)importRawData:(id)sender
 {
     [[rdPatientForm cellWithTag:0] setStringValue: @"Raw Data"]; //Patient Name
@@ -18319,6 +18321,240 @@ restart:
         }
     }
 }
+ */
+
+/* test code by h.inomata
+ */
+
+
+- (IBAction)importRawData2:(id)sender {
+    
+    //NSView* rawDataimport2 = [[[self BrowserController] objectAtIndex:0] self];
+    
+    /*
+    [[rdPatientForm cellWithTag:0] setStringValue: @"Raw Data"]; //Patient Name
+    [[rdPatientForm cellWithTag:1] setStringValue: @"RD0001"];    //Patient ID
+    [[rdPatientForm cellWithTag:2] setStringValue: @"Raw Data Secondary Capture"]; //Study Descripition
+    
+    [[rdPixelForm cellWithTag:0] setObjectValue:[NSNumber numberWithInt:512]];        //rows
+    [[rdPixelForm cellWithTag:1] setObjectValue:[NSNumber numberWithInt:512]];        //columns
+    [[rdPixelForm cellWithTag:2] setObjectValue:[NSNumber numberWithInt:1]];        //slices
+    
+    [[rdVoxelForm cellWithTag:0] setObjectValue:[NSNumber numberWithInt:1]];        //voxel width
+    [[rdVoxelForm cellWithTag:1] setObjectValue:[NSNumber numberWithInt:1]];        //voxel height
+    [[rdVoxelForm cellWithTag:2] setObjectValue:[NSNumber numberWithInt:1]];        //voxel depth
+    
+    [[rdOffsetForm cellWithTag:0] setObjectValue:[NSNumber numberWithInt:0]];        //offset
+    */
+    //NSOpenPanel *rawDataimport2;
+    //[tfPtName setObjectValue:@"test"];
+    tfPtName.title=@"phazor";tfIDValue.title=@"00000";
+    tfRowValue.title=@"512";tfColValue.title=@"512";tfSliceValue.title=@"1";
+    tfPixHValue.title=@"1";tfPixWValue.title=@"1";tfSliceThickValue.title=@"1";
+    tfSelect.title=@"0";
+    
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    //[openPanel setAccessoryView:rdAccessory];//origin
+    [openPanel setAccessoryView:rawDataimport2];//add NSView by h.inomata
+    [openPanel setPrompt:NSLocalizedString(@"Import", nil)];
+    [openPanel setTitle:NSLocalizedString(@"Import Raw Data", nil)];
+    
+    [openPanel setMessage:NSLocalizedString(@"Choose file containing raw data:", nil)];
+    
+    if ([openPanel runModalForTypes:nil] == NSOKButton)
+    {
+        NSData *data = [NSData dataWithContentsOfFile:[openPanel filename]];
+        if (data)
+        {
+            NSString *patientName = tfPtName.title;
+            
+            NSString *patientID = tfIDValue.title;
+            NSString *studyDescription = @"RAW file origin";
+            
+            NSInteger intVal = [tfRowValue.title intValue];
+            NSNumber *rows = [NSNumber numberWithInteger:intVal];
+            NSInteger intVal2 = [tfColValue.title intValue];
+            NSNumber *columns = [NSNumber numberWithInteger:intVal2];
+            NSInteger intVal3 = [tfSliceValue.title intValue];
+            NSNumber *slices = [NSNumber numberWithInteger:intVal3];
+            NSInteger intVal4 = [tfPixHValue.title intValue];
+            NSNumber *height = [NSNumber numberWithInteger:intVal4];
+            NSInteger intVal5 = [tfPixWValue.title intValue];
+            NSNumber *width = [NSNumber numberWithInteger:intVal5];
+            NSInteger intVal6 = [tfSliceThickValue.title intValue];
+            NSNumber *depth = [NSNumber numberWithInteger:intVal6];
+            
+            NSNumber *offset = [NSNumber numberWithInt:0];//[[rdOffsetForm cellWithTag:0] objectValue];
+            
+            NSInteger intVal7 = [tfSelect.title intValue];
+            int pixelType= intVal7;
+            //int pixelType = [(NSCell *)[rdPixelTypeMatrix selectedCell] tag];
+            
+            NSUInteger spp;
+            NSUInteger highBit = 7;
+            NSUInteger bitsAllocated = 8;
+            NSUInteger numberBytes;
+            BOOL isSigned = YES;
+            BOOL isLittleEndian = YES;
+            NSString *photometricInterpretation = @"MONOCHROME2";
+            //int pixelType=0;//add for test by h.inomata
+            //int offset = 0;
+            switch (pixelType)
+            {
+                case 0:  spp = 3;//origin 3 by air
+                    numberBytes = 1;
+                    photometricInterpretation = @"RGB";
+                    break;
+                case 1: spp = 1;
+                    numberBytes = 1;
+                    break;
+                case 2:    spp = 1;
+                    numberBytes = 2;
+                    highBit = 15;
+                    bitsAllocated = 16;
+                    isSigned = NO;
+                    break;
+                case 3:    spp = 1;
+                    numberBytes = 2;
+                    highBit = 15;
+                    bitsAllocated = 16;
+                    break;
+                case 4:    spp = 1;
+                    numberBytes = 2;
+                    highBit = 15;
+                    bitsAllocated = 16;
+                    isSigned = NO;
+                    isLittleEndian = NO;
+                    break;
+                case 5:    spp = 1;
+                    numberBytes = 2;
+                    highBit = 15;
+                    bitsAllocated = 16;
+                    isSigned = YES;
+                    isLittleEndian = NO;
+                    break;
+                case 6: spp = 1;
+                    numberBytes = 4;
+                    highBit = 31;
+                    bitsAllocated = 32;
+                    isSigned = YES;
+                    isLittleEndian = YES;
+                    break;
+                    
+                default:    spp = 1;
+                    numberBytes = 2;
+            }
+            
+            NSUInteger subDataLength = spp  * numberBytes * [rows unsignedIntegerValue] * [columns unsignedIntegerValue];
+            
+            if ([data length] >= subDataLength * [slices unsignedIntegerValue]  + [offset unsignedIntegerValue])
+            {
+                NSUInteger s = [slices unsignedIntegerValue];
+                
+                //tmpObject for StudyUID andd SeriesUID
+                
+                DCMObject *tmpObject = [DCMObject secondaryCaptureObjectWithBitDepth:numberBytes * 8  samplesPerPixel:spp numberOfFrames:1];
+                NSString *studyUID = [tmpObject attributeValueWithName:@"StudyInstanceUID"];
+                NSString *seriesUID = [tmpObject attributeValueWithName:@"SeriesInstanceUID"];
+                int studyID = [[NSUserDefaults standardUserDefaults] integerForKey:@"SCStudyID"];
+                DCMCalendarDate *studyDate = [DCMCalendarDate date];
+                DCMCalendarDate *seriesDate = [DCMCalendarDate date];
+                [[NSUserDefaults standardUserDefaults] setInteger:(++studyID) forKey:@"SCStudyID"];
+                for(NSUInteger i = 0; i < s; i++)
+                {
+                    DCMObject *dcmObject = [DCMObject secondaryCaptureObjectWithBitDepth:numberBytes * 8  samplesPerPixel:spp numberOfFrames:1];
+                    DCMCalendarDate *aquisitionDate = [DCMCalendarDate date];
+                    //add attributes
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:studyUID] forName:@"StudyInstanceUID"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:seriesUID] forName:@"SeriesInstanceUID"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:patientName] forName:@"PatientsName"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:patientID] forName:@"PatientID"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:studyDescription] forName:@"StudyDescription"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:[NSString stringWithFormat:@"%d", (int) i]] forName:@"InstanceNumber"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:[NSString stringWithFormat:@"%d", studyID]] forName:@"StudyID"];
+                    
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:studyDate] forName:@"StudyDate"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:studyDate] forName:@"StudyTime"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:seriesDate] forName:@"SeriesDate"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:seriesDate] forName:@"SeriesTime"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:aquisitionDate] forName:@"AcquisitionDate"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:aquisitionDate] forName:@"AcquisitionTime"];
+                    
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:@"101"] forName:@"SeriesNumber"];
+                    
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:rows] forName:@"Rows"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:columns] forName:@"Columns"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:[NSNumber numberWithInt:spp]] forName:@"SamplesperPixel"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObjects:[NSString stringWithFormat:@"%f", [width floatValue]], [NSString stringWithFormat:@"%f",  [height floatValue]], nil] forName:@"PixelSpacing"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:[NSString stringWithFormat:@"%f", [depth floatValue]]] forName:@"SliceThickness"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:photometricInterpretation] forName:@"PhotometricInterpretation"];
+                    
+                    float slicePosition = i * [depth floatValue];
+                    NSMutableArray *positionArray = [NSMutableArray arrayWithObjects:[NSString stringWithFormat:@"%f", 0.0], [NSString stringWithFormat:@"%f", 0.0], [NSString stringWithFormat:@"%f", slicePosition], nil];
+                    NSMutableArray *orientationArray = [NSMutableArray arrayWithObjects:[NSString stringWithFormat:@"%f", 1.0], [NSString stringWithFormat:@"%f", 0.0], [NSString stringWithFormat:@"%f", 0.0], [NSString stringWithFormat:@"%f", 0.0], [NSString stringWithFormat:@"%f", 1.0], [NSString stringWithFormat:@"%f", 0.0], nil];
+                    
+                    [dcmObject setAttributeValues:positionArray forName:@"ImagePositionPatient"];
+                    [dcmObject setAttributeValues:orientationArray forName:@"ImageOrientationPatient"];
+                    
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:[NSNumber numberWithBool:isSigned]] forName:@"PixelRepresentation"];
+                    
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:[NSNumber numberWithInt:highBit]] forName:@"HighBit"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:[NSNumber numberWithInt:bitsAllocated]] forName:@"BitsAllocated"];
+                    [dcmObject setAttributeValues:[NSMutableArray arrayWithObject:[NSNumber numberWithInt:bitsAllocated]] forName:@"BitsStored"];
+                    
+                    //add Pixel data
+                    NSString *vr = @"OW";
+                    if (numberBytes < 2)
+                        vr = @"OB";
+                    
+                    NSRange range = NSMakeRange([offset unsignedIntegerValue] + subDataLength * i, subDataLength);
+                    
+                    NSMutableData *subdata = [NSMutableData dataWithData:[data subdataWithRange:range]];
+                    
+                    DCMTransferSyntax *ts = [DCMTransferSyntax ImplicitVRLittleEndianTransferSyntax];
+                    if (isLittleEndian == NO)
+                    {
+                        if( isSigned == NO)
+                        {
+                            unsigned short *ptr = (unsigned short*) [subdata mutableBytes];
+                            NSUInteger l = subDataLength/2;
+                            while( l-- > 0)
+                                ptr[ l] = EndianU16_BtoL( ptr[ l]);
+                        }
+                        else
+                        {
+                            short *ptr = ( short*) [subdata mutableBytes];
+                            NSUInteger l = subDataLength/2;
+                            while( l-- > 0)
+                                ptr[ l] = EndianS16_BtoL( ptr[ l]);
+                        }
+                    }
+                    
+                    DCMAttributeTag *tag = [DCMAttributeTag tagWithName:@"PixelData"];
+                    DCMPixelDataAttribute *attr = [[[DCMPixelDataAttribute alloc] initWithAttributeTag:tag
+                                                                                                    vr:vr
+                                                                                                length:numberBytes
+                                                                                                  data:nil
+                                                                                  specificCharacterSet:nil
+                                                                                        transferSyntax:ts
+                                                                                             dcmObject:dcmObject
+                                                                                            decodeData:NO] autorelease];
+                    
+                    [attr addFrame:subdata];
+                    [dcmObject setAttribute:attr];
+                    
+                    NSString *tempFilename = [[self INCOMINGPATH] stringByAppendingPathComponent: [NSString stringWithFormat:@"%d.dcm", (int) i]];
+                    [dcmObject writeToFile:tempFilename withTransferSyntax:[DCMTransferSyntax ImplicitVRLittleEndianTransferSyntax] quality:DCMLosslessQuality atomically:YES];
+                }
+            }
+            else
+                NSLog(@"Not enough data");
+        }
+    }
+    
+}
+
+
 
 - (IBAction) viewXML:(id) sender
 {
@@ -19490,9 +19726,10 @@ restart:
     [splitViewHorz saveDefault: @"SplitHorz2"];
     [splitComparative saveDefault: @"SplitComparative"];
     [splitViewVert saveDefault: @"SplitVert2"];
-     */
+ */
 }
 
+    
 - (NSArray *)toolbarDefaultItemIdentifiers: (NSToolbar *)toolbar
 {
     return [NSArray arrayWithObjects:

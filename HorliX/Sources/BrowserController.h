@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX/Horos Project (www.horosproject.org)
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -146,6 +146,41 @@ extern NSString * const O2PasteboardTypeDatabaseObjectXIDs;
     IBOutlet PreviewView			*imageView;
     IBOutlet NSView                 *matrixView;
     IBOutlet NSView                 *comparativeScrollView;
+    
+    IBOutlet NSView                 *rawDataimport2;
+
+    IBOutlet NSTextField *tf;
+    IBOutlet NSTextFieldCell *tfPtName;
+    
+    IBOutlet NSTextField *tfID;
+    IBOutlet NSTextFieldCell *tfIDValue;
+    
+    IBOutlet NSTextField *tfRow;
+    
+    IBOutlet NSTextFieldCell *tfRowValue;
+    
+    IBOutlet NSTextField *tfCol;
+    
+    IBOutlet NSTextFieldCell *tfColValue;
+    
+    IBOutlet NSTextField *tfSlice;
+    
+    IBOutlet NSTextFieldCell *tfSliceValue;
+    IBOutlet NSTextField *tfPixH;
+    
+    IBOutlet NSTextFieldCell *tfPixHValue;
+    IBOutlet NSTextField *tfPixW;
+    
+    IBOutlet NSTextFieldCell *tfPixWValue;
+    IBOutlet NSTextField *tfSliceThick;
+    IBOutlet NSTextFieldCell *tfSliceThickValue;
+    
+    IBOutlet NSTextField *tfSelect05;
+    IBOutlet NSTextFieldCell *tfSelect;
+    
+    
+    
+    
     
     int								subFrom, subTo, subInterval, subMax;
     
@@ -320,6 +355,8 @@ extern NSString * const O2PasteboardTypeDatabaseObjectXIDs;
 @property(readonly) NSMutableDictionary *databaseIndexDictionary;
 @property(readonly) PluginManagerController *pluginManagerController;
 @property int distantSearchType;
+@property(nonatomic, retain) NSTextField *tf;//test code by h.inomata
+
 
 +(void)initializeBrowserControllerClass;
 + (unsigned int)_currentModifierFlags;
@@ -587,7 +624,11 @@ extern NSString * const O2PasteboardTypeDatabaseObjectXIDs;
 - (IBAction) decompressSelectedFiles:(id) sender;
 - (void) importReport:(NSString*) path UID: (NSString*) uid;
 - (IBAction) generateReport: (id) sender;
-- (IBAction)importRawData:(id)sender;
+//- (IBAction)importRawData:(id)sender;
+- (IBAction)importRawData2:(id)sender;
+//importRawData
+
+
 - (void) pdfPreview:(id)sender;
 - (IBAction) burnDICOM:(id) sender;
 - (IBAction) anonymizeDICOM:(id) sender;

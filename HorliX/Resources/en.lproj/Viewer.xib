@@ -74,7 +74,7 @@
                 <outlet property="dcmToText" destination="1359" id="1520"/>
                 <outlet property="display12bitToolbarItemMatrix" destination="2442" id="2447"/>
                 <outlet property="display12bitToolbarItemView" destination="2424" id="2448"/>
-                <outlet property="displaySUVWindow" destination="1408" id="1441"/>
+                <!--<outlet property="displaySUVWindow" destination="1408" id="1441"/>-->
                 <outlet property="fromset" destination="973" id="977"/>
                 <outlet property="imageAllViewers" destination="2396" id="2398"/>
                 <outlet property="imageExportWindow" destination="1261" id="1277"/>
@@ -4423,7 +4423,7 @@ Gw
                 </constraints>
             </view>
         </window>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" id="1408" userLabel="displaySUV">
+        <!--<window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" id="1408" userLabel="displaySUV">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="246" y="338" width="503" height="532"/>
@@ -4652,7 +4652,7 @@ DO NOT USE THESE VALUES FOR CLINICAL DECISIONS !</string>
                     <constraint firstAttribute="trailing" secondItem="1422" secondAttribute="trailing" constant="20" symbolic="YES" id="tt8-fx-cfP"/>
                 </constraints>
             </view>
-        </window>
+        </window>-->
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" id="1450" userLabel="roiRename">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>

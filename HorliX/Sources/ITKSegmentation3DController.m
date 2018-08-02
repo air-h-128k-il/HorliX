@@ -1,5 +1,5 @@
 /*=========================================================================
- This file is part of the Horos Project (www.horosproject.org)
+ This file is part of the HorliX Project
  
  Horos is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
@@ -252,7 +252,7 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 	[self changeAlgorithm:self];
 }
 
--(IBAction) preview:(id) sender
+-(IBAction) preview:(id) sender// linked with params? h.inomata
 {
 	BOOL parametersProvided = YES;
 	int p;
@@ -277,9 +277,10 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 	
 	if( [[NSUserDefaults standardUserDefaults] boolForKey: @"previewGrowingRegion"] == NO && [[NSUserDefaults standardUserDefaults] boolForKey: @"segmentationDirectlyGenerate"] == NO) return;
 	
-	for(p=0;p<[params numberOfRows]; p++)
+	//for(p=0;p<[params numberOfRows]; p++)//params is here
+     for(p=0;p<3; p++)
 	{
-		parametersProvided = parametersProvided && (![[[params cellAtRow:p column:0] stringValue] isEqualToString:@""]);
+		//parametersProvided = parametersProvided && (![[[params cellAtRow:p column:0] stringValue] isEqualToString:@""]);
 	}
 	
 	if (!parametersProvided)
@@ -315,9 +316,10 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 				int parametersCount = [[parameters objectAtIndex:algo] count];
 				NSMutableArray *parametersArray = [NSMutableArray arrayWithCapacity:parametersCount];
 				int i;
-				for(i=0; i<parametersCount; i++)
+				//for(i=0; i<parametersCount; i++)
+                for(i=0; i<3; i++)
 				{
-					[parametersArray addObject:[NSNumber numberWithFloat:[[params cellAtRow:i column:0] floatValue]]];
+					//[parametersArray addObject:[NSNumber numberWithFloat:[[params cellAtRow:i column:0] floatValue]]];
 				}
 				
 				[itk regionGrowing3D	: viewer
@@ -350,10 +352,12 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 	BOOL parametersProvided = YES;
 	int p;
 	
-	for(p=0;p<[params numberOfRows]; p++)
+	/*
+    for(p=0;p<[params numberOfRows]; p++)
 	{
-		parametersProvided = parametersProvided && (![[[params cellAtRow:p column:0] stringValue] isEqualToString:@""]);
+		//parametersProvided = parametersProvided && (![[[params cellAtRow:p column:0] stringValue] isEqualToString:@""]);
 	}
+     */
 	
 	if (!parametersProvided)
 	{
@@ -427,9 +431,22 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 				int parametersCount = [[parameters objectAtIndex:algo] count];
 				NSMutableArray *parametersArray = [NSMutableArray arrayWithCapacity:parametersCount] ;
 				int i;
-				for(i=0; i<parametersCount; i++)
+                
+				//for(i=0; i<parametersCount; i++)//give up generalizing by h.inomata
+                for(i=0; i<3; i++)
 				{
-					[parametersArray addObject:[NSNumber numberWithFloat:[[params cellAtRow:i column:0] floatValue]]];
+					//[parametersArray addObject:[NSNumber numberWithFloat:[[params cellAtRow:i column:0] floatValue]]];
+                    if(i == 0){
+                        NSInteger intVal =[tfIntervalValue.title intValue];
+                        [parametersArray addObject:[NSNumber numberWithFloat:[intVal floatValue]]];
+                    }else if(i == 1){
+                        NSInteger intVal1 =[tfField1Value.title intValue];
+                        [parametersArray addObject:[NSNumber numberWithFloat:[intVal1 floatValue]]];
+                    }else if(i==2){
+                        NSInteger intVal2 =[tfField2Value.title intValue];
+                        [parametersArray addObject:[NSNumber numberWithFloat:[intVal2 floatValue]]];
+                    }
+                    
 				}
 				
 				[itk regionGrowing3D	: viewer
@@ -492,24 +509,28 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 	int algorithmType = [[algorithmPopup selectedItem] tag];
 	NSArray *titles= [parameters objectAtIndex:algorithmType];
 	NSArray *defaultValues = [defaultsParameters objectAtIndex:algorithmType];
-	NSFormCell *cell = nil;
+	//NSFormCell *cell = nil;
+    NSTextFieldCell *cell = nil;
 	switch (algorithmType)
 	{
 		case intervalSegmentationType:	
-				cell = [params cellAtRow:0 column:0] ;
-				[cell setTitleWidth:-1];
+				//cell = [params cellAtRow:0 column:0] ;
+            cell = tfIntervalValue;
+				[cell.title setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:0]];
 				[cell setStringValue:[defaultValues objectAtIndex:0]];
 				[cell bind:@"value" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.growingRegionInterval" options:nil];	
 				break;								
 		case thresholdSegmentationType:
-				cell = [params cellAtRow:0 column:0] ;
+				//cell = [params cellAtRow:0 column:0] ;
+            cell = tfIntervalValue;
 				[cell setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:0]];
 				[cell setStringValue:[defaultValues objectAtIndex:0]];
 				[cell bind:@"value" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.growingRegionLowerThreshold" options:nil];	
 				
-				cell = [params cellAtRow:1 column:0] ;
+				//cell = [params cellAtRow:1 column:0] ;
+            cell = tfField1Value;
 				[cell setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:1]];
 				[cell setStringValue:[defaultValues objectAtIndex:1]];
@@ -518,19 +539,22 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 				
 		case neighborhoodSegmentationType:
 		
-				cell = [params cellAtRow:0 column:0] ;
-				[cell setTitleWidth:-1];
+				//cell = [params cellAtRow:0 column:0] ;//maybe interval
+            cell = tfIntervalValue;
+			[cell setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:0]];
 				[cell setStringValue:[defaultValues objectAtIndex:0]];
 				[cell bind:@"value" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.growingRegionLowerThreshold" options:nil];	
 				
-				cell = [params cellAtRow:1 column:0] ;
+				//cell = [params cellAtRow:1 column:0] ;//maybe field
+            cell = tfField1Value;
 				[cell setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:1]];
 				[cell setStringValue:[defaultValues objectAtIndex:1]];
 				[cell bind:@"value" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.growingRegionUpperThreshold" options:nil];
 				
-				cell = [params cellAtRow:2 column:0] ;
+				//cell = [params cellAtRow:2 column:0] ;//maybe field
+            cell = tfField2Value;
 				[cell setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:2]];
 				[cell setStringValue:[defaultValues objectAtIndex:2]];
@@ -539,19 +563,22 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 				break;
 		case confidenceSegmentationType:
 		
-				cell = [params cellAtRow:0 column:0] ;
+				//cell = [params cellAtRow:0 column:0] ;
+            cell = tfIntervalValue;
 				[cell setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:0]];
 				[cell setStringValue:[defaultValues objectAtIndex:0]];
 				[cell bind:@"value" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.growingRegionMultiplier" options:nil];	
 				
-				cell = [params cellAtRow:1 column:0] ;
+				//cell = [params cellAtRow:1 column:0] ;
+            cell = tfField1Value;
 				[cell setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:1]];
 				[cell setStringValue:[defaultValues objectAtIndex:1]];
 				[cell bind:@"value" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.growingRegionIterations" options:nil];
 				
-				cell = [params cellAtRow:2 column:0] ;
+				//cell = [params cellAtRow:2 column:0] ;
+            cell = tfField2Value;
 				[cell setTitleWidth:-1];
 				[cell setTitle:[titles objectAtIndex:2]];
 				[cell setStringValue:[defaultValues objectAtIndex:2]];
@@ -572,8 +599,9 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 
 - (void) setNumberOfParameters: (int) n
 {
-    params.translatesAutoresizingMaskIntoConstraints = YES;
+    //params.translatesAutoresizingMaskIntoConstraints = YES;
     
+    /*
 	NSRect frameBefore = [params frame];
 	// change the number of field in the matrix
 	while (!([params numberOfRows]==0))
@@ -586,6 +614,7 @@ enum algorithmTypes { intervalSegmentationType, thresholdSegmentationType, neigh
 	float deltaY = frameBefore.size.height - frameAfter.size.height;
 	frameAfter.origin.y = frameBefore.origin.y + deltaY;
 	[params setFrame:frameAfter];
+     */
 //
     if( [[self.window.contentView constraints] count] == 0) //backward compatibility : prior auto-layout xib
     {

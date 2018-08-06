@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="101100" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="OSILocationsPreferencePanePref">
@@ -338,7 +339,6 @@
                                                 </connections>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </clipView>
                                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="349">
                                         <rect key="frame" x="1" y="177" width="789" height="16"/>
@@ -523,8 +523,6 @@
                                 </textField>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <box verticalHuggingPriority="249" title="Network - Horos Databases with Fixed Addresses (tcp/ip port 8780):" id="175">
                         <rect key="frame" x="17" y="197" width="797" height="228"/>
@@ -610,7 +608,6 @@
                                                 </connections>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </clipView>
                                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="352">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -701,8 +698,6 @@
                                 </button>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <box title="Local - Horos Databases files / folder:" id="252">
                         <rect key="frame" x="17" y="16" width="797" height="177"/>
@@ -778,7 +773,6 @@
                                                 </connections>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </clipView>
                                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="355">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -793,8 +787,6 @@
                                 </scrollView>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="1127">
                         <rect key="frame" x="642" y="183" width="171" height="11"/>
@@ -1125,14 +1117,11 @@ Gw
                             <binding destination="-2" name="value" keyPath="TLSEnabled" id="709"/>
                         </connections>
                     </button>
-                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="708">
+                    <box verticalHuggingPriority="750" boxType="separator" id="708">
                         <rect key="frame" x="20" y="463" width="373" height="5"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <font key="titleFont" metaFont="system"/>
                     </box>
-                    <box autoresizesSubviews="NO" title="Type of communications" borderType="line" id="736">
+                    <box autoresizesSubviews="NO" borderType="line" title="Type of communications" id="736">
                         <rect key="frame" x="17" y="348" width="379" height="109"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView" id="eBN-bx-86z">
@@ -1209,10 +1198,8 @@ Gw
                                 </button>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <box autoresizesSubviews="NO" title="Cipher Suites" borderType="line" id="787">
+                    <box autoresizesSubviews="NO" borderType="line" title="Cipher Suites" id="787">
                         <rect key="frame" x="17" y="150" width="379" height="194"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView" id="fXX-eu-wYu">
@@ -1224,16 +1211,16 @@ Gw
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <clipView key="contentView" id="fjY-p3-qL3">
                                         <rect key="frame" x="1" y="1" width="339" height="105"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="13" id="664">
-                                                <rect key="frame" x="0.0" y="0.0" width="339" height="15"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="105"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                 <tableColumns>
-                                                    <tableColumn width="25" minWidth="25" maxWidth="25" id="666">
+                                                    <tableColumn identifier="" width="25" minWidth="25" maxWidth="25" id="666">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1248,7 +1235,7 @@ Gw
                                                             <binding destination="685" name="value" keyPath="arrangedObjects.Supported" id="690"/>
                                                         </connections>
                                                     </tableColumn>
-                                                    <tableColumn width="308" minWidth="40" maxWidth="1000" id="667">
+                                                    <tableColumn identifier="" width="308" minWidth="40" maxWidth="1000" id="667">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Cipher">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1273,7 +1260,6 @@ Gw
                                                 </connections>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </clipView>
                                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="663">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1337,10 +1323,8 @@ Gw
                                 </button>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <box autoresizesSubviews="NO" title="Peer Authentication" borderType="line" id="894">
+                    <box autoresizesSubviews="NO" borderType="line" title="Peer Authentication" id="894">
                         <rect key="frame" x="17" y="62" width="379" height="84"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView" id="g8j-ip-9Dm">
@@ -1396,8 +1380,6 @@ Gw
                                 </textField>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                 </subviews>
             </view>

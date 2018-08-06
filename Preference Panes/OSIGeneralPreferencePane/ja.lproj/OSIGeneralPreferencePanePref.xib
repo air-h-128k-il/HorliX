@@ -35,7 +35,7 @@
                                 <button toolTip="Connect to Horos and check for latest version." horizontalCompressionResistancePriority="1000" id="101">
                                     <rect key="frame" x="15" y="11" width="436" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="check" title="Automatically check for Horos application updates at startup time" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="178">
+                                    <buttonCell key="cell" type="check" title="this function is off for the MacAppStore distribution" bezelStyle="regularSquare" imagePosition="left" scrollable="YES" lineBreakMode="clipping" enabled="NO" inset="2" id="178">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -47,7 +47,7 @@
                                 <button toolTip="Connect to Horos and check for latest version." horizontalCompressionResistancePriority="1000" id="191">
                                     <rect key="frame" x="15" y="31" width="428" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="check" title="Automatically check for installed Plugins updates at startup time" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" inset="2" id="192">
+                                    <buttonCell key="cell" type="check" title="this function is off for the MacAppStore distribution" bezelStyle="regularSquare" imagePosition="left" alignment="left" scrollable="YES" lineBreakMode="clipping" enabled="NO" inset="2" id="192">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>

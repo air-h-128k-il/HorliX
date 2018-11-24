@@ -33,4 +33,4 @@ ROI-color-rotation-UI
 
 ## Licence
 
-GPLv3
+LGPLv3
